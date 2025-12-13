@@ -11,7 +11,7 @@ export const register = async (req: Request, res: Response) => {
     // Validate input
     const validation = registerSchema.safeParse(req.body)
     if (!validation.success) {
-      return res.status(400).json({ errors: validation.error.errors })
+      return res.status(400).json({ errors: validation.error.issues })
     }
 
     const { name, username, email, password } = validation.data
@@ -63,7 +63,7 @@ export const login = async (req: Request, res: Response) => {
     // Validate input
     const validation = loginSchema.safeParse(req.body)
     if (!validation.success) {
-      return res.status(400).json({ errors: validation.error.errors })
+      return res.status(400).json({ errors: validation.error.issues })
     }
 
     const { email, password } = validation.data
