@@ -1,0 +1,83 @@
+[
+  {
+    "concern": "acne",
+    "description": "A condition where pores become clogged, leading to breakouts.",
+    "commonFor": [
+      "oily",
+      "combination"
+    ]
+  },
+  {
+    "concern": "dryness",
+    "description": "Lack of moisture that causes tightness and flaking.",
+    "commonFor": [
+      "dry",
+      "sensitive"
+    ]
+  },
+  {
+    "concern": "oiliness",
+    "description": "Excess oil production that causes shine.",
+    "commonFor": [
+      "oily"
+    ]
+  },
+  {
+    "concern": "sensitivity",
+    "description": "Skin that reacts easily to products or environment.",
+    "commonFor": [
+      "sensitive"
+    ]
+  },
+  {
+    "concern": "redness",
+    "description": "Visible redness caused by irritation or sensitivity.",
+    "commonFor": [
+      "sensitive",
+      "dry"
+    ]
+  },
+  {
+    "concern": "uneven_texture",
+    "description": "Rough or bumpy skin surface.",
+    "commonFor": [
+      "oily",
+      "combination",
+      "normal"
+    ]
+  },
+  {
+    "concern": "dullness",
+    "description": "Lack of radiance or glow.",
+    "commonFor": [
+      "dry",
+      "normal",
+      "combination"
+    ]
+  },
+  {
+    "concern": "large_pores",
+    "description": "Visible pores often related to oil production.",
+    "commonFor": [
+      "oily",
+      "combination"
+    ]
+  },
+  {
+    "concern": "fine_lines",
+    "description": "Small lines caused by dehydration or aging.",
+    "commonFor": [
+      "dry",
+      "normal"
+    ]
+  },
+  {
+    "concern": "dark_spots",
+    "description": "Pigmented areas from sun exposure or acne.",
+    "commonFor": [
+      "normal",
+      "combination",
+      "oily"
+    ]
+  }
+]

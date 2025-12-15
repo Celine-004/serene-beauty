@@ -1,0 +1,239 @@
+[
+  {
+    "name": "Foaming Facial Cleanser",
+    "brand": "CeraVe",
+    "category": "cleanser",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "ingredients": [
+      "Ceramides",
+      "Niacinamide",
+      "Hyaluronic Acid"
+    ],
+    "priceRange": "budget",
+    "description": "A gentle foaming cleanser that removes excess oil while supporting the skin barrier, ideal for oily and combination skin."
+  },
+  {
+    "name": "Hydrating Facial Cleanser",
+    "brand": "CeraVe",
+    "category": "cleanser",
+    "suitableFor": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "ingredients": [
+      "Ceramides",
+      "Glycerin",
+      "Hyaluronic Acid"
+    ],
+    "priceRange": "budget",
+    "description": "A non-foaming cleanser that cleanses without stripping moisture, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Toleriane Purifying Foaming Cleanser",
+    "brand": "La Roche-Posay",
+    "category": "cleanser",
+    "suitableFor": [
+      "oily",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Thermal Spring Water",
+      "Niacinamide"
+    ],
+    "priceRange": "mid-range",
+    "description": "A gentle foaming cleanser that removes impurities and reduces shine, ideal for oily skin that is also sensitive."
+  },
+  {
+    "name": "Toleriane Hydrating Gentle Cleanser",
+    "brand": "La Roche-Posay",
+    "category": "cleanser",
+    "suitableFor": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "ingredients": [
+      "Ceramide-3",
+      "Glycerin",
+      "Thermal Spring Water"
+    ],
+    "priceRange": "mid-range",
+    "description": "A creamy cleanser that supports hydration and comfort, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Gentle Skin Cleanser",
+    "brand": "Cetaphil",
+    "category": "cleanser",
+    "suitableFor": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "ingredients": [
+      "Glycerin",
+      "Panthenol",
+      "Niacinamide"
+    ],
+    "priceRange": "budget",
+    "description": "A mild cleanser that cleanses without irritation and helps keep skin comfortable, ideal for sensitive skin."
+  },
+  {
+    "name": "Ultra Gentle Hydrating Cleanser",
+    "brand": "Neutrogena",
+    "category": "cleanser",
+    "suitableFor": [
+      "dry",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Glycerin"
+    ],
+    "priceRange": "budget",
+    "description": "A fragrance-free cleanser that helps protect the moisture barrier, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Low pH Good Morning Gel Cleanser",
+    "brand": "COSRX",
+    "category": "cleanser",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Betaine Salicylate",
+      "Tea Tree Extract"
+    ],
+    "priceRange": "mid-range",
+    "description": "A low-pH gel cleanser that refreshes skin and supports clearer pores, ideal for oily and combination skin."
+  },
+  {
+    "name": "Salicylic Acid Cleanser",
+    "brand": "The INKEY List",
+    "category": "cleanser",
+    "suitableFor": [
+      "oily",
+      "combination"
+    ],
+    "ingredients": [
+      "Salicylic Acid",
+      "Zinc"
+    ],
+    "priceRange": "budget",
+    "description": "A pore-clearing cleanser that helps reduce oil buildup and congestion, ideal for oily and acne-prone skin."
+  },
+  {
+    "name": "Oat Cleansing Balm",
+    "brand": "The INKEY List",
+    "category": "cleanser",
+    "suitableFor": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "ingredients": [
+      "Oat Kernel Oil",
+      "Colloidal Oatmeal"
+    ],
+    "priceRange": "budget",
+    "description": "A nourishing balm cleanser that removes makeup while soothing dryness, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Sensibio H2O Micellar Water",
+    "brand": "Bioderma",
+    "category": "cleanser",
+    "suitableFor": [
+      "sensitive",
+      "dry",
+      "normal"
+    ],
+    "ingredients": [
+      "Micelles"
+    ],
+    "priceRange": "mid-range",
+    "description": "A gentle micellar cleanser that removes makeup and impurities with minimal irritation, ideal for sensitive skin."
+  },
+  {
+    "name": "Cleanance Cleansing Gel",
+    "brand": "Avène",
+    "category": "cleanser",
+    "suitableFor": [
+      "oily",
+      "sensitive",
+      "combination"
+    ],
+    "ingredients": [
+      "Thermal Spring Water",
+      "Zinc Gluconate"
+    ],
+    "priceRange": "mid-range",
+    "description": "A cleansing gel that helps reduce excess oil while remaining gentle, ideal for oily and sensitive skin."
+  },
+  {
+    "name": "Calendula Deep Cleansing Foaming Face Wash",
+    "brand": "Kiehl's",
+    "category": "cleanser",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "ingredients": [
+      "Calendula Extract",
+      "Glycerin"
+    ],
+    "priceRange": "premium",
+    "description": "A foaming cleanser that removes daily buildup and excess oil, ideal for oily and combination skin."
+  },
+  {
+    "name": "Soy Face Cleanser",
+    "brand": "Fresh",
+    "category": "cleanser",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "dry"
+    ],
+    "ingredients": [
+      "Soy Proteins",
+      "Amino Acids"
+    ],
+    "priceRange": "premium",
+    "description": "A soft gel cleanser that removes makeup and dirt while keeping skin comfortable, ideal for normal to dry skin."
+  },
+  {
+    "name": "Blueberry Bounce Gentle Cleanser",
+    "brand": "Glow Recipe",
+    "category": "cleanser",
+    "suitableFor": [
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "Blueberry Extract",
+      "Hyaluronic Acid"
+    ],
+    "priceRange": "premium",
+    "description": "A gentle cleanser that refreshes skin and supports hydration, ideal for normal and combination skin."
+  },
+  {
+    "name": "Take The Day Off Cleansing Balm",
+    "brand": "Clinique",
+    "category": "cleanser",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Emollients"
+    ],
+    "priceRange": "premium",
+    "description": "A cleansing balm that dissolves makeup and sunscreen without drying, ideal for dry and sensitive skin."
+  }
+]

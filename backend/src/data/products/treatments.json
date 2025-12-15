@@ -1,0 +1,230 @@
+[
+  {
+    "name": "Effaclar Duo",
+    "brand": "La Roche-Posay",
+    "category": "treatment",
+    "suitableFor": [
+      "oily",
+      "combination"
+    ],
+    "ingredients": [
+      "Benzoyl Peroxide"
+    ],
+    "priceRange": "mid-range",
+    "description": "An acne treatment that helps reduce active breakouts and congestion, ideal for oily and acne-prone skin."
+  },
+  {
+    "name": "Adapalene Gel 0.1%",
+    "brand": "Differin",
+    "category": "treatment",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "ingredients": [
+      "Adapalene"
+    ],
+    "priceRange": "budget",
+    "description": "A retinoid treatment that helps prevent clogged pores over time, ideal for acne-prone skin when introduced gradually."
+  },
+  {
+    "name": "Azelaic Acid Suspension 10%",
+    "brand": "The Ordinary",
+    "category": "treatment",
+    "suitableFor": [
+      "sensitive",
+      "combination",
+      "normal"
+    ],
+    "ingredients": [
+      "Azelaic Acid"
+    ],
+    "priceRange": "budget",
+    "description": "A treatment that helps improve uneven tone and redness, ideal for sensitive and combination skin."
+  },
+  {
+    "name": "Retinol 0.2% in Squalane",
+    "brand": "The Ordinary",
+    "category": "treatment",
+    "suitableFor": [
+      "normal",
+      "dry",
+      "combination"
+    ],
+    "ingredients": [
+      "Retinol",
+      "Squalane"
+    ],
+    "priceRange": "budget",
+    "description": "A beginner retinol that targets texture and early signs of aging, ideal for normal to dry skin used at night."
+  },
+  {
+    "name": "Discoloration Correcting Serum",
+    "brand": "Good Molecules",
+    "category": "treatment",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "Tranexamic Acid",
+      "Niacinamide"
+    ],
+    "priceRange": "budget",
+    "description": "A treatment serum that helps fade the look of dark spots, ideal for normal to oily skin."
+  },
+  {
+    "name": "Cicapair Tiger Grass Serum",
+    "brand": "Dr.Jart+",
+    "category": "treatment",
+    "suitableFor": [
+      "sensitive",
+      "normal",
+      "dry"
+    ],
+    "ingredients": [
+      "Centella Asiatica"
+    ],
+    "priceRange": "premium",
+    "description": "A calming treatment that helps reduce visible redness, ideal for sensitive skin."
+  },
+  {
+    "name": "AHA 30% + BHA 2% Peeling Solution",
+    "brand": "The Ordinary",
+    "category": "treatment",
+    "suitableFor": [
+      "oily",
+      "combination"
+    ],
+    "ingredients": [
+      "Glycolic Acid",
+      "Lactic Acid",
+      "Salicylic Acid"
+    ],
+    "priceRange": "budget",
+    "description": "A strong exfoliating peel for occasional use, ideal for oily and combination skin (avoid if sensitive)."
+  },
+  {
+    "name": "Blemish + Age Defense",
+    "brand": "SkinCeuticals",
+    "category": "treatment",
+    "suitableFor": [
+      "oily",
+      "combination"
+    ],
+    "ingredients": [
+      "Salicylic Acid",
+      "Glycolic Acid"
+    ],
+    "priceRange": "premium",
+    "description": "An exfoliating treatment that targets breakouts and texture, ideal for oily and combination skin."
+  },
+  {
+    "name": "Resurfacing Retinol Serum",
+    "brand": "CeraVe",
+    "category": "treatment",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "Retinol",
+      "Niacinamide",
+      "Ceramides"
+    ],
+    "priceRange": "budget",
+    "description": "A retinol treatment that supports smoother-looking skin and post-acne marks, ideal for combination and oily skin."
+  },
+  {
+    "name": "Benzoyl Peroxide Gel",
+    "brand": "Benzac",
+    "category": "treatment",
+    "suitableFor": [
+      "oily",
+      "combination"
+    ],
+    "ingredients": [
+      "Benzoyl Peroxide"
+    ],
+    "priceRange": "budget",
+    "description": "A spot treatment that helps reduce acne bacteria, ideal for oily and acne-prone skin."
+  },
+  {
+    "name": "Skin Perfecting 2% BHA Liquid",
+    "brand": "Paula's Choice",
+    "category": "treatment",
+    "suitableFor": [
+      "oily",
+      "combination"
+    ],
+    "ingredients": [
+      "Salicylic Acid"
+    ],
+    "priceRange": "premium",
+    "description": "A leave-on exfoliant that helps clear pores and blackheads, ideal for oily and combination skin."
+  },
+  {
+    "name": "Glycolic 10 Renew Overnight",
+    "brand": "L'Oréal Paris",
+    "category": "treatment",
+    "suitableFor": [
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "Glycolic Acid"
+    ],
+    "priceRange": "mid-range",
+    "description": "An overnight glycolic treatment that helps smooth texture, ideal for normal and combination skin."
+  },
+  {
+    "name": "Cicaplast Baume B5",
+    "brand": "La Roche-Posay",
+    "category": "treatment",
+    "suitableFor": [
+      "sensitive",
+      "dry",
+      "normal"
+    ],
+    "ingredients": [
+      "Panthenol",
+      "Madecassoside"
+    ],
+    "priceRange": "mid-range",
+    "description": "A barrier-repair balm that helps soothe irritation, ideal for sensitive and dry skin."
+  },
+  {
+    "name": "Acne Pimple Master Patch",
+    "brand": "COSRX",
+    "category": "treatment",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "ingredients": [
+      "Hydrocolloid"
+    ],
+    "priceRange": "mid-range",
+    "description": "Hydrocolloid patches that protect and help flatten pimples, ideal for acne-prone skin."
+  },
+  {
+    "name": "Rapid Wrinkle Repair Retinol Oil",
+    "brand": "Neutrogena",
+    "category": "treatment",
+    "suitableFor": [
+      "normal",
+      "dry",
+      "combination"
+    ],
+    "ingredients": [
+      "Retinol",
+      "Emollients"
+    ],
+    "priceRange": "mid-range",
+    "description": "A retinol treatment oil that targets fine lines, ideal for normal to dry skin used at night."
+  }
+]

@@ -1,0 +1,241 @@
+[
+  {
+    "name": "Moisturizing Cream",
+    "brand": "CeraVe",
+    "category": "moisturizer",
+    "suitableFor": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "ingredients": [
+      "Ceramides",
+      "Hyaluronic Acid"
+    ],
+    "priceRange": "budget",
+    "description": "A rich moisturizer that supports the skin barrier and reduces dryness, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "PM Facial Moisturizing Lotion",
+    "brand": "CeraVe",
+    "category": "moisturizer",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "dry"
+    ],
+    "ingredients": [
+      "Ceramides",
+      "Niacinamide",
+      "Hyaluronic Acid"
+    ],
+    "priceRange": "budget",
+    "description": "A lightweight moisturizer that hydrates and helps calm skin, ideal for normal to dry skin."
+  },
+  {
+    "name": "Hydro Boost Water Gel",
+    "brand": "Neutrogena",
+    "category": "moisturizer",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Glycerin"
+    ],
+    "priceRange": "budget",
+    "description": "A fast-absorbing gel moisturizer that hydrates without heaviness, ideal for oily and combination skin."
+  },
+  {
+    "name": "Toleriane Sensitive Fluide",
+    "brand": "La Roche-Posay",
+    "category": "moisturizer",
+    "suitableFor": [
+      "sensitive",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "Niacinamide",
+      "Glycerin",
+      "Thermal Spring Water"
+    ],
+    "priceRange": "mid-range",
+    "description": "A lightweight moisturizer designed to reduce discomfort and dryness, ideal for sensitive skin."
+  },
+  {
+    "name": "Lipikar Balm AP+M",
+    "brand": "La Roche-Posay",
+    "category": "moisturizer",
+    "suitableFor": [
+      "dry",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Shea Butter",
+      "Niacinamide"
+    ],
+    "priceRange": "mid-range",
+    "description": "A deeply nourishing balm that supports very dry skin and barrier repair, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Oil-Free Moisturizing Lotion",
+    "brand": "Cetaphil",
+    "category": "moisturizer",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Glycerin",
+      "Panthenol"
+    ],
+    "priceRange": "budget",
+    "description": "A lightweight moisturizer that hydrates without shine, ideal for oily and sensitive skin."
+  },
+  {
+    "name": "UltraSensitive Soothing Care",
+    "brand": "Eucerin",
+    "category": "moisturizer",
+    "suitableFor": [
+      "sensitive",
+      "dry"
+    ],
+    "ingredients": [
+      "SymSitive",
+      "Glycerin"
+    ],
+    "priceRange": "mid-range",
+    "description": "A calming moisturizer designed to reduce irritation, ideal for sensitive and dry skin."
+  },
+  {
+    "name": "Advanced Snail 92 All In One Cream",
+    "brand": "COSRX",
+    "category": "moisturizer",
+    "suitableFor": [
+      "sensitive",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "Snail Mucin",
+      "Hyaluronic Acid"
+    ],
+    "priceRange": "mid-range",
+    "description": "A moisturizer that supports hydration and repair, ideal for sensitive and combination skin."
+  },
+  {
+    "name": "Cicaplast Baume B5",
+    "brand": "La Roche-Posay",
+    "category": "moisturizer",
+    "suitableFor": [
+      "sensitive",
+      "dry",
+      "normal"
+    ],
+    "ingredients": [
+      "Panthenol",
+      "Madecassoside"
+    ],
+    "priceRange": "mid-range",
+    "description": "A barrier-supporting balm that helps soothe and protect irritated skin, ideal for sensitive and dry skin."
+  },
+  {
+    "name": "Dramatically Different Hydrating Jelly",
+    "brand": "Clinique",
+    "category": "moisturizer",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Glycerin"
+    ],
+    "priceRange": "premium",
+    "description": "A water-gel hydrator that delivers moisture without greasiness, ideal for oily and combination skin."
+  },
+  {
+    "name": "Ultra Facial Cream",
+    "brand": "Kiehl's",
+    "category": "moisturizer",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "Squalane",
+      "Glycerin"
+    ],
+    "priceRange": "premium",
+    "description": "A daily moisturizer that provides comfortable hydration, ideal for dry and normal skin."
+  },
+  {
+    "name": "Ultra Repair Cream",
+    "brand": "First Aid Beauty",
+    "category": "moisturizer",
+    "suitableFor": [
+      "dry",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Colloidal Oatmeal",
+      "Shea Butter"
+    ],
+    "priceRange": "premium",
+    "description": "A rich cream that helps relieve dryness and supports comfort, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Aqua Bomb Hydrating Water Gel",
+    "brand": "belif",
+    "category": "moisturizer",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "Glycerin",
+      "Hyaluronic Acid"
+    ],
+    "priceRange": "premium",
+    "description": "A refreshing gel moisturizer that hydrates without feeling heavy, ideal for normal to oily skin."
+  },
+  {
+    "name": "Water Bank Blue Hyaluronic Cream",
+    "brand": "Laneige",
+    "category": "moisturizer",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Glycerin"
+    ],
+    "priceRange": "premium",
+    "description": "A hydrating cream that improves moisture levels and comfort, ideal for normal to dry skin."
+  },
+  {
+    "name": "Hydrating Light Moisturiser",
+    "brand": "Simple",
+    "category": "moisturizer",
+    "suitableFor": [
+      "sensitive",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "Vitamin B5",
+      "Glycerin"
+    ],
+    "priceRange": "budget",
+    "description": "A simple lightweight moisturizer that supports hydration without irritation, ideal for sensitive skin."
+  }
+]

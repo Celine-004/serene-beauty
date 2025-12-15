@@ -1,0 +1,26 @@
+[
+  {
+    "stepType": "cleanser",
+    "instruction": "Apply cleanser to damp skin and gently massage in circular motions. Rinse with lukewarm water."
+  },
+  {
+    "stepType": "toner",
+    "instruction": "Apply toner to clean skin using hands or a cotton pad. Gently press into the skin."
+  },
+  {
+    "stepType": "serum",
+    "instruction": "Apply a small amount of serum and gently pat until absorbed."
+  },
+  {
+    "stepType": "treatment",
+    "instruction": "Apply a thin layer of treatment to targeted areas only."
+  },
+  {
+    "stepType": "moisturizer",
+    "instruction": "Apply moisturizer evenly to lock in hydration."
+  },
+  {
+    "stepType": "sunscreen",
+    "instruction": "Apply sunscreen as the final morning step and reapply if exposed to sunlight."
+  }
+]

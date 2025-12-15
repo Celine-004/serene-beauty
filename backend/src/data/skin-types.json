@@ -1,0 +1,22 @@
+[
+  {
+    "type": "oily",
+    "description": "Oily skin produces more natural oil (sebum), which can cause shine, enlarged pores, and a higher chance of breakouts."
+  },
+  {
+    "type": "dry",
+    "description": "Dry skin lacks sufficient moisture and may feel tight, rough, or flaky."
+  },
+  {
+    "type": "combination",
+    "description": "Combination skin has both oily and dry areas, typically with oiliness in the T-zone."
+  },
+  {
+    "type": "sensitive",
+    "description": "Sensitive skin reacts easily to products or environmental factors."
+  },
+  {
+    "type": "normal",
+    "description": "Normal skin is well-balanced with minimal concerns."
+  }
+]

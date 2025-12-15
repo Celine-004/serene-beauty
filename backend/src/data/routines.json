@@ -1,0 +1,222 @@
+[
+  {
+    "id": "dry_am",
+    "name": "Dry Skin \u2013 Morning Routine",
+    "skinType": "dry",
+    "timeOfDay": "AM",
+    "description": "This routine focuses on hydrating and protecting dry skin throughout the day.",
+    "steps": [
+      {
+        "order": 1,
+        "category": "cleanser"
+      },
+      {
+        "order": 2,
+        "category": "toner"
+      },
+      {
+        "order": 3,
+        "category": "serum"
+      },
+      {
+        "order": 4,
+        "category": "moisturizer"
+      },
+      {
+        "order": 5,
+        "category": "sunscreen"
+      }
+    ]
+  },
+  {
+    "id": "dry_pm",
+    "name": "Dry Skin \u2013 Evening Routine",
+    "skinType": "dry",
+    "timeOfDay": "PM",
+    "description": "An evening routine designed to repair and deeply hydrate dry skin overnight.",
+    "steps": [
+      {
+        "order": 1,
+        "category": "cleanser"
+      },
+      {
+        "order": 2,
+        "category": "toner"
+      },
+      {
+        "order": 3,
+        "category": "serum"
+      },
+      {
+        "order": 4,
+        "category": "moisturizer"
+      }
+    ]
+  },
+  {
+    "id": "oily_am",
+    "name": "Oily Skin \u2013 Morning Routine",
+    "skinType": "oily",
+    "timeOfDay": "AM",
+    "description": "This routine helps control excess oil while keeping the skin balanced.",
+    "steps": [
+      {
+        "order": 1,
+        "category": "cleanser"
+      },
+      {
+        "order": 2,
+        "category": "toner"
+      },
+      {
+        "order": 3,
+        "category": "serum"
+      },
+      {
+        "order": 4,
+        "category": "moisturizer"
+      },
+      {
+        "order": 5,
+        "category": "sunscreen"
+      }
+    ]
+  },
+  {
+    "id": "oily_pm",
+    "name": "Oily Skin \u2013 Evening Routine",
+    "skinType": "oily",
+    "timeOfDay": "PM",
+    "description": "An evening routine focused on cleansing oil buildup and supporting balance.",
+    "steps": [
+      {
+        "order": 1,
+        "category": "cleanser"
+      },
+      {
+        "order": 2,
+        "category": "toner"
+      },
+      {
+        "order": 3,
+        "category": "treatment"
+      },
+      {
+        "order": 4,
+        "category": "moisturizer"
+      }
+    ]
+  },
+  {
+    "id": "combination_am",
+    "name": "Combination Skin \u2013 Morning Routine",
+    "skinType": "combination",
+    "timeOfDay": "AM",
+    "description": "Balances oily and dry areas while protecting the skin during the day.",
+    "steps": [
+      {
+        "order": 1,
+        "category": "cleanser"
+      },
+      {
+        "order": 2,
+        "category": "toner"
+      },
+      {
+        "order": 3,
+        "category": "serum"
+      },
+      {
+        "order": 4,
+        "category": "moisturizer"
+      },
+      {
+        "order": 5,
+        "category": "sunscreen"
+      }
+    ]
+  },
+  {
+    "id": "combination_pm",
+    "name": "Combination Skin \u2013 Evening Routine",
+    "skinType": "combination",
+    "timeOfDay": "PM",
+    "description": "Rebalances the skin after daily exposure to oil and impurities.",
+    "steps": [
+      {
+        "order": 1,
+        "category": "cleanser"
+      },
+      {
+        "order": 2,
+        "category": "toner"
+      },
+      {
+        "order": 3,
+        "category": "treatment"
+      },
+      {
+        "order": 4,
+        "category": "moisturizer"
+      }
+    ]
+  },
+  {
+    "id": "sensitive_daily",
+    "name": "Sensitive Skin \u2013 Daily Routine",
+    "skinType": "sensitive",
+    "timeOfDay": "Daily",
+    "description": "A gentle routine focused on calming and protecting sensitive skin.",
+    "steps": [
+      {
+        "order": 1,
+        "category": "cleanser"
+      },
+      {
+        "order": 2,
+        "category": "toner"
+      },
+      {
+        "order": 3,
+        "category": "serum"
+      },
+      {
+        "order": 4,
+        "category": "moisturizer"
+      },
+      {
+        "order": 5,
+        "category": "sunscreen"
+      }
+    ]
+  },
+  {
+    "id": "normal_daily",
+    "name": "Normal Skin \u2013 Daily Routine",
+    "skinType": "normal",
+    "timeOfDay": "Daily",
+    "description": "A simple routine to maintain healthy, balanced skin.",
+    "steps": [
+      {
+        "order": 1,
+        "category": "cleanser"
+      },
+      {
+        "order": 2,
+        "category": "toner"
+      },
+      {
+        "order": 3,
+        "category": "serum"
+      },
+      {
+        "order": 4,
+        "category": "moisturizer"
+      },
+      {
+        "order": 5,
+        "category": "sunscreen"
+      }
+    ]
+  }
+]

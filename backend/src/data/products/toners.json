@@ -1,0 +1,236 @@
+[
+  {
+    "name": "Glycolic Acid 7% Toning Solution",
+    "brand": "The Ordinary",
+    "category": "toner",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "ingredients": [
+      "Glycolic Acid",
+      "Amino Acids"
+    ],
+    "priceRange": "budget",
+    "description": "An exfoliating toner that improves texture and brightness, ideal for oily and combination skin when used a few nights per week."
+  },
+  {
+    "name": "Pore-Reducing Toner",
+    "brand": "Paula's Choice",
+    "category": "toner",
+    "suitableFor": [
+      "oily",
+      "combination"
+    ],
+    "ingredients": [
+      "Niacinamide",
+      "Antioxidants"
+    ],
+    "priceRange": "premium",
+    "description": "A toner that helps reduce the appearance of pores and shine, ideal for oily and combination skin."
+  },
+  {
+    "name": "Supple Preparation Facial Toner",
+    "brand": "Klairs",
+    "category": "toner",
+    "suitableFor": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Beta-Glucan"
+    ],
+    "priceRange": "mid-range",
+    "description": "A hydrating toner that supports comfort and moisture, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Rosewater Facial Toner",
+    "brand": "Heritage Store",
+    "category": "toner",
+    "suitableFor": [
+      "normal",
+      "dry",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Rose Water"
+    ],
+    "priceRange": "budget",
+    "description": "A simple refreshing toner that helps lightly hydrate, ideal for normal to dry and sensitive skin."
+  },
+  {
+    "name": "Green Tea Fresh Toner",
+    "brand": "Isntree",
+    "category": "toner",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Green Tea Extract",
+      "Centella"
+    ],
+    "priceRange": "mid-range",
+    "description": "A soothing toner that helps balance oil and calm redness, ideal for oily and sensitive skin."
+  },
+  {
+    "name": "Gentle Toning Lotion",
+    "brand": "Avène",
+    "category": "toner",
+    "suitableFor": [
+      "sensitive",
+      "normal",
+      "dry"
+    ],
+    "ingredients": [
+      "Thermal Spring Water",
+      "Silicates"
+    ],
+    "priceRange": "mid-range",
+    "description": "A gentle toner that refreshes and comforts skin, ideal for sensitive and dry skin."
+  },
+  {
+    "name": "Calendula Herbal-Extract Toner",
+    "brand": "Kiehl's",
+    "category": "toner",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "Calendula Extract",
+      "Allantoin"
+    ],
+    "priceRange": "premium",
+    "description": "An alcohol-free toner that helps soothe and refresh, ideal for normal to oily and combination skin."
+  },
+  {
+    "name": "Alcohol-Free Toner",
+    "brand": "Neutrogena",
+    "category": "toner",
+    "suitableFor": [
+      "sensitive",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "Glycerin"
+    ],
+    "priceRange": "budget",
+    "description": "A basic toner that refreshes without dryness, ideal for sensitive and combination skin."
+  },
+  {
+    "name": "Rice Toner",
+    "brand": "I'm From",
+    "category": "toner",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "Rice Extract",
+      "Niacinamide"
+    ],
+    "priceRange": "premium",
+    "description": "A milky toner that supports brightness and hydration, ideal for normal to dry skin."
+  },
+  {
+    "name": "SoonJung pH 5.5 Relief Toner",
+    "brand": "Etude",
+    "category": "toner",
+    "suitableFor": [
+      "sensitive",
+      "dry",
+      "normal"
+    ],
+    "ingredients": [
+      "Panthenol",
+      "Madecassoside"
+    ],
+    "priceRange": "budget",
+    "description": "A calming toner that supports the skin barrier, ideal for sensitive and dry skin."
+  },
+  {
+    "name": "Hydrating Toner",
+    "brand": "CeraVe",
+    "category": "toner",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Ceramides",
+      "Hyaluronic Acid"
+    ],
+    "priceRange": "budget",
+    "description": "A hydration-focused toner that supports the skin barrier, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Witch Hazel Toner",
+    "brand": "Thayers",
+    "category": "toner",
+    "suitableFor": [
+      "oily",
+      "combination"
+    ],
+    "ingredients": [
+      "Witch Hazel",
+      "Aloe Vera"
+    ],
+    "priceRange": "mid-range",
+    "description": "A refreshing toner that helps reduce oiliness, ideal for oily skin (avoid if very sensitive)."
+  },
+  {
+    "name": "Heartleaf 77% Soothing Toner",
+    "brand": "Anua",
+    "category": "toner",
+    "suitableFor": [
+      "sensitive",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "Heartleaf Extract"
+    ],
+    "priceRange": "mid-range",
+    "description": "A soothing toner that helps calm redness and irritation, ideal for sensitive and combination skin."
+  },
+  {
+    "name": "Hatomugi Skin Conditioner",
+    "brand": "Naturie",
+    "category": "toner",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "Coix Seed Extract"
+    ],
+    "priceRange": "budget",
+    "description": "A lightweight watery toner for daily hydration, ideal for normal to oily skin."
+  },
+  {
+    "name": "Moisture Surge Face Spray",
+    "brand": "Clinique",
+    "category": "toner",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Aloe Vera",
+      "Glycerin"
+    ],
+    "priceRange": "premium",
+    "description": "A hydrating mist-toner that refreshes throughout the day, ideal for dry and sensitive skin."
+  }
+]

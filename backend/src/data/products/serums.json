@@ -1,0 +1,237 @@
+[
+  {
+    "name": "Niacinamide 10% + Zinc 1%",
+    "brand": "The Ordinary",
+    "category": "serum",
+    "suitableFor": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "ingredients": [
+      "Niacinamide",
+      "Zinc PCA"
+    ],
+    "priceRange": "budget",
+    "description": "A serum that helps reduce shine and improve the look of pores, ideal for oily and combination skin."
+  },
+  {
+    "name": "Hyaluronic Acid 2% + B5",
+    "brand": "The Ordinary",
+    "category": "serum",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Vitamin B5"
+    ],
+    "priceRange": "budget",
+    "description": "A hydrating serum that helps skin retain moisture, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Caffeine Solution 5% + EGCG",
+    "brand": "The Ordinary",
+    "category": "serum",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Caffeine",
+      "EGCG"
+    ],
+    "priceRange": "budget",
+    "description": "A lightweight eye serum that helps reduce the look of puffiness, ideal for all skin types including sensitive."
+  },
+  {
+    "name": "Hyalu B5 Serum",
+    "brand": "La Roche-Posay",
+    "category": "serum",
+    "suitableFor": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Vitamin B5"
+    ],
+    "priceRange": "mid-range",
+    "description": "A hydrating serum that supports barrier comfort, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Pure Vitamin C10 Serum",
+    "brand": "La Roche-Posay",
+    "category": "serum",
+    "suitableFor": [
+      "normal",
+      "dry",
+      "combination"
+    ],
+    "ingredients": [
+      "Vitamin C",
+      "Salicylic Acid"
+    ],
+    "priceRange": "mid-range",
+    "description": "A brightening serum that helps improve uneven tone, ideal for normal and combination skin."
+  },
+  {
+    "name": "10% Azelaic Acid Booster",
+    "brand": "Paula's Choice",
+    "category": "serum",
+    "suitableFor": [
+      "sensitive",
+      "combination",
+      "normal"
+    ],
+    "ingredients": [
+      "Azelaic Acid"
+    ],
+    "priceRange": "premium",
+    "description": "A booster that helps reduce redness and uneven tone, ideal for sensitive and combination skin."
+  },
+  {
+    "name": "2% BHA Liquid Exfoliant",
+    "brand": "Paula's Choice",
+    "category": "serum",
+    "suitableFor": [
+      "oily",
+      "combination"
+    ],
+    "ingredients": [
+      "Salicylic Acid"
+    ],
+    "priceRange": "premium",
+    "description": "A leave-on exfoliant that helps unclog pores and reduce blackheads, ideal for oily and combination skin."
+  },
+  {
+    "name": "Advanced Snail 96 Mucin Essence",
+    "brand": "COSRX",
+    "category": "serum",
+    "suitableFor": [
+      "sensitive",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "Snail Mucin"
+    ],
+    "priceRange": "mid-range",
+    "description": "A hydrating essence-serum that supports repair without heaviness, ideal for sensitive and combination skin."
+  },
+  {
+    "name": "Hyaluronic Acid Serum",
+    "brand": "The INKEY List",
+    "category": "serum",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Hyaluronic Acid"
+    ],
+    "priceRange": "budget",
+    "description": "A simple hydration serum that helps skin feel smoother, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Retinol Serum",
+    "brand": "The INKEY List",
+    "category": "serum",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "Retinol"
+    ],
+    "priceRange": "budget",
+    "description": "A retinol serum that helps improve texture over time, ideal for normal to oily skin when introduced gradually."
+  },
+  {
+    "name": "Glow Serum",
+    "brand": "Beauty of Joseon",
+    "category": "serum",
+    "suitableFor": [
+      "combination",
+      "oily",
+      "normal"
+    ],
+    "ingredients": [
+      "Propolis",
+      "Niacinamide"
+    ],
+    "priceRange": "mid-range",
+    "description": "A glow-boosting serum that supports oil balance, ideal for oily and combination skin."
+  },
+  {
+    "name": "Calm + Restore Triple Oat Serum",
+    "brand": "Aveeno",
+    "category": "serum",
+    "suitableFor": [
+      "sensitive",
+      "dry",
+      "normal"
+    ],
+    "ingredients": [
+      "Oat Extract",
+      "Glycerin"
+    ],
+    "priceRange": "budget",
+    "description": "A soothing serum that helps reduce dryness discomfort, ideal for sensitive and dry skin."
+  },
+  {
+    "name": "Hydrating B5 Gel",
+    "brand": "SkinCeuticals",
+    "category": "serum",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Vitamin B5"
+    ],
+    "priceRange": "premium",
+    "description": "A lightweight hydration gel that supports moisture levels, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Midnight Recovery Concentrate",
+    "brand": "Kiehl's",
+    "category": "serum",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Squalane",
+      "Lavender Oil"
+    ],
+    "priceRange": "premium",
+    "description": "A night oil-serum that supports softness and comfort, ideal for dry skin (avoid if very fragrance-sensitive)."
+  },
+  {
+    "name": "Mineral 89 Hyaluronic Acid Booster",
+    "brand": "Vichy",
+    "category": "serum",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "combination",
+      "sensitive"
+    ],
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Mineral-Rich Water"
+    ],
+    "priceRange": "mid-range",
+    "description": "A daily hydrating booster that helps reduce tightness, ideal for dry and sensitive skin."
+  }
+]

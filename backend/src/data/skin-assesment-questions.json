@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "question": "How does your skin usually feel a few hours after cleansing, without applying any products?",
+    "options": [
+      {
+        "text": "Very shiny, especially on the forehead and nose",
+        "result": "oily"
+      },
+      {
+        "text": "Tight or uncomfortable, sometimes flaky",
+        "result": "dry"
+      },
+      {
+        "text": "Shiny in some areas and dry in others",
+        "result": "combination"
+      },
+      {
+        "text": "Feels uncomfortable, reactive, or easily irritated",
+        "result": "sensitive"
+      },
+      {
+        "text": "Comfortable and balanced",
+        "result": "normal"
+      }
+    ]
+  }
+]

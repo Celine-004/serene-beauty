@@ -1,0 +1,240 @@
+[
+  {
+    "name": "Anthelios Invisible Fluid SPF 50+",
+    "brand": "La Roche-Posay",
+    "category": "sunscreen",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily",
+      "sensitive"
+    ],
+    "ingredients": [
+      "UV Filters",
+      "Antioxidants"
+    ],
+    "priceRange": "mid-range",
+    "description": "A lightweight high-protection sunscreen with a natural finish, ideal for normal to oily and sensitive skin."
+  },
+  {
+    "name": "Ultra Sheer Dry-Touch SPF 55",
+    "brand": "Neutrogena",
+    "category": "sunscreen",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "UV Filters"
+    ],
+    "priceRange": "budget",
+    "description": "A sunscreen with a dry-touch finish that helps reduce shine, ideal for oily and combination skin."
+  },
+  {
+    "name": "AM Facial Moisturizing Lotion SPF 30",
+    "brand": "CeraVe",
+    "category": "sunscreen",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "sensitive"
+    ],
+    "ingredients": [
+      "UV Filters",
+      "Ceramides",
+      "Niacinamide"
+    ],
+    "priceRange": "budget",
+    "description": "A moisturizing sunscreen that supports the skin barrier, ideal for dry and sensitive skin."
+  },
+  {
+    "name": "Mineral Sunscreen SPF 50",
+    "brand": "CeraVe",
+    "category": "sunscreen",
+    "suitableFor": [
+      "sensitive",
+      "dry",
+      "normal"
+    ],
+    "ingredients": [
+      "Zinc Oxide",
+      "Titanium Dioxide"
+    ],
+    "priceRange": "budget",
+    "description": "A mineral sunscreen designed to be gentle and protective, ideal for sensitive and dry skin."
+  },
+  {
+    "name": "UV Aqua Rich Watery Essence SPF 50+",
+    "brand": "Biore",
+    "category": "sunscreen",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "UV Filters"
+    ],
+    "priceRange": "mid-range",
+    "description": "A watery sunscreen that feels light and non-greasy, ideal for oily and combination skin."
+  },
+  {
+    "name": "UV Clear Broad-Spectrum SPF 46",
+    "brand": "EltaMD",
+    "category": "sunscreen",
+    "suitableFor": [
+      "sensitive",
+      "oily",
+      "combination"
+    ],
+    "ingredients": [
+      "Zinc Oxide",
+      "Niacinamide"
+    ],
+    "priceRange": "premium",
+    "description": "A gentle sunscreen that supports calm skin while protecting, ideal for sensitive and acne-prone skin."
+  },
+  {
+    "name": "Unseen Sunscreen SPF 40",
+    "brand": "Supergoop!",
+    "category": "sunscreen",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "UV Filters"
+    ],
+    "priceRange": "premium",
+    "description": "A clear, primer-like sunscreen with a smooth finish, ideal for oily and combination skin."
+  },
+  {
+    "name": "Capital Soleil UV-Age Daily SPF 50+",
+    "brand": "Vichy",
+    "category": "sunscreen",
+    "suitableFor": [
+      "normal",
+      "dry",
+      "combination"
+    ],
+    "ingredients": [
+      "UV Filters",
+      "Peptides"
+    ],
+    "priceRange": "mid-range",
+    "description": "A daily sunscreen designed for high protection with a skincare feel, ideal for normal to dry skin."
+  },
+  {
+    "name": "Sheer Mineral Sunscreen SPF 50",
+    "brand": "Cetaphil",
+    "category": "sunscreen",
+    "suitableFor": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "ingredients": [
+      "Zinc Oxide",
+      "Titanium Dioxide"
+    ],
+    "priceRange": "mid-range",
+    "description": "A mineral sunscreen that feels comfortable and gentle, ideal for sensitive and dry skin."
+  },
+  {
+    "name": "Everyday Sunscreen SPF 50",
+    "brand": "Bondi Sands",
+    "category": "sunscreen",
+    "suitableFor": [
+      "normal",
+      "dry",
+      "combination"
+    ],
+    "ingredients": [
+      "UV Filters"
+    ],
+    "priceRange": "budget",
+    "description": "A high-protection sunscreen suitable for daily use, ideal for normal to dry skin."
+  },
+  {
+    "name": "Aloe Soothing Sun Cream SPF 50+",
+    "brand": "COSRX",
+    "category": "sunscreen",
+    "suitableFor": [
+      "sensitive",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "UV Filters",
+      "Aloe Vera"
+    ],
+    "priceRange": "mid-range",
+    "description": "A soothing sunscreen that feels comfortable on skin, ideal for sensitive and combination skin."
+  },
+  {
+    "name": "Sun Protection Face Lotion SPF 50",
+    "brand": "Eucerin",
+    "category": "sunscreen",
+    "suitableFor": [
+      "sensitive",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "UV Filters",
+      "Antioxidants"
+    ],
+    "priceRange": "mid-range",
+    "description": "A daily sunscreen that supports protection with a comfortable finish, ideal for sensitive and normal skin."
+  },
+  {
+    "name": "Water Bank Sunscreen SPF 50",
+    "brand": "Laneige",
+    "category": "sunscreen",
+    "suitableFor": [
+      "dry",
+      "normal",
+      "combination"
+    ],
+    "ingredients": [
+      "UV Filters",
+      "Glycerin"
+    ],
+    "priceRange": "premium",
+    "description": "A hydrating sunscreen with a skincare-like feel, ideal for dry and normal skin."
+  },
+  {
+    "name": "Mineral Sunscreen Lotion SPF 50",
+    "brand": "Avène",
+    "category": "sunscreen",
+    "suitableFor": [
+      "sensitive",
+      "dry",
+      "normal"
+    ],
+    "ingredients": [
+      "Mineral Filters",
+      "Thermal Spring Water"
+    ],
+    "priceRange": "premium",
+    "description": "A mineral sunscreen designed for sensitive skin comfort, ideal for sensitive and dry skin."
+  },
+  {
+    "name": "Resting Beach Face SPF 30",
+    "brand": "Everyday Humans",
+    "category": "sunscreen",
+    "suitableFor": [
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "ingredients": [
+      "UV Filters",
+      "Antioxidants"
+    ],
+    "priceRange": "premium",
+    "description": "A lightweight daily sunscreen that layers well under makeup, ideal for normal to oily skin."
+  }
+]
