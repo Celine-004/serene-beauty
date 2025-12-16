@@ -1,236 +1,126 @@
-[
-  {
-    "name": "Glycolic Acid 7% Toning Solution",
-    "brand": "The Ordinary",
-    "category": "toner",
-    "suitableFor": [
-      "oily",
-      "combination",
-      "normal"
-    ],
-    "ingredients": [
-      "Glycolic Acid",
-      "Amino Acids"
-    ],
-    "priceRange": "budget",
-    "description": "An exfoliating toner that improves texture and brightness, ideal for oily and combination skin when used a few nights per week."
+{
+    "metadata": {
+    "author": "[Antonios KARAFENTZOS]",
+    "date": "[14.12.2025]",
+    "version": "1.0"
   },
+  "products":[
   {
-    "name": "Pore-Reducing Toner",
-    "brand": "Paula's Choice",
+    "id": "brand_product",
+    "name": "Skin Balancing Pore-Reducing Toner",
+    "brand": "Paula’s Choice",
     "category": "toner",
-    "suitableFor": [
-      "oily",
-      "combination"
-    ],
-    "ingredients": [
-      "Niacinamide",
-      "Antioxidants"
-    ],
+    "suitableFor": ["oily", "combination"],
+    "targetConcerns": [],
     "priceRange": "premium",
-    "description": "A toner that helps reduce the appearance of pores and shine, ideal for oily and combination skin."
+    "description": "A lightweight toner that helps refine pores and balance excess oil.",
+    "keyIngredients": ["Niacinamide", "Antioxidants"],
+    "url": "https://www.paulaschoice.com/skin-balancing-pore-reducing-toner/135.html",
+    "allIngredients": "Water, Glycerin, Niacinamide, Sodium PCA, Panthenol, Allantoin, Phenoxyethanol"
   },
   {
-    "name": "Supple Preparation Facial Toner",
-    "brand": "Klairs",
+    "id": "brand_product",
+    "name": "Enriched Calming Toner",
+    "brand": "Paula’s Choice",
     "category": "toner",
-    "suitableFor": [
-      "dry",
-      "sensitive",
-      "normal"
-    ],
-    "ingredients": [
-      "Hyaluronic Acid",
-      "Beta-Glucan"
-    ],
-    "priceRange": "mid-range",
-    "description": "A hydrating toner that supports comfort and moisture, ideal for dry and sensitive skin."
-  },
-  {
-    "name": "Rosewater Facial Toner",
-    "brand": "Heritage Store",
-    "category": "toner",
-    "suitableFor": [
-      "normal",
-      "dry",
-      "sensitive"
-    ],
-    "ingredients": [
-      "Rose Water"
-    ],
-    "priceRange": "budget",
-    "description": "A simple refreshing toner that helps lightly hydrate, ideal for normal to dry and sensitive skin."
-  },
-  {
-    "name": "Green Tea Fresh Toner",
-    "brand": "Isntree",
-    "category": "toner",
-    "suitableFor": [
-      "oily",
-      "combination",
-      "sensitive"
-    ],
-    "ingredients": [
-      "Green Tea Extract",
-      "Centella"
-    ],
-    "priceRange": "mid-range",
-    "description": "A soothing toner that helps balance oil and calm redness, ideal for oily and sensitive skin."
-  },
-  {
-    "name": "Gentle Toning Lotion",
-    "brand": "Avène",
-    "category": "toner",
-    "suitableFor": [
-      "sensitive",
-      "normal",
-      "dry"
-    ],
-    "ingredients": [
-      "Thermal Spring Water",
-      "Silicates"
-    ],
-    "priceRange": "mid-range",
-    "description": "A gentle toner that refreshes and comforts skin, ideal for sensitive and dry skin."
-  },
-  {
-    "name": "Calendula Herbal-Extract Toner",
-    "brand": "Kiehl's",
-    "category": "toner",
-    "suitableFor": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "ingredients": [
-      "Calendula Extract",
-      "Allantoin"
-    ],
+    "suitableFor": ["dry", "sensitive"],
+    "targetConcerns": [],
     "priceRange": "premium",
-    "description": "An alcohol-free toner that helps soothe and refresh, ideal for normal to oily and combination skin."
+    "description": "A soothing toner designed to calm and hydrate sensitive, dry skin.",
+    "keyIngredients": ["Ceramides", "Glycerin"],
+    "url": "https://www.paulaschoice.com/enriched-calming-toner/125.html",
+    "allIngredients": "Water, Glycerin, Ceramide NP, Panthenol, Allantoin, Sodium PCA, Phenoxyethanol"
   },
   {
-    "name": "Alcohol-Free Toner",
-    "brand": "Neutrogena",
-    "category": "toner",
-    "suitableFor": [
-      "sensitive",
-      "normal",
-      "combination"
-    ],
-    "ingredients": [
-      "Glycerin"
-    ],
-    "priceRange": "budget",
-    "description": "A basic toner that refreshes without dryness, ideal for sensitive and combination skin."
-  },
-  {
-    "name": "Rice Toner",
-    "brand": "I'm From",
-    "category": "toner",
-    "suitableFor": [
-      "dry",
-      "normal",
-      "combination"
-    ],
-    "ingredients": [
-      "Rice Extract",
-      "Niacinamide"
-    ],
-    "priceRange": "premium",
-    "description": "A milky toner that supports brightness and hydration, ideal for normal to dry skin."
-  },
-  {
-    "name": "SoonJung pH 5.5 Relief Toner",
-    "brand": "Etude",
-    "category": "toner",
-    "suitableFor": [
-      "sensitive",
-      "dry",
-      "normal"
-    ],
-    "ingredients": [
-      "Panthenol",
-      "Madecassoside"
-    ],
-    "priceRange": "budget",
-    "description": "A calming toner that supports the skin barrier, ideal for sensitive and dry skin."
-  },
-  {
-    "name": "Hydrating Toner",
-    "brand": "CeraVe",
-    "category": "toner",
-    "suitableFor": [
-      "dry",
-      "normal",
-      "sensitive"
-    ],
-    "ingredients": [
-      "Ceramides",
-      "Hyaluronic Acid"
-    ],
-    "priceRange": "budget",
-    "description": "A hydration-focused toner that supports the skin barrier, ideal for dry and sensitive skin."
-  },
-  {
-    "name": "Witch Hazel Toner",
+    "id": "brand_product",
+    "name": "Alcohol-Free Witch Hazel Toner",
     "brand": "Thayers",
     "category": "toner",
-    "suitableFor": [
-      "oily",
-      "combination"
-    ],
-    "ingredients": [
-      "Witch Hazel",
-      "Aloe Vera"
-    ],
-    "priceRange": "mid-range",
-    "description": "A refreshing toner that helps reduce oiliness, ideal for oily skin (avoid if very sensitive)."
-  },
-  {
-    "name": "Heartleaf 77% Soothing Toner",
-    "brand": "Anua",
-    "category": "toner",
-    "suitableFor": [
-      "sensitive",
-      "combination",
-      "oily"
-    ],
-    "ingredients": [
-      "Heartleaf Extract"
-    ],
-    "priceRange": "mid-range",
-    "description": "A soothing toner that helps calm redness and irritation, ideal for sensitive and combination skin."
-  },
-  {
-    "name": "Hatomugi Skin Conditioner",
-    "brand": "Naturie",
-    "category": "toner",
-    "suitableFor": [
-      "normal",
-      "combination",
-      "oily"
-    ],
-    "ingredients": [
-      "Coix Seed Extract"
-    ],
+    "suitableFor": ["normal", "combination", "sensitive"],
+    "targetConcerns": [],
     "priceRange": "budget",
-    "description": "A lightweight watery toner for daily hydration, ideal for normal to oily skin."
+    "description": "A gentle, alcohol-free toner that refreshes and soothes the skin.",
+    "keyIngredients": ["Witch Hazel", "Aloe Vera"],
+    "url": "https://www.thayers.com/Alcohol-Free-Witch-Hazel-Toner/THY0006.html",
+    "allIngredients": "Water, Hamamelis Virginiana Water, Aloe Barbadensis Leaf Juice, Glycerin, Phenoxyethanol"
   },
   {
-    "name": "Moisture Surge Face Spray",
-    "brand": "Clinique",
+    "id": "brand_product",
+    "name": "Calendula Herbal Extract Toner",
+    "brand": "Kiehl’s",
     "category": "toner",
-    "suitableFor": [
-      "dry",
-      "normal",
-      "sensitive"
-    ],
-    "ingredients": [
-      "Aloe Vera",
-      "Glycerin"
-    ],
+    "suitableFor": ["normal", "oily"],
+    "targetConcerns": [],
     "priceRange": "premium",
-    "description": "A hydrating mist-toner that refreshes throughout the day, ideal for dry and sensitive skin."
+    "description": "A calming toner infused with calendula to help soothe and refresh skin.",
+    "keyIngredients": ["Calendula Extract", "Allantoin"],
+    "url": "https://www.kiehls.com/skincare/toners/calendula-herbal-extract-toner",
+    "allIngredients": "Water, Calendula Officinalis Flower Extract, Allantoin, Glycerin, Phenoxyethanol"
+  },
+  {
+    "id": "brand_product",
+    "name": "AHA/BHA Clarifying Treatment Toner",
+    "brand": "COSRX",
+    "category": "toner",
+    "suitableFor": ["oily", "acne-prone"],
+    "targetConcerns": [],
+    "priceRange": "mid-range",
+    "description": "An exfoliating toner that helps clear pores and improve skin texture.",
+    "keyIngredients": ["AHA", "BHA"],
+    "url": "https://www.cosrx.com/products/aha-bha-clarifying-treatment-toner",
+    "allIngredients": "Water, Salix Alba Bark Water, Glycolic Acid, Betaine Salicylate, Panthenol"
+  },
+  {
+    "id": "brand_product",
+    "name": "Serozinc Toner",
+    "brand": "La Roche-Posay",
+    "category": "toner",
+    "suitableFor": ["oily", "sensitive"],
+    "targetConcerns": [],
+    "priceRange": "mid-range",
+    "description": "A refreshing mist toner that helps reduce oiliness and soothe skin.",
+    "keyIngredients": ["Zinc Sulfate", "Thermal Spring Water"],
+    "url": "https://www.laroche-posay.com/en-int/serozinc/serozinc",
+    "allIngredients": "Aqua / Water, Zinc Sulfate, Sodium Chloride"
+  },
+  {
+    "id": "brand_product",
+    "name": "Cream Skin Refiner",
+    "brand": "Laneige",
+    "category": "toner",
+    "suitableFor": ["dry", "normal"],
+    "targetConcerns": [],
+    "priceRange": "premium",
+    "description": "A nourishing toner that combines the hydration of a cream with the freshness of a toner.",
+    "keyIngredients": ["White Leaf Tea Extract", "Glycerin"],
+    "url": "https://www.laneige.com/int/en/skincare/cream-skin-refiner.html",
+    "allIngredients": "Water, Glycerin, Camellia Sinensis Leaf Extract, Meadowfoam Seed Oil, Phenoxyethanol"
+  },
+  {
+    "id": "brand_product",
+    "name": "Soothing Facial Toner",
+    "brand": "Simple",
+    "category": "toner",
+    "suitableFor": ["sensitive", "dry"],
+    "targetConcerns": [],
+    "priceRange": "budget",
+    "description": "A gentle toner formulated to soothe and hydrate sensitive skin.",
+    "keyIngredients": ["Chamomile Extract", "Allantoin"],
+    "url": "https://www.simpleskincare.com/uk/products/toners/soothing-facial-toner.html",
+    "allIngredients": "Water, Chamomilla Recutita Flower Extract, Allantoin, Glycerin, Phenoxyethanol"
+  },
+  {
+    "id": "brand_product",
+    "name": "Aloe BHA Skin Toner",
+    "brand": "Benton",
+    "category": "toner",
+    "suitableFor": ["oily", "acne-prone"],
+    "targetConcerns": [],
+    "priceRange": "mid-range",
+    "description": "A gentle exfoliating toner that helps clarify skin while soothing irritation.",
+    "keyIngredients": ["Aloe Vera", "BHA"],
+    "url": "https://bentoncosmetics.com/product/aloe-bha-skin-toner/47/",
+    "allIngredients": "Aloe Barbadensis Leaf Water, Salicylic Acid, Snail Secretion Filtrate, Betaine, Panthenol"
   }
 ]
+}

@@ -1,4 +1,10 @@
-[
+{
+  "metadata": {
+    "author": "[Antonios KARAFENTZOS]",
+    "date": "[14.12.2025]",
+    "version": "1.0"
+  },
+  "routines":[
   {
     "id": "dry_am",
     "name": "Dry Skin \u2013 Morning Routine",
@@ -220,3 +226,4 @@
     ]
   }
 ]
+}

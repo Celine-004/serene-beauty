@@ -1,6 +1,13 @@
-[
+{
+"metadata": {
+    "author": "[Antonios KARAFENTZOS]",
+    "date": "[14.12.2025]",
+    "version": "1.0"
+  },
+"concerns":[
   {
-    "concern": "acne",
+    "id": "acne",
+    "name": "Acne",
     "description": "A condition where pores become clogged, leading to breakouts.",
     "commonFor": [
       "oily",
@@ -8,7 +15,8 @@
     ]
   },
   {
-    "concern": "dryness",
+    "id": "dryness",
+    "name": "Dryness",
     "description": "Lack of moisture that causes tightness and flaking.",
     "commonFor": [
       "dry",
@@ -16,21 +24,24 @@
     ]
   },
   {
-    "concern": "oiliness",
+    "id": "oiliness",
+    "name": "Oiliness",
     "description": "Excess oil production that causes shine.",
     "commonFor": [
       "oily"
     ]
   },
   {
-    "concern": "sensitivity",
+    "id": "sensitivity",
+    "name": "Sensitivity",
     "description": "Skin that reacts easily to products or environment.",
     "commonFor": [
       "sensitive"
     ]
   },
   {
-    "concern": "redness",
+    "id": "redness",
+    "name": "Redness",
     "description": "Visible redness caused by irritation or sensitivity.",
     "commonFor": [
       "sensitive",
@@ -38,7 +49,8 @@
     ]
   },
   {
-    "concern": "uneven_texture",
+    "id": "uneven_texture",
+    "name": "Uneven Texture",
     "description": "Rough or bumpy skin surface.",
     "commonFor": [
       "oily",
@@ -47,7 +59,8 @@
     ]
   },
   {
-    "concern": "dullness",
+    "id": "dullness",
+    "name": "Dullness",
     "description": "Lack of radiance or glow.",
     "commonFor": [
       "dry",
@@ -56,7 +69,8 @@
     ]
   },
   {
-    "concern": "large_pores",
+    "id": "large_pores",
+    "name": "Large Pores",
     "description": "Visible pores often related to oil production.",
     "commonFor": [
       "oily",
@@ -64,7 +78,8 @@
     ]
   },
   {
-    "concern": "fine_lines",
+    "id": "fine_lines",
+    "name": "Fine Lines",
     "description": "Small lines caused by dehydration or aging.",
     "commonFor": [
       "dry",
@@ -72,7 +87,8 @@
     ]
   },
   {
-    "concern": "dark_spots",
+    "id": "dark_spots",
+    "name": "Dark Spots",
     "description": "Pigmented areas from sun exposure or acne.",
     "commonFor": [
       "normal",
@@ -81,3 +97,4 @@
     ]
   }
 ]
+}

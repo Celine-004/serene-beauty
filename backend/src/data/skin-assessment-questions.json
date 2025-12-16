@@ -1,0 +1,112 @@
+{
+"metadata": {
+    "author": "[Antonios KARAFENTZOS]",
+    "date": "[14.2.2025]",
+    "version": "1.0"
+  },
+"quiz": {
+    "title": "Find Your Skin Type",
+    "description": "Answer these questions to discover your skin type",
+    "questions": [
+      {
+        "id": 1,
+        "question": "How does your skin usually feel a few hours after cleansing, without applying any products?",
+        "options": [
+          { "text": "Very shiny, especially on the forehead and nose", "skinType": "oily" },
+          { "text": "Tight or uncomfortable, sometimes flaky", "skinType": "dry" },
+          { "text": "Shiny in some areas and dry in others", "skinType": "combination" },
+          { "text": "Easily irritated or red", "skinType": "sensitive" },
+          { "text": "Comfortable and balanced", "skinType": "normal" }
+        ]
+      },
+      {
+        "id": 2,
+        "question": "How often does your skin feel oily throughout the day?",
+        "options": [
+          { "text": "Almost all day", "skinType": "oily" },
+          { "text": "Rarely, it feels dry instead", "skinType": "dry" },
+          { "text": "Only in certain areas (T-zone)", "skinType": "combination" },
+          { "text": "It depends on products, but irritation is more noticeable", "skinType": "sensitive" },
+          { "text": "Occasionally, but not excessively", "skinType": "normal" }
+        ]
+      },
+      {
+        "id": 3,
+        "question": "How does your skin usually react to new skincare products?",
+        "options": [
+          { "text": "I rarely have reactions", "skinType": "oily" },
+          { "text": "It sometimes feels dry or tight", "skinType": "dry" },
+          { "text": "Some areas react, others don't", "skinType": "combination" },
+          { "text": "It often becomes red, itchy, or irritated", "skinType": "sensitive" },
+          { "text": "It usually adapts without issues", "skinType": "normal" }
+        ]
+      },
+      {
+        "id": 4,
+        "question": "How visible are your pores, especially around the nose and cheeks?",
+        "options": [
+          { "text": "Very visible and often clogged", "skinType": "oily" },
+          { "text": "Hardly visible", "skinType": "dry" },
+          { "text": "Visible mainly in the T-zone", "skinType": "combination" },
+          { "text": "Not very visible, but skin feels reactive", "skinType": "sensitive" },
+          { "text": "Moderately visible", "skinType": "normal" }
+        ]
+      },
+      {
+        "id": 5,
+        "question": "How does your skin feel at the end of the day?",
+        "options": [
+          { "text": "Oily and shiny", "skinType": "oily" },
+          { "text": "Dry or rough", "skinType": "dry" },
+          { "text": "Oily in some areas, dry in others", "skinType": "combination" },
+          { "text": "Irritated or uncomfortable", "skinType": "sensitive" },
+          { "text": "Normal and balanced", "skinType": "normal" }
+        ]
+      },
+      {
+        "id": 6,
+        "question": "How does your skin usually behave in cold or dry weather?",
+        "options": [
+          { "text": "Still oily", "skinType": "oily" },
+          { "text": "Becomes very dry and tight", "skinType": "dry" },
+          { "text": "Dry in some areas, oily in others", "skinType": "combination" },
+          { "text": "Easily irritated and red", "skinType": "sensitive" },
+          { "text": "Slightly drier, but manageable", "skinType": "normal" }
+        ]
+      },
+      {
+        "id": 7,
+        "question": "Which statement best describes your skin overall?",
+        "options": [
+          { "text": "Prone to excess oil and breakouts", "skinType": "oily" },
+          { "text": "Often feels dry and needs rich products", "skinType": "dry" },
+          { "text": "Difficult to balance due to mixed areas", "skinType": "combination" },
+          { "text": "Reacts easily and needs gentle care", "skinType": "sensitive" },
+          { "text": "Feels mostly balanced year-round", "skinType": "normal" }
+        ]
+      }
+    ],
+    "results": {
+      "oily": {
+        "title": "Oily Skin",
+        "message": "Your skin produces more natural oil (sebum), which can cause shine, enlarged pores, and a higher chance of breakouts. Focus on oil-control products and lightweight, non-comedogenic moisturizers."
+      },
+      "dry": {
+        "title": "Dry Skin",
+        "message": "Your skin lacks sufficient moisture and may feel tight, rough, or flaky. Look for rich moisturizers and gentle, hydrating cleansers."
+      },
+      "combination": {
+        "title": "Combination Skin",
+        "message": "Your skin has both oily and dry areas, typically with oiliness in the T-zone. Consider using different products for different zones."
+      },
+      "sensitive": {
+        "title": "Sensitive Skin",
+        "message": "Your skin reacts easily to products or environmental factors. Choose fragrance-free, gentle formulations and patch test new products."
+      },
+      "normal": {
+        "title": "Normal Skin",
+        "message": "Your skin is well-balanced with minimal concerns. Focus on maintaining this healthy state with a consistent routine."
+      }
+    }
+  }
+}
