@@ -2,6 +2,9 @@ import express, { Request, Response } from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
 import authRoutes from './routes/authRoutes'
+import quizRoutes from './routes/quizRoutes'
+import routineRoutes from './routes/routineRoutes'
+import productRoutes from './routes/productRoutes'
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -18,6 +21,9 @@ mongoose.connect(MONGODB_URI)
 
 // Routes
 app.use('/api/auth', authRoutes)
+app.use('/api/quiz', quizRoutes)
+app.use('/api/routines', routineRoutes)
+app.use('/api/products', productRoutes)
 
 // Test route
 app.get('/', (req: Request, res: Response) => {
