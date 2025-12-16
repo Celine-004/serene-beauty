@@ -1,205 +1,349 @@
 {
-    "metadata": {
+  "metadata": {
     "author": "[Antonios KARAFENTZOS]",
-    "date": "[14.12.2025]",
-    "version": "1.0"
+    "date": "[16.12.2025]",
+    "version": "3.0"
   },
-  "products":[
- {
-  "id": "brand_product",
-  "name": "Foaming Facial Cleanser",
-  "brand": "CeraVe",
-  "category": "cleanser",
-  "suitableFor": ["oily", "combination", "normal"],
-  "targetConcerns": [],
-  "priceRange": "budget",
-  "description": "A gentle foaming cleanser that removes excess oil without disrupting the skin barrier.",
-  "keyIngredients": ["Ceramides", "Niacinamide", "Hyaluronic Acid"],
-  "url": "https://www.cerave.com/skincare/cleansers/foaming-facial-cleanser",
-  "allIngredients": "Aqua / Water, Glycerin, Cocamidopropyl Hydroxysultaine, Niacinamide, Sodium Lauroyl Sarcosinate, PEG-150 Pentaerythrityl Tetrastearate, Ceramide NP, Ceramide AP, Ceramide EOP, Carbomer, Sodium Chloride, Cholesterol, Phenoxyethanol, Sodium Benzoate, Disodium EDTA, Phytosphingosine"
-},
-{
-  "id": "brand_product",
-  "name": "Hydrating Facial Cleanser",
-  "brand": "CeraVe",
-  "category": "cleanser",
-  "suitableFor": ["dry", "sensitive", "normal"],
-  "targetConcerns": [],
-  "priceRange": "budget",
-  "description": "A non-foaming cleanser that gently cleanses while maintaining moisture.",
-  "keyIngredients ": ["Ceramides", "Hyaluronic Acid", "Glycerin"],
-  "url": "https://www.cerave.com/skincare/cleansers/hydrating-facial-cleanser",
-  "allIngredients": "Aqua / Water, Glycerin, Cetearyl Alcohol, PEG-40 Stearate, Stearyl Alcohol, Cetyl Alcohol, Phenoxyethanol, Polysorbate 20, Sodium Lauroyl Lactylate, Carbomer, Ceramide NP, Ceramide AP, Ceramide EOP, Cholesterol, Sodium Hyaluronate, Disodium EDTA, Phytosphingosine"
-},
-{
-  "id": "brand_product",
-  "name": "Toleriane Purifying Foaming Cleanser",
-  "brand": "La Roche-Posay",
-  "category": "cleanser",
-  "suitableFor": ["oily", "combination", "sensitive"],
-  "targetConcerns": [],
-  "priceRange": "mid-range",
-  "description": "A gentle foaming cleanser that removes impurities while respecting sensitive skin.",
-  "keyIngredients ": ["Niacinamide", "Ceramide-3", "Thermal Spring Water"],
-  "url": "https://www.laroche-posay.com/en-int/toleriane/toleriane-purifying-foaming-cleanser",
-  "allIngredients": "Aqua / Water, Sodium Laureth Sulfate, PEG-8, Cocamidopropyl Betaine, Niacinamide, Sodium Chloride, Sodium Hydroxide, Ceramide NP, PEG-100 Stearate, Disodium EDTA"
-},
-{
-  "id": "brand_product",
-  "name": "Toleriane Hydrating Gentle Cleanser",
-  "brand": "La Roche-Posay",
-  "category": "cleanser",
-  "suitableFor": ["dry", "sensitive", "normal"],
-  "targetConcerns": [],
-  "priceRange": "mid-range",
-  "description": "A creamy cleanser that gently removes impurities without drying the skin.",
-  "keyIngredients ": ["Ceramide-3", "Niacinamide", "Glycerin"],
-  "url": "https://www.laroche-posay.com/en-int/toleriane/toleriane-hydrating-gentle-cleanser",
-  "allIngredients": "Aqua / Water, Glycerin, Propanediol, Sodium Cocoyl Glycinate, PEG-120 Methyl Glucose Dioleate, Niacinamide, Ceramide NP, Sodium Chloride, Caprylyl Glycol"
-},
-{
-  "id": "brand_product",
-  "name": "Gentle Skin Cleanser",
-  "brand": "Cetaphil",
-  "category": "cleanser",
-  "suitableFor": ["dry", "sensitive", "normal"],
-  "targetConcerns": [],
-  "priceRange": "budget",
-  "description": "A mild cleanser designed to cleanse sensitive skin without irritation.",
-  "keyIngredients ": ["Glycerin", "Panthenol", "Niacinamide"],
-  "url": "https://www.cetaphil.com/us/cleansers/gentle-skin-cleanser",
-  "allIngredients": "Water, Glycerin, Cetyl Alcohol, Propylene Glycol, Sodium Lauryl Sulfate, Stearyl Alcohol, Panthenol, Niacinamide, Tocopherol"
-},
-{
-  "id": "brand_product",
-  "name": "Daily Facial Cleanser",
-  "brand": "Neutrogena",
-  "category": "cleanser",
-  "suitableFor": ["normal", "combination"],
-  "targetConcerns": [],
-  "priceRange": "budget",
-  "description": "A refreshing daily cleanser that removes dirt and oil effectively.",
-  "keyIngredients ": ["Glycerin", "Coco-Glucoside"],
-  "url": "https://www.neutrogena.com/products/skincare/daily-facial-cleanser",
-  "allIngredients": "Water, Glycerin, Coco-Glucoside, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Sodium Chloride, Citric Acid"
-},
-{
-  "id": "brand_product",
-  "name": "Ultra Gentle Hydrating Cleanser",
-  "brand": "Neutrogena",
-  "category": "cleanser",
-  "suitableFor": ["dry", "sensitive"],
-  "targetConcerns": [],
-  "priceRange": "budget",
-  "description": "A gentle cleanser formulated to cleanse without stripping moisture.",
-  "keyIngredients ": ["Glycerin", "Pro-Vitamin B5"],
-  "url": "https://www.neutrogena.com/products/skincare/ultra-gentle-hydrating-cleanser",
-  "allIngredients": "Water, Glycerin, Coco-Glucoside, Sodium Cocoyl Glycinate, Panthenol, Sodium Chloride, Citric Acid"
-},
-{
-  "id": "brand_product",
-  "name": "Low pH Good Morning Gel Cleanser",
-  "brand": "COSRX",
-  "category": "cleanser",
-  "suitableFor": ["oily", "combination", "sensitive"],
-  "targetConcerns": [],
-  "priceRange": "mid-range",
-  "description": "A low-pH gel cleanser that refreshes skin and supports clearer pores, ideal for oily and combination skin.",
-  "keyIngredients ": ["Betaine Salicylate", "Tea Tree Extract"],
-  "url": "https://www.cosrx.com/products/low-ph-good-morning-gel-cleanser",
-  "allIngredients": "Water, Cocamidopropyl Betaine, Sodium Lauroyl Sarcosinate, Betaine Salicylate, Polysorbate 20, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Allantoin, Citric Acid, Sodium Chloride, Butylene Glycol, Ethylhexanediol"
-},
-{
-  "id": "brand_product",
-  "name": "Salicylic Acid Cleanser",
-  "brand": "The INKEY List",
-  "category": "cleanser",
-  "suitableFor": ["oily", "combination"],
-  "targetConcerns": [],
-  "priceRange": "budget",
-  "description": "A cleanser designed to help unclog pores and reduce breakouts.",
-  "keyIngredients ": ["Salicylic Acid", "Zinc"],
-  "url": "https://www.theinkeylist.com/products/salicylic-acid-cleanser",
-  "allIngredients": "Water, Cocamidopropyl Betaine, Sodium Lauroyl Sarcosinate, Salicylic Acid, Zinc PCA, Glycerin"
-},
-{
-  "id": "brand_product",
-  "name": "Oat Cleansing Balm",
-  "brand": "The INKEY List",
-  "category": "cleanser",
-  "suitableFor": ["dry", "sensitive"],
-  "targetConcerns": [],
-  "priceRange": "budget",
-  "description": "A gentle balm cleanser that removes makeup while soothing the skin.",
-  "keyIngredients ": ["Colloidal Oatmeal", "Oat Kernel Oil"],
-  "url": "https://www.theinkeylist.com/products/oat-cleansing-balm",
-  "allIngredients": "Helianthus Annuus Seed Oil, Caprylic/Capric Triglyceride, Avena Sativa Kernel Oil, Avena Sativa Kernel Flour, Polysorbate 85"
-},
-{
-  "id": "brand_product",
-  "name": "Cleanance Cleansing Gel",
-  "brand": "Avène",
-  "category": "cleanser",
-  "suitableFor": ["oily", "combination"],
-  "targetConcerns": [],
-  "priceRange": "mid-range",
-  "description": "A purifying cleanser that helps reduce excess oil.",
-  "keyIngredients ": ["Zinc Gluconate", "Thermal Spring Water"],
-  "url": "https://www.eau-thermale-avene.com/p/cleanance-cleansing-gel",
-  "allIngredients": "Avène Thermal Spring Water, Sodium Laureth Sulfate, Zinc Gluconate, Coco-Glucoside, Citric Acid"
-},
-{
-  "id": "brand_product",
-  "name": "Sensibio H2O Micellar Water",
-  "brand": "Bioderma",
-  "category": "cleanser",
-  "suitableFor": ["sensitive", "normal"],
-  "targetConcerns": [],
-  "priceRange": "mid-range",
-  "description": "A micellar water that cleanses and removes makeup without irritation.",
-  "keyIngredients ": ["Micelles", "Cucumber Extract"],
-  "url": "https://www.bioderma.com/en/our-products/sensibio/h2o",
-  "allIngredients": "Water, PEG-6 Caprylic/Capric Glycerides, Mannitol, Xylitol, Rhamnose, Fructooligosaccharides"
-},
-{
-  "id": "brand_product",
-  "name": "Soy Face Cleanser",
-  "brand": "Fresh",
-  "category": "cleanser",
-  "suitableFor": ["normal", "combination"],
-  "targetConcerns": [],
-  "priceRange": "premium",
-  "description": "A gentle gel cleanser that cleanses while maintaining skin balance.",
-  "keyIngredients ": ["Soy Proteins", "Amino Acids"],
-  "url": "https://www.fresh.com/us/skincare/categories/cleansers/soy-face-cleanser",
-  "allIngredients": "Water, Sodium Cocoyl Glutamate, Coco-Glucoside, Glycine Soja Protein, Citric Acid"
-},
-{
-  "id": "brand_product",
-  "name": "Blueberry Bounce Gentle Cleanser",
-  "brand": "Glow Recipe",
-  "category": "cleanser",
-  "suitableFor": ["normal", "combination"],
-  "targetConcerns": [],
-  "priceRange": "premium",
-  "description": "A gentle cleanser enriched with antioxidants to refresh the skin.",
-  "keyIngredients ": ["Blueberry Extract", "AHA"],
-  "url": "https://www.glowrecipe.com/products/blueberry-bounce-gentle-cleanser",
-  "allIngredients": "Water, Cocamidopropyl Betaine, Vaccinium Angustifolium Fruit Extract, Glycolic Acid, Sodium Chloride"
-},
-{
-  "id": "brand_product",
-  "name": "Calendula Deep Cleansing Foaming Face Wash",
-  "brand": "Kiehl’s",
-  "category": "cleanser",
-  "suitableFor": ["normal", "oily"],
-  "targetConcerns": [],
-  "priceRange": "premium",
-  "description": "A foaming cleanser that deeply cleanses while soothing the skin.",
-  "keyIngredients ": ["Calendula Extract", "Glycerin"],
-  "url": "https://www.kiehls.com/skincare/cleansers/calendula-deep-cleansing-foaming-face-wash",
-  "allIngredients": "Water, Sodium Laureth Sulfate, Glycerin, Calendula Officinalis Flower Extract, Coco-Glucoside"
-}
-
-]
+  "products": [
+    {
+      "id": "cerave_foaming_facial_cleanser",
+      "name": "Foaming Facial Cleanser",
+      "brand": "CeraVe",
+      "category": "cleanser",
+      "suitableFor": [
+        "oily",
+        "combination",
+        "normal"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "oiliness",
+        "sensitivity"
+      ],
+      "priceRange": "budget",
+      "description": "A gentle foaming cleanser that removes excess oil without disrupting the skin barrier.",
+      "keyIngredients": [
+        "Ceramides",
+        "Niacinamide",
+        "Hyaluronic Acid"
+      ],
+      "url": "https://www.cerave.com/skincare/cleansers/foaming-facial-cleanser",
+      "allIngredients": "Aqua / Water, Glycerin, Cocamidopropyl Hydroxysultaine, Niacinamide, Sodium Lauroyl Sarcosinate, PEG-150 Pentaerythrityl Tetrastearate, Ceramide NP, Ceramide AP, Ceramide EOP, Carbomer, Sodium Chloride, Cholesterol, Phenoxyethanol, Sodium Benzoate, Disodium EDTA, Phytosphingosine"
+    },
+    {
+      "id": "cerave_hydrating_facial_cleanser",
+      "name": "Hydrating Facial Cleanser",
+      "brand": "CeraVe",
+      "category": "cleanser",
+      "suitableFor": [
+        "dry",
+        "sensitive",
+        "normal"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "budget",
+      "description": "A non-foaming cleanser that gently cleanses while maintaining moisture.",
+      "url": "https://www.cerave.com/skincare/cleansers/hydrating-facial-cleanser",
+      "allIngredients": "Aqua / Water, Glycerin, Cetearyl Alcohol, PEG-40 Stearate, Stearyl Alcohol, Cetyl Alcohol, Phenoxyethanol, Polysorbate 20, Sodium Lauroyl Lactylate, Carbomer, Ceramide NP, Ceramide AP, Ceramide EOP, Cholesterol, Sodium Hyaluronate, Disodium EDTA, Phytosphingosine",
+      "keyIngredients": [
+        "Ceramides",
+        "Hyaluronic Acid",
+        "Glycerin"
+      ]
+    },
+    {
+      "id": "la_roche_posay_toleriane_purifying_foaming_cleanser",
+      "name": "Toleriane Purifying Foaming Cleanser",
+      "brand": "La Roche-Posay",
+      "category": "cleanser",
+      "suitableFor": [
+        "oily",
+        "combination",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "sensitivity"
+      ],
+      "priceRange": "mid-range",
+      "description": "A gentle foaming cleanser that removes impurities while respecting sensitive skin.",
+      "url": "https://www.laroche-posay.com/en-int/toleriane/toleriane-purifying-foaming-cleanser",
+      "allIngredients": "Aqua / Water, Sodium Laureth Sulfate, PEG-8, Cocamidopropyl Betaine, Niacinamide, Sodium Chloride, Sodium Hydroxide, Ceramide NP, PEG-100 Stearate, Disodium EDTA",
+      "keyIngredients": [
+        "Niacinamide",
+        "Ceramide-3",
+        "Thermal Spring Water"
+      ]
+    },
+    {
+      "id": "la_roche_posay_toleriane_hydrating_gentle_cleanser",
+      "name": "Toleriane Hydrating Gentle Cleanser",
+      "brand": "La Roche-Posay",
+      "category": "cleanser",
+      "suitableFor": [
+        "dry",
+        "sensitive",
+        "normal"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "sensitivity"
+      ],
+      "priceRange": "mid-range",
+      "description": "A creamy cleanser that gently removes impurities without drying the skin.",
+      "url": "https://www.laroche-posay.com/en-int/toleriane/toleriane-hydrating-gentle-cleanser",
+      "allIngredients": "Aqua / Water, Glycerin, Propanediol, Sodium Cocoyl Glycinate, PEG-120 Methyl Glucose Dioleate, Niacinamide, Ceramide NP, Sodium Chloride, Caprylyl Glycol",
+      "keyIngredients": [
+        "Ceramide-3",
+        "Niacinamide",
+        "Glycerin"
+      ]
+    },
+    {
+      "id": "cetaphil_gentle_skin_cleanser",
+      "name": "Gentle Skin Cleanser",
+      "brand": "Cetaphil",
+      "category": "cleanser",
+      "suitableFor": [
+        "dry",
+        "sensitive",
+        "normal"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "sensitivity"
+      ],
+      "priceRange": "budget",
+      "description": "A mild cleanser designed to cleanse sensitive skin without irritation.",
+      "url": "https://www.cetaphil.com/us/cleansers/gentle-skin-cleanser",
+      "allIngredients": "Water, Glycerin, Cetyl Alcohol, Propylene Glycol, Sodium Lauryl Sulfate, Stearyl Alcohol, Panthenol, Niacinamide, Tocopherol",
+      "keyIngredients": [
+        "Glycerin",
+        "Panthenol",
+        "Niacinamide"
+      ]
+    },
+    {
+      "id": "neutrogena_daily_facial_cleanser",
+      "name": "Daily Facial Cleanser",
+      "brand": "Neutrogena",
+      "category": "cleanser",
+      "suitableFor": [
+        "normal",
+        "combination"
+      ],
+      "targetConcerns": [
+        "oiliness"
+      ],
+      "priceRange": "budget",
+      "description": "A refreshing daily cleanser that removes dirt and oil effectively.",
+      "url": "https://www.neutrogena.com/products/skincare/daily-facial-cleanser",
+      "allIngredients": "Water, Glycerin, Coco-Glucoside, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Sodium Chloride, Citric Acid",
+      "keyIngredients": [
+        "Glycerin",
+        "Coco-Glucoside"
+      ]
+    },
+    {
+      "id": "neutrogena_ultra_gentle_hydrating_cleanser",
+      "name": "Ultra Gentle Hydrating Cleanser",
+      "brand": "Neutrogena",
+      "category": "cleanser",
+      "suitableFor": [
+        "dry",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "sensitivity"
+      ],
+      "priceRange": "budget",
+      "description": "A gentle cleanser formulated to cleanse without stripping moisture.",
+      "url": "https://www.neutrogena.com/products/skincare/ultra-gentle-hydrating-cleanser",
+      "allIngredients": "Water, Glycerin, Coco-Glucoside, Sodium Cocoyl Glycinate, Panthenol, Sodium Chloride, Citric Acid",
+      "keyIngredients": [
+        "Glycerin",
+        "Pro-Vitamin B5"
+      ]
+    },
+    {
+      "id": "cosrx_low_ph_good_morning_gel_cleanser",
+      "name": "Low pH Good Morning Gel Cleanser",
+      "brand": "COSRX",
+      "category": "cleanser",
+      "suitableFor": [
+        "oily",
+        "combination",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "large_pores",
+        "oiliness"
+      ],
+      "priceRange": "mid-range",
+      "description": "A low-pH gel cleanser that refreshes skin and supports clearer pores, ideal for oily and combination skin.",
+      "url": "https://www.cosrx.com/products/low-ph-good-morning-gel-cleanser",
+      "allIngredients": "Water, Cocamidopropyl Betaine, Sodium Lauroyl Sarcosinate, Betaine Salicylate, Polysorbate 20, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Allantoin, Citric Acid, Sodium Chloride, Butylene Glycol, Ethylhexanediol",
+      "keyIngredients": [
+        "Betaine Salicylate",
+        "Tea Tree Extract"
+      ]
+    },
+    {
+      "id": "the_inkey_list_salicylic_acid_cleanser",
+      "name": "Salicylic Acid Cleanser",
+      "brand": "The INKEY List",
+      "category": "cleanser",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "large_pores",
+        "oiliness",
+        "redness"
+      ],
+      "priceRange": "budget",
+      "description": "A cleanser designed to help unclog pores and reduce breakouts.",
+      "url": "https://www.theinkeylist.com/products/salicylic-acid-cleanser",
+      "allIngredients": "Water, Cocamidopropyl Betaine, Sodium Lauroyl Sarcosinate, Salicylic Acid, Zinc PCA, Glycerin",
+      "keyIngredients": [
+        "Salicylic Acid",
+        "Zinc"
+      ]
+    },
+    {
+      "id": "the_inkey_list_oat_cleansing_balm",
+      "name": "Oat Cleansing Balm",
+      "brand": "The INKEY List",
+      "category": "cleanser",
+      "suitableFor": [
+        "dry",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "oiliness",
+        "sensitivity"
+      ],
+      "priceRange": "budget",
+      "description": "A gentle balm cleanser that removes makeup while soothing the skin.",
+      "url": "https://www.theinkeylist.com/products/oat-cleansing-balm",
+      "allIngredients": "Helianthus Annuus Seed Oil, Caprylic/Capric Triglyceride, Avena Sativa Kernel Oil, Avena Sativa Kernel Flour, Polysorbate 85",
+      "keyIngredients": [
+        "Colloidal Oatmeal",
+        "Oat Kernel Oil"
+      ]
+    },
+    {
+      "id": "av_ne_cleanance_cleansing_gel",
+      "name": "Cleanance Cleansing Gel",
+      "brand": "Avène",
+      "category": "cleanser",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "oiliness",
+        "redness",
+        "sensitivity"
+      ],
+      "priceRange": "mid-range",
+      "description": "A purifying cleanser that helps reduce excess oil.",
+      "url": "https://www.eau-thermale-avene.com/p/cleanance-cleansing-gel",
+      "allIngredients": "Avène Thermal Spring Water, Sodium Laureth Sulfate, Zinc Gluconate, Coco-Glucoside, Citric Acid",
+      "keyIngredients": [
+        "Zinc Gluconate",
+        "Thermal Spring Water"
+      ]
+    },
+    {
+      "id": "bioderma_sensibio_h2o_micellar_water",
+      "name": "Sensibio H2O Micellar Water",
+      "brand": "Bioderma",
+      "category": "cleanser",
+      "suitableFor": [
+        "sensitive",
+        "normal"
+      ],
+      "targetConcerns": [],
+      "priceRange": "mid-range",
+      "description": "A micellar water that cleanses and removes makeup without irritation.",
+      "url": "https://www.bioderma.com/en/our-products/sensibio/h2o",
+      "allIngredients": "Water, PEG-6 Caprylic/Capric Glycerides, Mannitol, Xylitol, Rhamnose, Fructooligosaccharides",
+      "keyIngredients": [
+        "Micelles",
+        "Cucumber Extract"
+      ]
+    },
+    {
+      "id": "fresh_soy_face_cleanser",
+      "name": "Soy Face Cleanser",
+      "brand": "Fresh",
+      "category": "cleanser",
+      "suitableFor": [
+        "normal",
+        "combination"
+      ],
+      "targetConcerns": [
+        "sensitivity"
+      ],
+      "priceRange": "premium",
+      "description": "A gentle gel cleanser that cleanses while maintaining skin balance.",
+      "url": "https://www.fresh.com/us/skincare/categories/cleansers/soy-face-cleanser",
+      "allIngredients": "Water, Sodium Cocoyl Glutamate, Coco-Glucoside, Glycine Soja Protein, Citric Acid",
+      "keyIngredients": [
+        "Soy Proteins",
+        "Amino Acids"
+      ]
+    },
+    {
+      "id": "glow_recipe_blueberry_bounce_gentle_cleanser",
+      "name": "Blueberry Bounce Gentle Cleanser",
+      "brand": "Glow Recipe",
+      "category": "cleanser",
+      "suitableFor": [
+        "normal",
+        "combination"
+      ],
+      "targetConcerns": [
+        "dullness",
+        "sensitivity",
+        "uneven_texture"
+      ],
+      "priceRange": "premium",
+      "description": "A gentle cleanser enriched with antioxidants to refresh the skin.",
+      "url": "https://www.glowrecipe.com/products/blueberry-bounce-gentle-cleanser",
+      "allIngredients": "Water, Cocamidopropyl Betaine, Vaccinium Angustifolium Fruit Extract, Glycolic Acid, Sodium Chloride",
+      "keyIngredients": [
+        "Blueberry Extract",
+        "AHA"
+      ]
+    },
+    {
+      "id": "kiehls_calendula_deep_cleansing_foaming_face_wash",
+      "name": "Calendula Deep Cleansing Foaming Face Wash",
+      "brand": "Kiehl’s",
+      "category": "cleanser",
+      "suitableFor": [
+        "normal",
+        "oily"
+      ],
+      "targetConcerns": [
+        "sensitivity"
+      ],
+      "priceRange": "premium",
+      "description": "A foaming cleanser that deeply cleanses while soothing the skin.",
+      "url": "https://www.kiehls.com/skincare/cleansers/calendula-deep-cleansing-foaming-face-wash",
+      "allIngredients": "Water, Sodium Laureth Sulfate, Glycerin, Calendula Officinalis Flower Extract, Coco-Glucoside",
+      "keyIngredients": [
+        "Calendula Extract",
+        "Glycerin"
+      ]
+    }
+  ]
 }

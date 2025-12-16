@@ -1,113 +1,182 @@
 {
-    "metadata": {
+  "metadata": {
     "author": "[Antonios KARAFENTZOS]",
-    "date": "[14.12.2025]",
-    "version": "1.0"
+    "date": "[16.12.2025]",
+    "version": "3.0"
   },
-  "products":[
-  {
-    "id": "brand_product",
-    "name": "Niacinamide 10% + Zinc 1%",
-    "brand": "The Ordinary",
-    "category": "serum",
-    "suitableFor": ["oily", "acne-prone", "combination"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A serum formulated to help balance oil production and improve the appearance of blemishes.",
-    "keyIngriedients": ["Niacinamide", "Zinc PCA"],
-    "url": "https://theordinary.com/en-us/niacinamide-10-zinc-1-serum-100436.html",
-    "allIngredients": "Aqua (Water), Niacinamide, Zinc PCA, Dimethyl Isosorbide, Tamarindus Indica Seed Gum, Xanthan Gum, Isoceteth-20, Ethoxydiglycol, Phenoxyethanol, Chlorphenesin"
-  },
-  {
-    "id": "brand_product",
-    "name": "Hyaluronic Acid 2% + B5",
-    "brand": "The Ordinary",
-    "category": "serum",
-    "suitableFor": ["dry", "normal", "combination"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A hydrating serum that helps maintain skin moisture and smoothness.",
-    "keyIngriedients": ["Hyaluronic Acid", "Vitamin B5"],
-    "url": "https://theordinary.com/en-us/hyaluronic-acid-2-b5-serum-100425.html",
-    "allIngredients": "Aqua (Water), Sodium Hyaluronate, Sodium Hyaluronate Crosspolymer, Panthenol, Pentylene Glycol, Citric Acid, Phenoxyethanol, Chlorphenesin"
-  },
-  {
-    "id": "brand_product",
-    "name": "Pure Vitamin C10 Serum",
-    "brand": "La Roche-Posay",
-    "category": "serum",
-    "suitableFor": ["normal", "dull"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A brightening serum that helps improve skin radiance and texture.",
-    "keyIngriedients": ["Vitamin C", "Salicylic Acid"],
-    "url": "https://www.laroche-posay.com/en-int/vitamin-c/pure-vitamin-c10-serum",
-    "allIngredients": "Aqua / Water, Ascorbic Acid, Alcohol Denat., Salicylic Acid, Neurosensine, Glycerin, Sodium Hydroxide"
-  },
-  {
-    "id": "brand_product",
-    "name": "Hyalu B5 Serum",
-    "brand": "La Roche-Posay",
-    "category": "serum",
-    "suitableFor": ["dry", "sensitive"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A hydrating and plumping serum designed to support skin repair.",
-    "keyIngriedients": ["Hyaluronic Acid", "Vitamin B5"],
-    "url": "https://www.laroche-posay.com/en-int/hyalu-b5/hyalu-b5-serum",
-    "allIngredients": "Aqua / Water, Glycerin, Panthenol, Sodium Hyaluronate, Dimethicone, Phenoxyethanol"
-  },
-  {
-    "id": "brand_product",
-    "name": "10% Azelaic Acid Booster",
-    "brand": "Paula’s Choice",
-    "category": "serum",
-    "suitableFor": ["acne-prone", "sensitive"],
-    "targetConcerns": [],
-    "priceRange": "premium",
-    "description": "A multi-tasking treatment that helps improve uneven tone and calm redness.",
-    "keyIngriedients": ["Azelaic Acid", "Salicylic Acid"],
-    "url": "https://www.paulaschoice.com/10pct-azelaic-acid-booster/775.html",
-    "allIngredients": "Water, Azelaic Acid, Butylene Glycol, Salicylic Acid, Allantoin, Phenoxyethanol"
-  },
-  {
-    "id": "brand_product",
-    "name": "Advanced Snail 96 Mucin Power Essence",
-    "brand": "COSRX",
-    "category": "serum",
-    "suitableFor": ["dry", "sensitive", "normal"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A repairing essence that helps hydrate and improve skin texture.",
-    "keyIngriedients": ["Snail Mucin"],
-    "url": "https://www.cosrx.com/products/advanced-snail-96-mucin-power-essence",
-    "allIngredients": "Snail Secretion Filtrate, Betaine, Sodium Hyaluronate, Panthenol, Arginine"
-  },
-  {
-    "id": "brand_product",
-    "name": "Retinol Serum",
-    "brand": "The INKEY List",
-    "category": "serum",
-    "suitableFor": ["normal", "aging"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A lightweight retinol serum designed to improve skin texture and fine lines.",
-    "keyIngriedients": ["Retinol", "Squalane"],
-    "url": "https://www.theinkeylist.com/products/retinol-serum",
-    "allIngredients": "Water, Squalane, Retinol, Caprylic/Capric Triglyceride, Phenoxyethanol"
-  },
-  {
-    "id": "brand_product",
-    "name": "Glow Serum",
-    "brand": "Beauty of Joseon",
-    "category": "serum",
-    "suitableFor": ["normal", "dull"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A nourishing serum that enhances glow and hydration.",
-    "keyIngriedients": ["Propolis Extract", "Niacinamide"],
-    "url": "https://beautyofjoseon.com/products/glow-serum-propolis-niacinamide",
-    "allIngredients": "Propolis Extract, Water, Glycerin, Niacinamide, Butylene Glycol, Phenoxyethanol"
-  }
-]
+  "products": [
+    {
+      "id": "the_ordinary_niacinamide_10_zinc_1",
+      "name": "Niacinamide 10% + Zinc 1%",
+      "brand": "The Ordinary",
+      "category": "serum",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "oiliness"
+      ],
+      "priceRange": "budget",
+      "description": "A serum formulated to help balance oil production and improve the appearance of blemishes.",
+      "keyIngriedients": [
+        "Niacinamide",
+        "Zinc PCA"
+      ],
+      "url": "https://theordinary.com/en-us/niacinamide-10-zinc-1-serum-100436.html",
+      "allIngredients": "Aqua (Water), Niacinamide, Zinc PCA, Dimethyl Isosorbide, Tamarindus Indica Seed Gum, Xanthan Gum, Isoceteth-20, Ethoxydiglycol, Phenoxyethanol, Chlorphenesin"
+    },
+    {
+      "id": "the_ordinary_hyaluronic_acid_2_b5",
+      "name": "Hyaluronic Acid 2% + B5",
+      "brand": "The Ordinary",
+      "category": "serum",
+      "suitableFor": [
+        "dry",
+        "normal",
+        "combination"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "budget",
+      "description": "A hydrating serum that helps maintain skin moisture and smoothness.",
+      "keyIngriedients": [
+        "Hyaluronic Acid",
+        "Vitamin B5"
+      ],
+      "url": "https://theordinary.com/en-us/hyaluronic-acid-2-b5-serum-100425.html",
+      "allIngredients": "Aqua (Water), Sodium Hyaluronate, Sodium Hyaluronate Crosspolymer, Panthenol, Pentylene Glycol, Citric Acid, Phenoxyethanol, Chlorphenesin"
+    },
+    {
+      "id": "la_roche_posay_pure_vitamin_c10_serum",
+      "name": "Pure Vitamin C10 Serum",
+      "brand": "La Roche-Posay",
+      "category": "serum",
+      "suitableFor": [
+        "normal"
+      ],
+      "targetConcerns": [
+        "dark_spots",
+        "dullness",
+        "uneven_texture"
+      ],
+      "priceRange": "mid-range",
+      "description": "A brightening serum that helps improve skin radiance and texture.",
+      "keyIngriedients": [
+        "Vitamin C",
+        "Salicylic Acid"
+      ],
+      "url": "https://www.laroche-posay.com/en-int/vitamin-c/pure-vitamin-c10-serum",
+      "allIngredients": "Aqua / Water, Ascorbic Acid, Alcohol Denat., Salicylic Acid, Neurosensine, Glycerin, Sodium Hydroxide"
+    },
+    {
+      "id": "la_roche_posay_hyalu_b5_serum",
+      "name": "Hyalu B5 Serum",
+      "brand": "La Roche-Posay",
+      "category": "serum",
+      "suitableFor": [
+        "dry",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "mid-range",
+      "description": "A hydrating and plumping serum designed to support skin repair.",
+      "keyIngriedients": [
+        "Hyaluronic Acid",
+        "Vitamin B5"
+      ],
+      "url": "https://www.laroche-posay.com/en-int/hyalu-b5/hyalu-b5-serum",
+      "allIngredients": "Aqua / Water, Glycerin, Panthenol, Sodium Hyaluronate, Dimethicone, Phenoxyethanol"
+    },
+    {
+      "id": "paulas_choice_10_azelaic_acid_booster",
+      "name": "10% Azelaic Acid Booster",
+      "brand": "Paula’s Choice",
+      "category": "serum",
+      "suitableFor": [
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dark_spots",
+        "redness",
+        "sensitivity"
+      ],
+      "priceRange": "premium",
+      "description": "A multi-tasking treatment that helps improve uneven tone and calm redness.",
+      "keyIngriedients": [
+        "Azelaic Acid",
+        "Salicylic Acid"
+      ],
+      "url": "https://www.paulaschoice.com/10pct-azelaic-acid-booster/775.html",
+      "allIngredients": "Water, Azelaic Acid, Butylene Glycol, Salicylic Acid, Allantoin, Phenoxyethanol"
+    },
+    {
+      "id": "cosrx_advanced_snail_96_mucin_power_essence",
+      "name": "Advanced Snail 96 Mucin Power Essence",
+      "brand": "COSRX",
+      "category": "serum",
+      "suitableFor": [
+        "dry",
+        "sensitive",
+        "normal"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "uneven_texture"
+      ],
+      "priceRange": "mid-range",
+      "description": "A repairing essence that helps hydrate and improve skin texture.",
+      "keyIngriedients": [
+        "Snail Mucin"
+      ],
+      "url": "https://www.cosrx.com/products/advanced-snail-96-mucin-power-essence",
+      "allIngredients": "Snail Secretion Filtrate, Betaine, Sodium Hyaluronate, Panthenol, Arginine"
+    },
+    {
+      "id": "the_inkey_list_retinol_serum",
+      "name": "Retinol Serum",
+      "brand": "The INKEY List",
+      "category": "serum",
+      "suitableFor": [
+        "normal"
+      ],
+      "targetConcerns": [
+        "fine_lines",
+        "uneven_texture"
+      ],
+      "priceRange": "budget",
+      "description": "A lightweight retinol serum designed to improve skin texture and fine lines.",
+      "keyIngriedients": [
+        "Retinol",
+        "Squalane"
+      ],
+      "url": "https://www.theinkeylist.com/products/retinol-serum",
+      "allIngredients": "Water, Squalane, Retinol, Caprylic/Capric Triglyceride, Phenoxyethanol"
+    },
+    {
+      "id": "beauty_of_joseon_glow_serum",
+      "name": "Glow Serum",
+      "brand": "Beauty of Joseon",
+      "category": "serum",
+      "suitableFor": [
+        "normal"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "dullness"
+      ],
+      "priceRange": "mid-range",
+      "description": "A nourishing serum that enhances glow and hydration.",
+      "keyIngriedients": [
+        "Propolis Extract",
+        "Niacinamide"
+      ],
+      "url": "https://beautyofjoseon.com/products/glow-serum-propolis-niacinamide",
+      "allIngredients": "Propolis Extract, Water, Glycerin, Niacinamide, Butylene Glycol, Phenoxyethanol"
+    }
+  ]
 }

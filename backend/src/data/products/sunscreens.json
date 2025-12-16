@@ -1,126 +1,188 @@
 {
-    "metadata": {
+  "metadata": {
     "author": "[Antonios KARAFENTZOS]",
-    "date": "[14.12.2025]",
-    "version": "1.0"
+    "date": "[16.12.2025]",
+    "version": "3.0"
   },
-  "products":[
-  {
-    "id": "brand_product",
-    "name": "Anthelios Invisible Fluid SPF 50+",
-    "brand": "La Roche-Posay",
-    "category": "sunscreen",
-    "suitableFor": ["oily", "combination", "sensitive"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A lightweight, fast-absorbing sunscreen that provides very high UV protection without leaving residue.",
-    "keyIngriedients": ["Mexoryl Filters", "Glycerin"],
-    "url": "https://www.laroche-posay.com/en-int/anthelios/anthelios-invisible-fluid-spf50-plus",
-    "allIngredients": "Aqua / Water, Alcohol Denat., Diisopropyl Sebacate, Ethylhexyl Triazone, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Glycerin, Silica, Tocopherol"
-  },
-  {
-    "id": "brand_product",
-    "name": "Anthelios Melt-in Milk SPF 100",
-    "brand": "La Roche-Posay",
-    "category": "sunscreen",
-    "suitableFor": ["dry", "normal"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A moisturizing sunscreen lotion offering ultra-high broad-spectrum protection.",
-    "keyIngriedients": ["Mexoryl Filters", "Vitamin E"],
-    "url": "https://www.laroche-posay.us/sunscreen/anthelios-melt-in-milk-spf-100-3606000403708.html",
-    "allIngredients": "Water, Homosalate, Octisalate, Octocrylene, Avobenzone, Glycerin, Tocopherol"
-  },
-  {
-    "id": "brand_product",
-    "name": "Hydrating Mineral Sunscreen SPF 30",
-    "brand": "CeraVe",
-    "category": "sunscreen",
-    "suitableFor": ["dry", "sensitive"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A mineral sunscreen that hydrates while protecting the skin barrier.",
-    "keyIngriedients": ["Zinc Oxide", "Ceramides"],
-    "url": "https://www.cerave.com/skincare/sunscreen/hydrating-mineral-sunscreen-spf-30-face-lotion",
-    "allIngredients": "Water, Zinc Oxide, Glycerin, Ceramide NP, Ceramide AP, Ceramide EOP, Dimethicone, Sodium Hyaluronate"
-  },
-  {
-    "id": "brand_product",
-    "name": "AM Facial Moisturizing Lotion SPF 30",
-    "brand": "CeraVe",
-    "category": "sunscreen",
-    "suitableFor": ["normal", "combination"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A daily facial moisturizer with SPF that hydrates and protects skin from UV damage.",
-    "keyIngriedients": ["Ceramides", "Niacinamide"],
-    "url": "https://www.cerave.com/skincare/moisturizers/am-facial-moisturizing-lotion-spf-30",
-    "allIngredients": "Water, Homosalate, Octinoxate, Niacinamide, Ceramides, Glycerin, Dimethicone"
-  },
-  {
-    "id": "brand_product",
-    "name": "Hydro Boost Water Gel Lotion SPF 30",
-    "brand": "Neutrogena",
-    "category": "sunscreen",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A lightweight sunscreen with a water-gel texture that hydrates while protecting skin.",
-    "keyIngriedients": ["Hyaluronic Acid", "Glycerin"],
-    "url": "https://www.neutrogena.com/products/sun/hydro-boost-water-gel-lotion-spf-30",
-    "allIngredients": "Water, Avobenzone, Homosalate, Octisalate, Glycerin, Sodium Hyaluronate"
-  },
-  {
-    "id": "brand_product",
-    "name": "Ultra Sheer Dry-Touch SPF 100",
-    "brand": "Neutrogena",
-    "category": "sunscreen",
-    "suitableFor": ["oily", "normal"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A fast-absorbing sunscreen that delivers powerful protection with a matte finish.",
-    "keyIngriedients": ["Helioplex Technology"],
-    "url": "https://www.neutrogena.com/products/sun/ultra-sheer-dry-touch-sunscreen-spf-100",
-    "allIngredients": "Water, Avobenzone, Homosalate, Octocrylene, Silica, Tocopherol"
-  },
-  {
-    "id": "brand_product",
-    "name": "Oil Control SPF 50+",
-    "brand": "Eucerin",
-    "category": "sunscreen",
-    "suitableFor": ["oily", "acne-prone"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A mattifying sunscreen designed to control oil and shine.",
-    "keyIngriedients": ["L-Carnitine", "Silica"],
-    "url": "https://www.eucerin.com/products/sun-protection/oil-control-spf-50plus",
-    "allIngredients": "Water, Alcohol Denat., Avobenzone, Octocrylene, Silica, Glycerin"
-  },
-  {
-    "id": "brand_product",
-    "name": "Fusion Water SPF 50",
-    "brand": "ISDIN",
-    "category": "sunscreen",
-    "suitableFor": ["all"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "An ultra-light sunscreen suitable for daily use and all skin types.",
-    "keyIngriedients": ["Hyaluronic Acid", "Vitamin E"],
-    "url": "https://www.isdin.com/en/product/fotoprotector-isdin/fusion-water-spf-50",
-    "allIngredients": "Water, Alcohol Denat., Ethylhexyl Triazone, Glycerin, Tocopherol"
-  },
-  {
-    "id": "brand_product",
-    "name": "Unseen Sunscreen SPF 40",
-    "brand": "Supergoop!",
-    "category": "sunscreen",
-    "suitableFor": ["all"],
-    "targetConcerns": [],
-    "priceRange": "premium",
-    "description": "A weightless, invisible sunscreen that doubles as a makeup primer.",
-    "keyIngriedients": ["Silicone Elastomers", "Antioxidants"],
-    "url": "https://supergoop.com/products/unseen-sunscreen",
-    "allIngredients": "Isododecane, Dimethicone, Homosalate, Octisalate, Avobenzone, Tocopherol"
-  }
-]
+  "products": [
+    {
+      "id": "la_roche_posay_anthelios_invisible_fluid_spf_50",
+      "name": "Anthelios Invisible Fluid SPF 50+",
+      "brand": "La Roche-Posay",
+      "category": "sunscreen",
+      "suitableFor": [
+        "oily",
+        "combination",
+        "sensitive"
+      ],
+      "targetConcerns": [],
+      "priceRange": "mid-range",
+      "description": "A lightweight, fast-absorbing sunscreen that provides very high UV protection without leaving residue.",
+      "keyIngriedients": [
+        "Mexoryl Filters",
+        "Glycerin"
+      ],
+      "url": "https://www.laroche-posay.com/en-int/anthelios/anthelios-invisible-fluid-spf50-plus",
+      "allIngredients": "Aqua / Water, Alcohol Denat., Diisopropyl Sebacate, Ethylhexyl Triazone, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Glycerin, Silica, Tocopherol"
+    },
+    {
+      "id": "la_roche_posay_anthelios_melt_in_milk_spf_100",
+      "name": "Anthelios Melt-in Milk SPF 100",
+      "brand": "La Roche-Posay",
+      "category": "sunscreen",
+      "suitableFor": [
+        "dry",
+        "normal"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "mid-range",
+      "description": "A moisturizing sunscreen lotion offering ultra-high broad-spectrum protection.",
+      "keyIngriedients": [
+        "Mexoryl Filters",
+        "Vitamin E"
+      ],
+      "url": "https://www.laroche-posay.us/sunscreen/anthelios-melt-in-milk-spf-100-3606000403708.html",
+      "allIngredients": "Water, Homosalate, Octisalate, Octocrylene, Avobenzone, Glycerin, Tocopherol"
+    },
+    {
+      "id": "cerave_hydrating_mineral_sunscreen_spf_30",
+      "name": "Hydrating Mineral Sunscreen SPF 30",
+      "brand": "CeraVe",
+      "category": "sunscreen",
+      "suitableFor": [
+        "dry",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "budget",
+      "description": "A mineral sunscreen that hydrates while protecting the skin barrier.",
+      "keyIngriedients": [
+        "Zinc Oxide",
+        "Ceramides"
+      ],
+      "url": "https://www.cerave.com/skincare/sunscreen/hydrating-mineral-sunscreen-spf-30-face-lotion",
+      "allIngredients": "Water, Zinc Oxide, Glycerin, Ceramide NP, Ceramide AP, Ceramide EOP, Dimethicone, Sodium Hyaluronate"
+    },
+    {
+      "id": "cerave_am_facial_moisturizing_lotion_spf_30",
+      "name": "AM Facial Moisturizing Lotion SPF 30",
+      "brand": "CeraVe",
+      "category": "sunscreen",
+      "suitableFor": [
+        "normal",
+        "combination"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "budget",
+      "description": "A daily facial moisturizer with SPF that hydrates and protects skin from UV damage.",
+      "keyIngriedients": [
+        "Ceramides",
+        "Niacinamide"
+      ],
+      "url": "https://www.cerave.com/skincare/moisturizers/am-facial-moisturizing-lotion-spf-30",
+      "allIngredients": "Water, Homosalate, Octinoxate, Niacinamide, Ceramides, Glycerin, Dimethicone"
+    },
+    {
+      "id": "neutrogena_hydro_boost_water_gel_lotion_spf_30",
+      "name": "Hydro Boost Water Gel Lotion SPF 30",
+      "brand": "Neutrogena",
+      "category": "sunscreen",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "uneven_texture"
+      ],
+      "priceRange": "budget",
+      "description": "A lightweight sunscreen with a water-gel texture that hydrates while protecting skin.",
+      "keyIngriedients": [
+        "Hyaluronic Acid",
+        "Glycerin"
+      ],
+      "url": "https://www.neutrogena.com/products/sun/hydro-boost-water-gel-lotion-spf-30",
+      "allIngredients": "Water, Avobenzone, Homosalate, Octisalate, Glycerin, Sodium Hyaluronate"
+    },
+    {
+      "id": "neutrogena_ultra_sheer_dry_touch_spf_100",
+      "name": "Ultra Sheer Dry-Touch SPF 100",
+      "brand": "Neutrogena",
+      "category": "sunscreen",
+      "suitableFor": [
+        "oily",
+        "normal"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "oiliness"
+      ],
+      "priceRange": "budget",
+      "description": "A fast-absorbing sunscreen that delivers powerful protection with a matte finish.",
+      "keyIngriedients": [
+        "Helioplex Technology"
+      ],
+      "url": "https://www.neutrogena.com/products/sun/ultra-sheer-dry-touch-sunscreen-spf-100",
+      "allIngredients": "Water, Avobenzone, Homosalate, Octocrylene, Silica, Tocopherol"
+    },
+    {
+      "id": "eucerin_oil_control_spf_50",
+      "name": "Oil Control SPF 50+",
+      "brand": "Eucerin",
+      "category": "sunscreen",
+      "suitableFor": [
+        "oily"
+      ],
+      "targetConcerns": [
+        "acne",
+        "oiliness"
+      ],
+      "priceRange": "mid-range",
+      "description": "A mattifying sunscreen designed to control oil and shine.",
+      "keyIngriedients": [
+        "L-Carnitine",
+        "Silica"
+      ],
+      "url": "https://www.eucerin.com/products/sun-protection/oil-control-spf-50plus",
+      "allIngredients": "Water, Alcohol Denat., Avobenzone, Octocrylene, Silica, Glycerin"
+    },
+    {
+      "id": "isdin_fusion_water_spf_50",
+      "name": "Fusion Water SPF 50",
+      "brand": "ISDIN",
+      "category": "sunscreen",
+      "suitableFor": [],
+      "targetConcerns": [],
+      "priceRange": "mid-range",
+      "description": "An ultra-light sunscreen suitable for daily use and all skin types.",
+      "keyIngriedients": [
+        "Hyaluronic Acid",
+        "Vitamin E"
+      ],
+      "url": "https://www.isdin.com/en/product/fotoprotector-isdin/fusion-water-spf-50",
+      "allIngredients": "Water, Alcohol Denat., Ethylhexyl Triazone, Glycerin, Tocopherol"
+    },
+    {
+      "id": "supergoop_unseen_sunscreen_spf_40",
+      "name": "Unseen Sunscreen SPF 40",
+      "brand": "Supergoop!",
+      "category": "sunscreen",
+      "suitableFor": [],
+      "targetConcerns": [],
+      "priceRange": "premium",
+      "description": "A weightless, invisible sunscreen that doubles as a makeup primer.",
+      "keyIngriedients": [
+        "Silicone Elastomers",
+        "Antioxidants"
+      ],
+      "url": "https://supergoop.com/products/unseen-sunscreen",
+      "allIngredients": "Isododecane, Dimethicone, Homosalate, Octisalate, Avobenzone, Tocopherol"
+    }
+  ]
 }

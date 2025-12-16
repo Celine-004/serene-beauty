@@ -1,204 +1,361 @@
 {
-    "metadata": {
+  "metadata": {
     "author": "[Antonios KARAFENTZOS]",
-    "date": "[14.12.2025]",
-    "version": "1.0"
+    "date": "[16.12.2025]",
+    "version": "3.0"
   },
-  "products":[
-  {
-    "id": "brand_product",
-    "name": "Salicylic Acid 2% Solution",
-    "brand": "The Ordinary",
-    "category": "treatment",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A leave-on exfoliating treatment that helps unclog pores and reduce breakouts.",
-    "keyIngredients": ["Salicylic Acid"],
-    "url": "https://theordinary.com/en-us/salicylic-acid-2-solution-100442.html",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Azelaic Acid Suspension 10%",
-    "brand": "The Ordinary",
-    "category": "treatment",
-    "suitableFor": ["normal", "combination", "sensitive"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A brightening treatment that helps improve uneven tone and texture.",
-    "keyIngredients": ["Azelaic Acid"],
-    "url": "https://theordinary.com/en-us/azelaic-acid-suspension-10-100407.html",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Skin Perfecting 2% BHA Liquid Exfoliant",
-    "brand": "Paula’s Choice",
-    "category": "treatment",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "premium",
-    "description": "A leave-on exfoliant that helps clear pores and smooth skin texture.",
-    "keyIngredients": ["Salicylic Acid"],
-    "url": "https://www.paulaschoice.com/skin-perfecting-2pct-bha-liquid-exfoliant/201.html",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Skin Perfecting 8% AHA Gel Exfoliant",
-    "brand": "Paula’s Choice",
-    "category": "treatment",
-    "suitableFor": ["normal", "combination"],
-    "targetConcerns": [],
-    "priceRange": "premium",
-    "description": "An AHA exfoliating gel that helps improve dullness and uneven texture.",
-    "keyIngredients": ["Glycolic Acid"],
-    "url": "https://www.paulaschoice.com/skin-perfecting-8pct-aha-gel-exfoliant/190.html",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Effaclar Duo (+)",
-    "brand": "La Roche-Posay",
-    "category": "treatment",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A blemish treatment that helps reduce breakouts and improve the look of marks.",
-    "keyIngredients": ["Niacinamide", "Salicylic Acid"],
-    "url": "https://www.laroche-posay.com/en-int/effaclar/effaclar-duo-plus",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Cicaplast Baume B5+",
-    "brand": "La Roche-Posay",
-    "category": "treatment",
-    "suitableFor": ["dry", "sensitive", "normal"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A barrier-repair balm that helps soothe dryness and irritation.",
-    "keyIngredients": ["Panthenol (B5)", "Madecassoside"],
-    "url": "https://www.laroche-posay.com/en-int/cicaplast/cicaplast-baume-b5-plus",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Acne Pimple Master Patch",
-    "brand": "COSRX",
-    "category": "treatment",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "Hydrocolloid patches that help protect spots and support faster-looking recovery.",
-    "keyIngredients": ["Hydrocolloid"],
-    "url": "https://www.cosrx.com/products/acne-pimple-master-patch",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "BHA Blackhead Power Liquid",
-    "brand": "COSRX",
-    "category": "treatment",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A BHA exfoliating treatment that helps reduce blackheads and refine pores.",
-    "keyIngredients": ["Betaine Salicylate", "Niacinamide"],
-    "url": "https://www.cosrx.com/products/bha-blackhead-power-liquid",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Clearly Corrective Dark Spot Solution",
-    "brand": "Kiehl’s",
-    "category": "treatment",
-    "suitableFor": ["normal", "combination"],
-    "targetConcerns": [],
-    "priceRange": "premium",
-    "description": "A targeted treatment that helps improve the look of dark spots and uneven tone.",
-    "keyIngredients": ["Activated Vitamin C", "White Birch Extract"],
-    "url": "https://www.kiehls.com/skincare/serums/clearly-corrective-dark-spot-solution",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Succinic Acid Acne Treatment",
-    "brand": "The INKEY List",
-    "category": "treatment",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A targeted spot treatment designed to reduce blemishes and redness.",
-    "keyIngredients": ["Succinic Acid", "Salicylic Acid"],
-    "url": "https://www.theinkeylist.com/products/succinic-acid-acne-treatment",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Retinol Eye Cream",
-    "brand": "The INKEY List",
-    "category": "treatment",
-    "suitableFor": ["normal", "dry"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "An eye-area treatment formulated to help improve the appearance of fine lines.",
-    "keyIngredients": ["Retinol", "Peptides"],
-    "url": "https://www.theinkeylist.com/products/retinol-eye-cream",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Cicalfate+ Restorative Protective Cream",
-    "brand": "Avène",
-    "category": "treatment",
-    "suitableFor": ["dry", "sensitive"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A soothing protective cream designed to support skin recovery and comfort.",
-    "keyIngredients": ["Sucralfate", "Zinc Oxide"],
-    "url": "https://www.eau-thermale-avene.com/p/cicalfate-restorative-protective-cream",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Sébium Global",
-    "brand": "Bioderma",
-    "category": "treatment",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A treatment designed to help improve the look of blemishes and excess oil.",
-    "keyIngredients": ["AHA", "Zinc"],
-    "url": "https://www.bioderma.com/en/our-products/sebium/global",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "DermoPure Oil Control Treatment",
-    "brand": "Eucerin",
-    "category": "treatment",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A treatment that helps reduce blemishes and support clearer-looking skin.",
-    "keyIngredients": ["Salicylic Acid", "Licochalcone A"],
-    "url": "https://www.eucerin.com/products/dermopure/oil-control-treatment",
-    "allIngredients": ""
-  },
-  {
-    "id": "brand_product",
-    "name": "Normaderm Phytosolution Double-Correction Daily Care",
-    "brand": "Vichy",
-    "category": "treatment",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A daily treatment that helps reduce blemishes and improve the look of pores.",
-    "keyIngredients": ["Salicylic Acid", "Hyaluronic Acid"],
-    "url": "https://www.vichy.com/en-int/skin-care/normaderm-phytosolution-double-correction-daily-care",
-    "allIngredients": ""
-  }
-]
+  "products": [
+    {
+      "id": "the_ordinary_salicylic_acid_2_solution",
+      "name": "Salicylic Acid 2% Solution",
+      "brand": "The Ordinary",
+      "category": "treatment",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "large_pores",
+        "oiliness",
+        "redness",
+        "uneven_texture"
+      ],
+      "priceRange": "budget",
+      "description": "A leave-on exfoliating treatment that helps unclog pores and reduce breakouts.",
+      "keyIngredients": [
+        "Salicylic Acid"
+      ],
+      "url": "https://theordinary.com/en-us/salicylic-acid-2-solution-100442.html",
+      "allIngredients": ""
+    },
+    {
+      "id": "the_ordinary_azelaic_acid_suspension_10",
+      "name": "Azelaic Acid Suspension 10%",
+      "brand": "The Ordinary",
+      "category": "treatment",
+      "suitableFor": [
+        "normal",
+        "combination",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dark_spots",
+        "dullness",
+        "redness",
+        "uneven_texture"
+      ],
+      "priceRange": "budget",
+      "description": "A brightening treatment that helps improve uneven tone and texture.",
+      "keyIngredients": [
+        "Azelaic Acid"
+      ],
+      "url": "https://theordinary.com/en-us/azelaic-acid-suspension-10-100407.html",
+      "allIngredients": ""
+    },
+    {
+      "id": "paulas_choice_skin_perfecting_2_bha_liquid_exfoliant",
+      "name": "Skin Perfecting 2% BHA Liquid Exfoliant",
+      "brand": "Paula’s Choice",
+      "category": "treatment",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "large_pores",
+        "oiliness",
+        "uneven_texture"
+      ],
+      "priceRange": "premium",
+      "description": "A leave-on exfoliant that helps clear pores and smooth skin texture.",
+      "keyIngredients": [
+        "Salicylic Acid"
+      ],
+      "url": "https://www.paulaschoice.com/skin-perfecting-2pct-bha-liquid-exfoliant/201.html",
+      "allIngredients": ""
+    },
+    {
+      "id": "paulas_choice_skin_perfecting_8_aha_gel_exfoliant",
+      "name": "Skin Perfecting 8% AHA Gel Exfoliant",
+      "brand": "Paula’s Choice",
+      "category": "treatment",
+      "suitableFor": [
+        "normal",
+        "combination"
+      ],
+      "targetConcerns": [
+        "dullness",
+        "uneven_texture"
+      ],
+      "priceRange": "premium",
+      "description": "An AHA exfoliating gel that helps improve dullness and uneven texture.",
+      "keyIngredients": [
+        "Glycolic Acid"
+      ],
+      "url": "https://www.paulaschoice.com/skin-perfecting-8pct-aha-gel-exfoliant/190.html",
+      "allIngredients": ""
+    },
+    {
+      "id": "la_roche_posay_effaclar_duo",
+      "name": "Effaclar Duo (+)",
+      "brand": "La Roche-Posay",
+      "category": "treatment",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "large_pores",
+        "oiliness",
+        "redness"
+      ],
+      "priceRange": "mid-range",
+      "description": "A blemish treatment that helps reduce breakouts and improve the look of marks.",
+      "keyIngredients": [
+        "Niacinamide",
+        "Salicylic Acid"
+      ],
+      "url": "https://www.laroche-posay.com/en-int/effaclar/effaclar-duo-plus",
+      "allIngredients": ""
+    },
+    {
+      "id": "la_roche_posay_cicaplast_baume_b5",
+      "name": "Cicaplast Baume B5+",
+      "brand": "La Roche-Posay",
+      "category": "treatment",
+      "suitableFor": [
+        "dry",
+        "sensitive",
+        "normal"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "redness",
+        "sensitivity"
+      ],
+      "priceRange": "mid-range",
+      "description": "A barrier-repair balm that helps soothe dryness and irritation.",
+      "keyIngredients": [
+        "Panthenol (B5)",
+        "Madecassoside"
+      ],
+      "url": "https://www.laroche-posay.com/en-int/cicaplast/cicaplast-baume-b5-plus",
+      "allIngredients": ""
+    },
+    {
+      "id": "cosrx_acne_pimple_master_patch",
+      "name": "Acne Pimple Master Patch",
+      "brand": "COSRX",
+      "category": "treatment",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "dark_spots",
+        "dryness"
+      ],
+      "priceRange": "mid-range",
+      "description": "Hydrocolloid patches that help protect spots and support faster-looking recovery.",
+      "keyIngredients": [
+        "Hydrocolloid"
+      ],
+      "url": "https://www.cosrx.com/products/acne-pimple-master-patch",
+      "allIngredients": ""
+    },
+    {
+      "id": "cosrx_bha_blackhead_power_liquid",
+      "name": "BHA Blackhead Power Liquid",
+      "brand": "COSRX",
+      "category": "treatment",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "large_pores",
+        "oiliness",
+        "redness",
+        "uneven_texture"
+      ],
+      "priceRange": "mid-range",
+      "description": "A BHA exfoliating treatment that helps reduce blackheads and refine pores.",
+      "keyIngredients": [
+        "Betaine Salicylate",
+        "Niacinamide"
+      ],
+      "url": "https://www.cosrx.com/products/bha-blackhead-power-liquid",
+      "allIngredients": ""
+    },
+    {
+      "id": "kiehls_clearly_corrective_dark_spot_solution",
+      "name": "Clearly Corrective Dark Spot Solution",
+      "brand": "Kiehl’s",
+      "category": "treatment",
+      "suitableFor": [
+        "normal",
+        "combination"
+      ],
+      "targetConcerns": [
+        "dark_spots",
+        "dullness"
+      ],
+      "priceRange": "premium",
+      "description": "A targeted treatment that helps improve the look of dark spots and uneven tone.",
+      "keyIngredients": [
+        "Activated Vitamin C",
+        "White Birch Extract"
+      ],
+      "url": "https://www.kiehls.com/skincare/serums/clearly-corrective-dark-spot-solution",
+      "allIngredients": ""
+    },
+    {
+      "id": "the_inkey_list_succinic_acid_acne_treatment",
+      "name": "Succinic Acid Acne Treatment",
+      "brand": "The INKEY List",
+      "category": "treatment",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "dark_spots",
+        "large_pores",
+        "oiliness",
+        "redness"
+      ],
+      "priceRange": "budget",
+      "description": "A targeted spot treatment designed to reduce blemishes and redness.",
+      "keyIngredients": [
+        "Succinic Acid",
+        "Salicylic Acid"
+      ],
+      "url": "https://www.theinkeylist.com/products/succinic-acid-acne-treatment",
+      "allIngredients": ""
+    },
+    {
+      "id": "the_inkey_list_retinol_eye_cream",
+      "name": "Retinol Eye Cream",
+      "brand": "The INKEY List",
+      "category": "treatment",
+      "suitableFor": [
+        "normal",
+        "dry"
+      ],
+      "targetConcerns": [
+        "fine_lines",
+        "uneven_texture"
+      ],
+      "priceRange": "budget",
+      "description": "An eye-area treatment formulated to help improve the appearance of fine lines.",
+      "keyIngredients": [
+        "Retinol",
+        "Peptides"
+      ],
+      "url": "https://www.theinkeylist.com/products/retinol-eye-cream",
+      "allIngredients": ""
+    },
+    {
+      "id": "av_ne_cicalfate_restorative_protective_cream",
+      "name": "Cicalfate+ Restorative Protective Cream",
+      "brand": "Avène",
+      "category": "treatment",
+      "suitableFor": [
+        "dry",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "oiliness",
+        "redness",
+        "sensitivity"
+      ],
+      "priceRange": "mid-range",
+      "description": "A soothing protective cream designed to support skin recovery and comfort.",
+      "keyIngredients": [
+        "Sucralfate",
+        "Zinc Oxide"
+      ],
+      "url": "https://www.eau-thermale-avene.com/p/cicalfate-restorative-protective-cream",
+      "allIngredients": ""
+    },
+    {
+      "id": "bioderma_s_bium_global",
+      "name": "Sébium Global",
+      "brand": "Bioderma",
+      "category": "treatment",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "oiliness",
+        "uneven_texture"
+      ],
+      "priceRange": "mid-range",
+      "description": "A treatment designed to help improve the look of blemishes and excess oil.",
+      "keyIngredients": [
+        "AHA",
+        "Zinc"
+      ],
+      "url": "https://www.bioderma.com/en/our-products/sebium/global",
+      "allIngredients": ""
+    },
+    {
+      "id": "eucerin_dermopure_oil_control_treatment",
+      "name": "DermoPure Oil Control Treatment",
+      "brand": "Eucerin",
+      "category": "treatment",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "large_pores",
+        "oiliness",
+        "redness"
+      ],
+      "priceRange": "mid-range",
+      "description": "A treatment that helps reduce blemishes and support clearer-looking skin.",
+      "keyIngredients": [
+        "Salicylic Acid",
+        "Licochalcone A"
+      ],
+      "url": "https://www.eucerin.com/products/dermopure/oil-control-treatment",
+      "allIngredients": ""
+    },
+    {
+      "id": "vichy_normaderm_phytosolution_double_correction_daily_care",
+      "name": "Normaderm Phytosolution Double-Correction Daily Care",
+      "brand": "Vichy",
+      "category": "treatment",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "acne",
+        "dryness",
+        "large_pores",
+        "oiliness",
+        "redness"
+      ],
+      "priceRange": "mid-range",
+      "description": "A daily treatment that helps reduce blemishes and improve the look of pores.",
+      "keyIngredients": [
+        "Salicylic Acid",
+        "Hyaluronic Acid"
+      ],
+      "url": "https://www.vichy.com/en-int/skin-care/normaderm-phytosolution-double-correction-daily-care",
+      "allIngredients": ""
+    }
+  ]
 }

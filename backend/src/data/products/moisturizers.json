@@ -1,113 +1,188 @@
 {
-    "metadata": {
+  "metadata": {
     "author": "[Antonios KARAFENTZOS]",
-    "date": "[14.12.2025]",
-    "version": "1.0"
+    "date": "[16.12.2025]",
+    "version": "3.0"
   },
-  "products":[
-  {
-    "id": "brand_product",
-    "name": "Moisturizing Cream",
-    "brand": "CeraVe",
-    "category": "moisturizer",
-    "suitableFor": ["dry", "normal", "sensitive"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A rich moisturizer that helps restore the skin barrier and provide long-lasting hydration.",
-    "keyIngriedients": ["Ceramides", "Hyaluronic Acid", "Glycerin"],
-    "url": "https://www.cerave.com/skincare/moisturizers/moisturizing-cream",
-    "allIngredients": "Aqua / Water, Glycerin, Cetearyl Alcohol, Caprylic/Capric Triglyceride, Ceramide NP, Ceramide AP, Ceramide EOP, Cholesterol, Sodium Hyaluronate, Phytosphingosine, Carbomer, Phenoxyethanol"
-  },
-  {
-    "id": "brand_product",
-    "name": "PM Facial Moisturizing Lotion",
-    "brand": "CeraVe",
-    "category": "moisturizer",
-    "suitableFor": ["normal", "dry", "combination"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A lightweight nighttime moisturizer that hydrates and supports skin barrier repair.",
-    "keyIngriedients": ["Niacinamide", "Ceramides", "Hyaluronic Acid"],
-    "url": "https://www.cerave.com/skincare/moisturizers/pm-facial-moisturizing-lotion",
-    "allIngredients": "Aqua / Water, Glycerin, Niacinamide, Caprylic/Capric Triglyceride, Ceramide NP, Ceramide AP, Ceramide EOP, Sodium Hyaluronate, Cholesterol, Phenoxyethanol"
-  },
-  {
-    "id": "brand_product",
-    "name": "Hydro Boost Water Gel",
-    "brand": "Neutrogena",
-    "category": "moisturizer",
-    "suitableFor": ["oily", "combination", "normal"],
-    "targetConcerns": [],
-    "priceRange": "budget",
-    "description": "A lightweight gel moisturizer that delivers intense hydration without heaviness.",
-    "keyIngriedients": ["Hyaluronic Acid", "Glycerin"],
-    "url": "https://www.neutrogena.com/products/skincare/hydro-boost-water-gel",
-    "allIngredients": "Water, Dimethicone, Glycerin, Sodium Hyaluronate, Carbomer, Phenoxyethanol, Chlorphenesin"
-  },
-  {
-    "id": "brand_product",
-    "name": "Toleriane Sensitive Fluide",
-    "brand": "La Roche-Posay",
-    "category": "moisturizer",
-    "suitableFor": ["sensitive", "normal", "combination"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A lightweight moisturizer formulated to soothe and hydrate sensitive skin.",
-    "keyIngriedients": ["Niacinamide", "Glycerin", "Thermal Spring Water"],
-    "url": "https://www.laroche-posay.com/en-int/toleriane/toleriane-sensitive-fluid",
-    "allIngredients": "Aqua / Water, Glycerin, Niacinamide, Caprylic/Capric Triglyceride, Sodium Hydroxide"
-  },
-  {
-    "id": "brand_product",
-    "name": "Lipikar Balm AP+M",
-    "brand": "La Roche-Posay",
-    "category": "moisturizer",
-    "suitableFor": ["dry", "sensitive"],
-    "targetConcerns": [],
-    "priceRange": "mid-range",
-    "description": "A nourishing balm that relieves dryness and helps rebalance the skin barrier.",
-    "keyIngriedients": ["Shea Butter", "Niacinamide"],
-    "url": "https://www.laroche-posay.com/en-int/lipikar/lipikar-baume-apm",
-    "allIngredients": "Aqua / Water, Glycerin, Butyrospermum Parkii Butter, Niacinamide, Mineral Oil, Dimethicone"
-  },
-  {
-    "id": "brand_product",
-    "name": "Dramatically Different Hydrating Jelly",
-    "brand": "Clinique",
-    "category": "moisturizer",
-    "suitableFor": ["oily", "combination"],
-    "targetConcerns": [],
-    "priceRange": "premium",
-    "description": "An oil-free gel moisturizer that delivers hydration without clogging pores.",
-    "keyIngriedients": ["Hyaluronic Acid", "Cucumber Extract"],
-    "url": "https://www.clinique.com/product/1687/58208/skincare/moisturizers/dramatically-different-hydrating-jelly",
-    "allIngredients": "Water, Glycerin, Dimethicone, Sodium Hyaluronate, Cucumis Sativus Fruit Extract, Phenoxyethanol"
-  },
-  {
-    "id": "brand_product",
-    "name": "Ultra Facial Cream",
-    "brand": "Kiehl’s",
-    "category": "moisturizer",
-    "suitableFor": ["normal", "dry"],
-    "targetConcerns": [],
-    "priceRange": "premium",
-    "description": "A lightweight cream that provides long-lasting hydration for daily use.",
-    "keyIngriedients": ["Squalane", "Glacial Glycoprotein"],
-    "url": "https://www.kiehls.com/skincare/moisturizers/ultra-facial-cream",
-    "allIngredients": "Aqua / Water, Glycerin, Squalane, Cetearyl Alcohol, Glyceryl Stearate, Phenoxyethanol"
-  },
-  {
-    "id": "brand_product",
-    "name": "Ultra Repair Cream",
-    "brand": "First Aid Beauty",
-    "category": "moisturizer",
-    "suitableFor": ["dry", "sensitive"],
-    "targetConcerns": [],
-    "priceRange": "premium",
-    "description": "A rich cream designed to soothe and hydrate very dry or irritated skin.",
-    "keyIngriedients": ["Colloidal Oatmeal", "Shea Butter"],
-    "url": "https://www.firstaidbeauty.com/skin-care/ultra-repair-cream",
-    "allIngredients": "Water, Glycerin, Butyrospermum Parkii Butter, Colloidal Oatmeal, Allantoin, Phenoxyethanol"
-  }
-]
+  "products": [
+    {
+      "id": "cerave_moisturizing_cream",
+      "name": "Moisturizing Cream",
+      "brand": "CeraVe",
+      "category": "moisturizer",
+      "suitableFor": [
+        "dry",
+        "normal",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "budget",
+      "description": "A rich moisturizer that helps restore the skin barrier and provide long-lasting hydration.",
+      "keyIngriedients": [
+        "Ceramides",
+        "Hyaluronic Acid",
+        "Glycerin"
+      ],
+      "url": "https://www.cerave.com/skincare/moisturizers/moisturizing-cream",
+      "allIngredients": "Aqua / Water, Glycerin, Cetearyl Alcohol, Caprylic/Capric Triglyceride, Ceramide NP, Ceramide AP, Ceramide EOP, Cholesterol, Sodium Hyaluronate, Phytosphingosine, Carbomer, Phenoxyethanol"
+    },
+    {
+      "id": "cerave_pm_facial_moisturizing_lotion",
+      "name": "PM Facial Moisturizing Lotion",
+      "brand": "CeraVe",
+      "category": "moisturizer",
+      "suitableFor": [
+        "normal",
+        "dry",
+        "combination"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "budget",
+      "description": "A lightweight nighttime moisturizer that hydrates and supports skin barrier repair.",
+      "keyIngriedients": [
+        "Niacinamide",
+        "Ceramides",
+        "Hyaluronic Acid"
+      ],
+      "url": "https://www.cerave.com/skincare/moisturizers/pm-facial-moisturizing-lotion",
+      "allIngredients": "Aqua / Water, Glycerin, Niacinamide, Caprylic/Capric Triglyceride, Ceramide NP, Ceramide AP, Ceramide EOP, Sodium Hyaluronate, Cholesterol, Phenoxyethanol"
+    },
+    {
+      "id": "neutrogena_hydro_boost_water_gel",
+      "name": "Hydro Boost Water Gel",
+      "brand": "Neutrogena",
+      "category": "moisturizer",
+      "suitableFor": [
+        "oily",
+        "combination",
+        "normal"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "budget",
+      "description": "A lightweight gel moisturizer that delivers intense hydration without heaviness.",
+      "keyIngriedients": [
+        "Hyaluronic Acid",
+        "Glycerin"
+      ],
+      "url": "https://www.neutrogena.com/products/skincare/hydro-boost-water-gel",
+      "allIngredients": "Water, Dimethicone, Glycerin, Sodium Hyaluronate, Carbomer, Phenoxyethanol, Chlorphenesin"
+    },
+    {
+      "id": "la_roche_posay_toleriane_sensitive_fluide",
+      "name": "Toleriane Sensitive Fluide",
+      "brand": "La Roche-Posay",
+      "category": "moisturizer",
+      "suitableFor": [
+        "sensitive",
+        "normal",
+        "combination"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "sensitivity"
+      ],
+      "priceRange": "mid-range",
+      "description": "A lightweight moisturizer formulated to soothe and hydrate sensitive skin.",
+      "keyIngriedients": [
+        "Niacinamide",
+        "Glycerin",
+        "Thermal Spring Water"
+      ],
+      "url": "https://www.laroche-posay.com/en-int/toleriane/toleriane-sensitive-fluid",
+      "allIngredients": "Aqua / Water, Glycerin, Niacinamide, Caprylic/Capric Triglyceride, Sodium Hydroxide"
+    },
+    {
+      "id": "la_roche_posay_lipikar_balm_ap_m",
+      "name": "Lipikar Balm AP+M",
+      "brand": "La Roche-Posay",
+      "category": "moisturizer",
+      "suitableFor": [
+        "dry",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "mid-range",
+      "description": "A nourishing balm that relieves dryness and helps rebalance the skin barrier.",
+      "keyIngriedients": [
+        "Shea Butter",
+        "Niacinamide"
+      ],
+      "url": "https://www.laroche-posay.com/en-int/lipikar/lipikar-baume-apm",
+      "allIngredients": "Aqua / Water, Glycerin, Butyrospermum Parkii Butter, Niacinamide, Mineral Oil, Dimethicone"
+    },
+    {
+      "id": "clinique_dramatically_different_hydrating_jelly",
+      "name": "Dramatically Different Hydrating Jelly",
+      "brand": "Clinique",
+      "category": "moisturizer",
+      "suitableFor": [
+        "oily",
+        "combination"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "large_pores",
+        "oiliness"
+      ],
+      "priceRange": "premium",
+      "description": "An oil-free gel moisturizer that delivers hydration without clogging pores.",
+      "keyIngriedients": [
+        "Hyaluronic Acid",
+        "Cucumber Extract"
+      ],
+      "url": "https://www.clinique.com/product/1687/58208/skincare/moisturizers/dramatically-different-hydrating-jelly",
+      "allIngredients": "Water, Glycerin, Dimethicone, Sodium Hyaluronate, Cucumis Sativus Fruit Extract, Phenoxyethanol"
+    },
+    {
+      "id": "kiehls_ultra_facial_cream",
+      "name": "Ultra Facial Cream",
+      "brand": "Kiehl’s",
+      "category": "moisturizer",
+      "suitableFor": [
+        "normal",
+        "dry"
+      ],
+      "targetConcerns": [
+        "dryness"
+      ],
+      "priceRange": "premium",
+      "description": "A lightweight cream that provides long-lasting hydration for daily use.",
+      "keyIngriedients": [
+        "Squalane",
+        "Glacial Glycoprotein"
+      ],
+      "url": "https://www.kiehls.com/skincare/moisturizers/ultra-facial-cream",
+      "allIngredients": "Aqua / Water, Glycerin, Squalane, Cetearyl Alcohol, Glyceryl Stearate, Phenoxyethanol"
+    },
+    {
+      "id": "first_aid_beauty_ultra_repair_cream",
+      "name": "Ultra Repair Cream",
+      "brand": "First Aid Beauty",
+      "category": "moisturizer",
+      "suitableFor": [
+        "dry",
+        "sensitive"
+      ],
+      "targetConcerns": [
+        "dryness",
+        "sensitivity"
+      ],
+      "priceRange": "premium",
+      "description": "A rich cream designed to soothe and hydrate very dry or irritated skin.",
+      "keyIngriedients": [
+        "Colloidal Oatmeal",
+        "Shea Butter"
+      ],
+      "url": "https://www.firstaidbeauty.com/skin-care/ultra-repair-cream",
+      "allIngredients": "Water, Glycerin, Butyrospermum Parkii Butter, Colloidal Oatmeal, Allantoin, Phenoxyethanol"
+    }
+  ]
 }
