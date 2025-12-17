@@ -9,7 +9,7 @@
     "id": "dry_am",
     "name": "Dry Skin \u2013 Morning Routine",
     "skinType": "dry",
-    "timeOfDay": "AM",
+    "dayTime": "AM",
     "description": "This routine focuses on hydrating and protecting dry skin throughout the day.",
     "steps": [
       {
@@ -38,7 +38,7 @@
     "id": "dry_pm",
     "name": "Dry Skin \u2013 Evening Routine",
     "skinType": "dry",
-    "timeOfDay": "PM",
+    "dayTime": "PM",
     "description": "An evening routine designed to repair and deeply hydrate dry skin overnight.",
     "steps": [
       {
@@ -63,7 +63,7 @@
     "id": "oily_am",
     "name": "Oily Skin \u2013 Morning Routine",
     "skinType": "oily",
-    "timeOfDay": "AM",
+    "dayTime": "AM",
     "description": "This routine helps control excess oil while keeping the skin balanced.",
     "steps": [
       {
@@ -92,7 +92,7 @@
     "id": "oily_pm",
     "name": "Oily Skin \u2013 Evening Routine",
     "skinType": "oily",
-    "timeOfDay": "PM",
+    "dayTime": "PM",
     "description": "An evening routine focused on cleansing oil buildup and supporting balance.",
     "steps": [
       {
@@ -117,7 +117,7 @@
     "id": "combination_am",
     "name": "Combination Skin \u2013 Morning Routine",
     "skinType": "combination",
-    "timeOfDay": "AM",
+    "dayTime": "AM",
     "description": "Balances oily and dry areas while protecting the skin during the day.",
     "steps": [
       {
@@ -146,7 +146,7 @@
     "id": "combination_pm",
     "name": "Combination Skin \u2013 Evening Routine",
     "skinType": "combination",
-    "timeOfDay": "PM",
+    "dayTime": "PM",
     "description": "Rebalances the skin after daily exposure to oil and impurities.",
     "steps": [
       {
@@ -171,7 +171,7 @@
     "id": "sensitive_daily",
     "name": "Sensitive Skin \u2013 Daily Routine",
     "skinType": "sensitive",
-    "timeOfDay": "Daily",
+    "dayTime": "Daily",
     "description": "A gentle routine focused on calming and protecting sensitive skin.",
     "steps": [
       {
@@ -200,7 +200,7 @@
     "id": "normal_daily",
     "name": "Normal Skin \u2013 Daily Routine",
     "skinType": "normal",
-    "timeOfDay": "Daily",
+    "dayTime": "Daily",
     "description": "A simple routine to maintain healthy, balanced skin.",
     "steps": [
       {
