@@ -1,8 +1,10 @@
 {
   "metadata": {
     "author": "[Antonios KARAFENTZOS]",
+    "lastModifiedBy": "Selin BIRINCI",
     "date": "[16.12.2025]",
-    "version": "3.0"
+    "lastModifiedDate": "[16.12.2025]",
+    "version": "4.0"
   },
   "products": [
     {
@@ -11,21 +13,30 @@
       "brand": "The Ordinary",
       "category": "serum",
       "suitableFor": [
+        "normal",
+        "dry",
         "oily",
         "combination"
       ],
       "targetConcerns": [
         "acne",
+        "uneven_texture",
+        "dullness",
         "oiliness"
       ],
-      "priceRange": "budget",
-      "description": "A serum formulated to help balance oil production and improve the appearance of blemishes.",
+      "description": "A serum formulated to help balance oil production and improve the appearance of blemishes. Can be used both day(make sure to aplly SPF afterwards) and night.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngriedients": [
         "Niacinamide",
         "Zinc PCA"
       ],
+      "allIngredients": "Aqua (Water), Niacinamide, Pentylene Glycol, Zinc PCA, Dimethyl Isosorbide, Tamarindus Indica Seed Gum, Xanthan Gum, Isoceteth-20, Ethoxydiglycol, Phenoxyethanol, Chlorphenesin",
+      "priceRange": "budget",
       "url": "https://theordinary.com/en-us/niacinamide-10-zinc-1-serum-100436.html",
-      "allIngredients": "Aqua (Water), Niacinamide, Zinc PCA, Dimethyl Isosorbide, Tamarindus Indica Seed Gum, Xanthan Gum, Isoceteth-20, Ethoxydiglycol, Phenoxyethanol, Chlorphenesin"
+      "imageURL": "https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwce8a7cdf/Images/products/The%20Ordinary/rdn-niacinamide-10pct-zinc-1pct-30ml.png?sw=860&sh=860&sm=fit"
     },
     {
       "id": "the_ordinary_hyaluronic_acid_2_b5",
@@ -35,41 +46,62 @@
       "suitableFor": [
         "dry",
         "normal",
-        "combination"
+        "combination",
+        "oily"
       ],
       "targetConcerns": [
         "dryness"
       ],
-      "priceRange": "budget",
-      "description": "A hydrating serum that helps maintain skin moisture and smoothness.",
-      "keyIngriedients": [
-        "Hyaluronic Acid",
-        "Vitamin B5"
+      "description": "A hydrating serum that helps maintain skin moisture and smoothness. Can be used both day(make sure to aplly SPF afterwards) and night.",
+      "dayTime": [
+        "AM",
+        "PM"
       ],
+      "keyIngriedients": [
+        "Sodium Hyaluronate",
+        "Sodium Hyaluronate",
+        "Crosspolymer",
+        "Panthenol"
+      ],
+      "allIngredients": " Aqua (Water), Sodium Hyaluronate, Pentylene Glycol, Propanediol, Sodium Hyaluronate Crosspolymer, Panthenol, Ahnfeltia Concinna Extract, Glycerin, Trisodium Ethylenediamine Disuccinate, Citric Acid, Isoceteth-20, Ethoxydiglycol, Ethylhexylglycerin, Hexylene Glycol, 1,2-Hexanediol, Phenoxyethanol, Caprylyl Glycol",
+      "priceRange": "budget",
       "url": "https://theordinary.com/en-us/hyaluronic-acid-2-b5-serum-100425.html",
-      "allIngredients": "Aqua (Water), Sodium Hyaluronate, Sodium Hyaluronate Crosspolymer, Panthenol, Pentylene Glycol, Citric Acid, Phenoxyethanol, Chlorphenesin"
+      "imageURL": "https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw56cd0f2e/Images/products/The%20Ordinary/rdn-hyaluronic-acid-2pct-b5-30ml.png?sw=860&sh=860&sm=fit"
     },
     {
-      "id": "la_roche_posay_pure_vitamin_c10_serum",
-      "name": "Pure Vitamin C10 Serum",
+      "id": "la_roche_posay_pure_vitamin_c12_serum",
+      "name": "Pure Vitamin C12 Serum",
       "brand": "La Roche-Posay",
       "category": "serum",
       "suitableFor": [
-        "normal"
+        "normal",
+        "oily",
+        "combination",
+        "dry",
+        "sensitive"
       ],
       "targetConcerns": [
-        "dark_spots",
         "dullness",
-        "uneven_texture"
+        "uneven_texture",
+        "sensitivity",
+        "fine_lines"
       ],
-      "priceRange": "mid-range",
-      "description": "A brightening serum that helps improve skin radiance and texture.",
+      "description": "A brightening serum that helps improve skin radiance and texture. Should be used only in the morning, follow with SPF.",
+      "dayTime": [
+        "AM"
+      ],
       "keyIngriedients": [
-        "Vitamin C",
-        "Salicylic Acid"
+        "12% Pure Vitamin C",
+        "Salicylic Acid",
+        "Neurosensine",
+        "Hyaluronic Acid",
+        "Glycerin",
+        "Thermal Water"
       ],
-      "url": "https://www.laroche-posay.com/en-int/vitamin-c/pure-vitamin-c10-serum",
-      "allIngredients": "Aqua / Water, Ascorbic Acid, Alcohol Denat., Salicylic Acid, Neurosensine, Glycerin, Sodium Hydroxide"
+      "allIngredients": "AQUA / WATER / EAU, ASCORBIC ACID, CYCLOHEXASILOXANE, GLYCERIN, ALCOHOL DENAT., POTASSIUM HYDROXIDE, POLYMETHYLSILSESQUIOXANE, POLYSILICONE-11, DI M E T H I C O N E, P ROP Y L E N E G LY COL, PENTAERYTHRITYL TETRAETHYLHEXANOATE, C13-14 ISOPARAFFIN, TOCOPHEROL, SODIUM HYALURONATE, HYDROLYZED HYALURONIC ACID, ADENOSINE, ACETYL DIPEPTIDE-1 CETYL ESTER, PEG-20 METHYL GLUCOSE SESQUISTEARATE, P O L OX AME R 3 3 8, S A L I C Y L I C A C I D, POLYACRYLAMIDE, TOLUENE SULFONIC ACID, AMMONIUM POLYACRYLOYLDIMETHYL TAURATE, XANTHAN GUM, CAPRYLYL GLYCOL, DISODIUM EDTA, BHT, LAURETH-7, PARFUM / FRAGRANCE",
+      "priceRange": "mid-range",
+      "url": "https://www.laroche-posay.us/our-products/face/face-serum/vitamin-c12-serum-3337875660570.html",
+      "imageURL": "https://www.laroche-posay.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-laroche-posay-master-catalog/default/dw85a71660/img/3337875660570/LaRochePosay-Product-Skincare-PureVitaminC12-30ml-3337875909235-PackshotFront-shadow-1500x1500-Rev.jpg?sw=1440&sh=1440&sm=cut&sfrm=jpg&q=70"
     },
     {
       "id": "la_roche_posay_hyalu_b5_serum",
@@ -78,19 +110,33 @@
       "category": "serum",
       "suitableFor": [
         "dry",
+        "combination",
+        "normal",
+        "oily",
         "sensitive"
       ],
       "targetConcerns": [
-        "dryness"
+        "dryness",
+        "fine_lines",
+        "sensitivity"
       ],
-      "priceRange": "mid-range",
-      "description": "A hydrating and plumping serum designed to support skin repair.",
+      "description": "A hydrating and plumping serum designed to support skin repair. Can be used both day(make sure to aplly SPF afterwards) and night.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngriedients": [
         "Hyaluronic Acid",
-        "Vitamin B5"
+        "Madecassoside",
+        "Glycerin",
+        "Dimethicone",
+        "Vitamin B5",
+        "Thermal Water"
       ],
-      "url": "https://www.laroche-posay.com/en-int/hyalu-b5/hyalu-b5-serum",
-      "allIngredients": "Aqua / Water, Glycerin, Panthenol, Sodium Hyaluronate, Dimethicone, Phenoxyethanol"
+      "allIngredients": "AQUA / WATER • GLYCERIN • ALCOHOL DENAT. • PROPYLENE GLYCOL • PANTHENOL • PENTYLENE GLYCOL • DIMETHICONE • PEG-6 CAPRYLIC/CAPRIC GLYCERIDES • PPG-6-DECYLTETRADECETH-30 • GLYCERYL ISOSTEARATE • MADECASSOSIDE • SODIUM HYALURONATE • AMMONIUM POLYACRYLOYLDIMETHYL TAURATE • DISODIUM EDTA • HYDROLYZED HYALURONIC ACID • CAPRYLYL GLYCOL • CITRIC ACID • XANTHAN GUM • BUTYLENE GLYCOL • TOCOPHEROL • PHENOXYETHANOL • PARFUM / FRAGRANCE ",
+     "priceRange": "mid-range",
+      "url": "https://www.laroche-posay.us/our-products/face/face-serum/hyalu-b5-pure-hyaluronic-acid-serum-hyaluB5serum.html",
+      "imageURL": "https://www.laroche-posay.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-laroche-posay-master-catalog/default/dw885f7b1a/product/March%202023%20packshot%20updates/3337875583626-1_Glycolic-B5_30ml.jpg?sw=1440&sh=1440&sm=cut&sfrm=jpg&q=70"
     },
     {
       "id": "paulas_choice_10_azelaic_acid_booster",
@@ -98,21 +144,31 @@
       "brand": "Paula’s Choice",
       "category": "serum",
       "suitableFor": [
-        "sensitive"
+        "combination",
+        "dry",
+        "normal",
+        "oily"
       ],
       "targetConcerns": [
         "dark_spots",
-        "redness",
-        "sensitivity"
+        "redness"
       ],
-      "priceRange": "premium",
-      "description": "A multi-tasking treatment that helps improve uneven tone and calm redness.",
+      "description": "A multi-tasking treatment that helps improve uneven tone and calm redness. Can be used both day(make sure to aplly SPF afterwards) and night.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngriedients": [
         "Azelaic Acid",
-        "Salicylic Acid"
+        "Salicylic Acid",
+        "Adenosine",
+        "Allantoin",
+        "Boerhavia Diffusa Root Extract"
       ],
+      "allIngredients": "Water, Azelaic Acid, C12-15 Alkyl Benzoate, Caprylic/Capric Triglyceride, Methyl Glucose Sesquistearate, Glycerin, Cetearyl Alcohol, Glyceryl Stearate, Dimethicone, Salicylic Acid, Adenosine, Glycyrrhiza Glabra (Licorice) Root Extract, Boerhavia Diffusa Root Extract, Allantoin, Bisabolol, Cyclopentasiloxane, Xanthan Gum, Sclerotium Gum, Propanediol, Butylene Glycol, Phenoxyethanol",
+      "priceRange": "premium",
       "url": "https://www.paulaschoice.com/10pct-azelaic-acid-booster/775.html",
-      "allIngredients": "Water, Azelaic Acid, Butylene Glycol, Salicylic Acid, Allantoin, Phenoxyethanol"
+      "imageURL": "https://www.paulaschoice.com/dw/image/v2/BBNX_PRD/on/demandware.static/-/Sites-pc-catalog/default/dwbd10fc78/images/products/7750-portrait.png?sw=1000&sfrm=png"
     },
     {
       "id": "cosrx_advanced_snail_96_mucin_power_essence",
@@ -126,15 +182,28 @@
       ],
       "targetConcerns": [
         "dryness",
+        "dark_spots",
+        "dullness",
+        "sensitivity",
         "uneven_texture"
       ],
-      "priceRange": "mid-range",
-      "description": "A repairing essence that helps hydrate and improve skin texture.",
+      "description": "A repairing essence that helps hydrate and improve skin texture. Can be used both day(make sure to aplly SPF afterwards) and night.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngriedients": [
+        "Allantoin",
+        "Panthenol",
+        "Sodium Hyaluronate",
+        "Betaine",
+        "Snail Secretion Filtrate",
         "Snail Mucin"
       ],
+      "allIngredients": "Snail Secretion Filtrate, Betaine, Butylene Glycol, 1,2-Hexanediol, Sodium Polyacrylate, Phenoxyethanol, Sodium Hyaluronate, Allantoin, Ethyl Hexanediol, Carbomer, Panthenol, Arginine ",  
+      "priceRange": "mid-range",
       "url": "https://www.cosrx.com/products/advanced-snail-96-mucin-power-essence",
-      "allIngredients": "Snail Secretion Filtrate, Betaine, Sodium Hyaluronate, Panthenol, Arginine"
+      "imageURL": "https://www.cosrx.com/cdn/shop/files/james_800x1067_1_1_4e9750cc-2cd6-4817-ace5-be2305a85806.jpg?v=1763111577"
     },
     {
       "id": "the_inkey_list_retinol_serum",
@@ -142,20 +211,29 @@
       "brand": "The INKEY List",
       "category": "serum",
       "suitableFor": [
-        "normal"
+        "normal",
+        "combination",
+        "dry",
+        "oily"
       ],
       "targetConcerns": [
         "fine_lines",
+        "dark_spots",
         "uneven_texture"
       ],
-      "priceRange": "budget",
-      "description": "A lightweight retinol serum designed to improve skin texture and fine lines.",
+      "description": "A lightweight retinol serum designed to improve skin texture and fine lines. Should be used only at night.",
+      "dayTime": [
+        "PM"
+      ],
       "keyIngriedients": [
-        "Retinol",
+        "1% Retinyl Acetate",
+        "0.5% Granactive Retinoid",
         "Squalane"
       ],
+      "allIngredients": "Water (Aqua / Eau), Glycerin, Butylene Glycol, Propanediol, Dicaprylyl Carbonate, Retinyl Acetate, Dimethicone, Phenoxyethanol, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Caprylyl Glycol, Phospholipids, Squalane, Glycine Soja (Soybean) Oil, Carbomer, Polysorbate 60, Tocopheryl Acetate, Glycolipids, Sodium Hydroxide, Sodium Phytate, Sorbitan Isostearate, Glycine Soja (Soybean) Sterols, Tetrahexyldecyl Ascorbate, Leuconostoc/Radish Root Ferment Filtrate, Hyaluronic Acid, Sodium Lactate, Tocopherol, Polysorbate 20, Palmitoyl Tetrapeptide-7, Palmitoyl Tripeptide-1",               
+      "priceRange": "budget",
       "url": "https://www.theinkeylist.com/products/retinol-serum",
-      "allIngredients": "Water, Squalane, Retinol, Caprylic/Capric Triglyceride, Phenoxyethanol"
+      "imageURL": "https://www.theinkeylist.com/cdn/shop/files/RetinolSerum_AwardHero_1075x_crop_center.jpg?v=1730488134"      
     },
     {
       "id": "beauty_of_joseon_glow_serum",
@@ -163,20 +241,31 @@
       "brand": "Beauty of Joseon",
       "category": "serum",
       "suitableFor": [
-        "normal"
+        "normal",
+        "dry",
+        "oily",
+        "combination"
       ],
       "targetConcerns": [
-        "dryness",
-        "dullness"
+        "dullness",
+        "oiliness",
+        "acne",
+        "redness"
       ],
-      "priceRange": "mid-range",
-      "description": "A nourishing serum that enhances glow and hydration.",
+      "description": "A nourishing serum that enhances glow and hydration. Can be used both day(make sure to aplly SPF afterwards) and night.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngriedients": [
-        "Propolis Extract",
-        "Niacinamide"
+        "Propolis Extract ",
+        "Niacinamide 2%",
+        "BHA 0.5%"
       ],
+      "allIngredients": "Propolis Extract, Dipropylene Glycol, Glycerin, Butylene Glycol, Water, Niacinamide, 1,2-Hexanediol, Melia Azadirachta Flower Extract, Melia Azadirachta Leaf Extract, Sodium Hyaluronate, Curcuma Longa (Turmeric) Root Extract, Ocimum Sanctum Leaf Extract, Theobroma Cacao (Cocoa) Seed Extract, Melaleuca Alternifolia (Tea Tree) Extract, Centella Asiatica Extract, Corallina Officinalis Extract, Lotus Corniculatus Seed Extract, Calophyllum Inophyllum Seed Oil, Betaine Salicylate, Sodium Polyacryloyldimethyl Taurate, Tromethamine, Polyglyceryl-10 Laurate, Caprylyl Glycol, Ethylhexylglycerin, Dextrin, Pentylene Glycol, Octanediol, Tocopherol, Xanthan Gum, Carbomer",
+      "priceRange": "mid-range",
       "url": "https://beautyofjoseon.com/products/glow-serum-propolis-niacinamide",
-      "allIngredients": "Propolis Extract, Water, Glycerin, Niacinamide, Butylene Glycol, Phenoxyethanol"
+      "imageURL": "https://beautyofjoseon.com/cdn/shop/files/Glow-Serum-Propolis-Niacinamide_Beauty-of-Joseon_55675732-52105492038004.jpg?v=1762679852&width=3000"
     }
   ]
 }

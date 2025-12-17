@@ -1,13 +1,15 @@
 {
   "metadata": {
     "author": "[Antonios KARAFENTZOS]",
+    "lastModifiedBy": "Selin BIRINCI",
     "date": "[16.12.2025]",
-    "version": "3.0"
+    "lastModifiedDate": "[16.12.2025]",
+    "version": "4.0"
   },
   "products": [
     {
-      "id": "paulas_choice_skin_balancing_pore_reducing_toner",
-      "name": "Skin Balancing Pore-Reducing Toner",
+      "id": "paulas_choice_pore_reducing_toner",
+      "name": "Pore-Reducing Toner",
       "brand": "Paula’s Choice",
       "category": "toner",
       "suitableFor": [
@@ -19,14 +21,21 @@
         "oiliness",
         "redness"
       ],
-      "priceRange": "premium",
-      "description": "A lightweight toner that helps refine pores and balance excess oil.",
-      "keyIngredients": [
-        "Niacinamide",
-        "Antioxidants"
+      "description": "A lightweight toner that helps refine pores and balance excess oil. Must be applied after cleanser, twice a day.",
+      "dayTime": [
+        "AM",
+        "PM"
       ],
+      "keyIngredients": [
+        "Cholesterol",
+        "Arctium Lappa",
+        "Cholesterol"
+      ],
+      "allIngredients": "Water, Glycerin, Butylene Glycol, Niacinamide, Polysorbate 20, Adenosine, Anthemis Nobilis Flower Extract, Arctium Lappa, Hydrolyzed Jojoba Esters, Sodium PCA, Panthenol, Sodium Hyaluronate, Ceramide NP, Ceramide AP, Ceramide EOP, Phytosphingosine, Cholesterol, Tetrahexyldecyl Ascorbate, Oleth-10, Sodium Lauroyl Lactylate, Caprylyl Glycol, Hexylene Glycol, Sodium Citrate, Xanthan Gum, Trisodium EDTA, Phenoxyethanol",
+      "priceRange": "premium",
       "url": "https://www.paulaschoice.com/skin-balancing-pore-reducing-toner/135.html",
-      "allIngredients": "Water, Glycerin, Niacinamide, Sodium PCA, Panthenol, Allantoin, Phenoxyethanol"
+      "imageURL": "https://www.paulaschoice.com/dw/image/v2/BBNX_PRD/on/demandware.static/-/Sites-pc-catalog/default/dwb26e4255/images/products/skin-balancing-pore-reducing-toner-1350-L_new.png?sw=1000&sfrm=png"
+
     },
     {
       "id": "paulas_choice_enriched_calming_toner",
@@ -42,36 +51,54 @@
         "redness",
         "sensitivity"
       ],
-      "priceRange": "premium",
-      "description": "A soothing toner designed to calm and hydrate sensitive, dry skin.",
-      "keyIngredients": [
-        "Ceramides",
-        "Glycerin"
+      "description": "A soothing toner designed to calm and hydrate sensitive, dry skin. Must be applied after cleanser, twice a day.",
+      "dayTime": [
+        "AM",
+        "PM"
       ],
+      "keyIngredients": [
+        "Ascorbyl Palmitate",
+        "Glycerin",
+        "Borage Seed Oil"
+      ],
+      "allIngredients": "Water, Cyclopentasiloxane, Butylene Glycol, Glycereth-26, Dimethiconol, Oenothera Biennis Oil, Borago Officinalis Seed Oil, Sodium Hyaluronate, Tocopheryl Acetate, Tocopherol, Ascorbyl Palmitate, Panthenol, Allantoin, Glycerin, Hydrogenated Lecithin, Caprylic/Capric Triglyceride, Niacinamide, Superoxide Dismutase, PEG-40 Hydrogenated Castor Oil, Myristamidopropyl PG-Dimonium Chloride Phosphate, Laureth-4, Laureth-23, Disodium EDTA, Sodium Benzoate, Chlorphenesin, Phenoxyethanol, Benzoic Acid, Sorbic Acid",
+      "priceRange": "premium",
       "url": "https://www.paulaschoice.com/enriched-calming-toner/125.html",
-      "allIngredients": "Water, Glycerin, Ceramide NP, Panthenol, Allantoin, Sodium PCA, Phenoxyethanol"
+      "imageURL": "https://www.paulaschoice.com/dw/image/v2/BBNX_PRD/on/demandware.static/-/Sites-pc-catalog/default/dw030d1a20/images/products/2025%20Sept%20Photos/ca_1250_pdp_carousel_main_1.png?sw=1000&sfrm=png"
+
     },
     {
-      "id": "thayers_alcohol_free_witch_hazel_toner",
-      "name": "Alcohol-Free Witch Hazel Toner",
+      "id": "thayers_uncented_witch_hazel_toner",
+      "name": "Uncented Witch Hazel Toner",
       "brand": "Thayers",
       "category": "toner",
       "suitableFor": [
         "normal",
+        "dry",
+        "oily",
         "combination",
         "sensitive"
       ],
       "targetConcerns": [
-        "sensitivity"
+        "sensitivity",
+        "large_pores",
+        "uneven_texture"
       ],
-      "priceRange": "budget",
-      "description": "A gentle, alcohol-free toner that refreshes and soothes the skin.",
+      "description": "A gentle, alcohol-free toner that refreshes and soothes the skin. Must be applied after cleanser, twice a day.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "Witch Hazel",
-        "Aloe Vera"
+        "Aloe Vera",
+        "Glycerin"
       ],
-      "url": "https://www.thayers.com/Alcohol-Free-Witch-Hazel-Toner/THY0006.html",
-      "allIngredients": "Water, Hamamelis Virginiana Water, Aloe Barbadensis Leaf Juice, Glycerin, Phenoxyethanol"
+      "allIngredients": " AQUA / WATER / EAU, GLYCERIN, HAMAMELIS VIRGINIANA BARK/LEAF/TWIG EXTRACT - WITCH HAZEL BARK/LEAF/TWIG EXTRACT, ALOE BARBADENSIS LEAF EXTRACT, POTASSIUM HYDROXIDE, CAPRYLYL GLYCOL, CITRIC ACID, ETHYLHEXYLGLYCERIN, POLYSORBATE 20, PHENOXYETHANOL ",
+      "priceRange": "budget",
+      "url": "https://www.thayers.com/shop-all/toners/unscented-facial-toner/12-oz?srsltid=AfmBOorJty-IyLFP8lE0pwekUN744avyCrnYFSXgTJX0rUXQW6Og3EaJ",
+      "imageURL": "https://www.thayers.com/-/media/project/loreal/brand-sites/thayers/americas/us/images/product/toners/unscented-facial-toner/thayers_-unscented-toner-12oz_pack-shot_front_atf_0041507070196.jpg?rev=9177542b608f483a9fca3d36767fcb9f&w=1024&hash=9D688C3BA8236D423F60C1ED083F8868"
+
     },
     {
       "id": "kiehls_calendula_herbal_extract_toner",
@@ -80,28 +107,40 @@
       "category": "toner",
       "suitableFor": [
         "normal",
-        "oily"
+        "oily",
+        "sensitive"
       ],
       "targetConcerns": [
         "redness",
-        "sensitivity"
+        "sensitivity",
+        "oiliness"
       ],
-      "priceRange": "premium",
-      "description": "A calming toner infused with calendula to help soothe and refresh skin.",
+      "description": "A calming toner infused with calendula to help soothe and refresh skin. Must be applied after cleanser, twice a day.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "Calendula Extract",
-        "Allantoin"
+        "Bio-Peptides"
       ],
-      "url": "https://www.kiehls.com/skincare/toners/calendula-herbal-extract-toner",
-      "allIngredients": "Water, Calendula Officinalis Flower Extract, Allantoin, Glycerin, Phenoxyethanol"
+      "allIngredients": "AQUA / WATER,PROPYLENE GLYCOL,PROPANEDIOL,PHENOXYETHANOL,CHLORPHENESIN,ARCTIUM LAPPA ROOT EXTRACT,DISODIUM EDTA,CALENDULA OFFICINALIS FLOWER EXTRACT,CALENDULA OFFICINALIS FLOWER,HYDROLYZED CORN STARCH,ALLANTOIN,HEDERA HELIX EXTRACT - IVY LEAF/STEM EXTRACT,GLYCERIN,ALTHAEA OFFICINALIS ROOT EXTRACT,SODIUM HYDROXIDE,CITRIC ACID",
+      "priceRange": "premium",
+      "url": "https://www.kiehls.com/skincare/facial-toners/calendula-herbal-extract-toner/254.html?dwvar_254_size=16.9%20fl.%20oz.%20Bottle",
+      "imageURL": "https://www.kiehls.com/dw/image/v2/AAFM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/default/dw52828162/nextgen/skin-care/face-toners/calendula/calendula-herbal-extract-toner-2025/02032025-013125-Calendula-Toner-PDP-Packshot-500ml-2400x2400.jpg?sw=1536&sh=1536&sm=cut&sfrm=png&q=70"
+
     },
     {
-      "id": "cosrx_aha_bha_clarifying_treatment_toner",
+      "id": "cosrx_aha_bha_clarifying_treatment_thttps://www.kiehls.com/dw/image/v2/AAFM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/default/dw52828162/nextgen/skin-care/face-toners/calendula/calendula-herbal-extract-toner-2025/02032025-013125-Calendula-Toner-PDP-Packshot-500ml-2400x2400.jpg?sw=1536&sh=1536&sm=cut&sfrm=png&q=70oner",
       "name": "AHA/BHA Clarifying Treatment Toner",
       "brand": "COSRX",
       "category": "toner",
       "suitableFor": [
-        "oily"
+        "oily",
+        "dry",
+        "normal",
+        "sensitive",
+        "combination"
       ],
       "targetConcerns": [
         "acne",
@@ -109,14 +148,23 @@
         "oiliness",
         "uneven_texture"
       ],
-      "priceRange": "mid-range",
-      "description": "An exfoliating toner that helps clear pores and improve skin texture.",
+      "description": "An exfoliating toner that helps clear pores and improve skin texture. Must be applied once a day, in the morning, after cleanser.",
+      "dayTime": [
+        "AM"
+      ],
       "keyIngredients": [
         "AHA",
+        "Salix Alba (Willow) Bark Water",
+        "Betaine Salicylate",
+        "Glycolic Acid ",
+        "Pyrus Malus (Apple) Fruit Water",
         "BHA"
       ],
+      "allIngredients": "Water, Salix Alba (Willow) Bark Water, Pyrus Malus (Apple) Fruit Water, Butylene Glycol, 1,2-Hexanediol, Sodium Lactate, Glycolic Acid, Betaine Salicylate, Allantoin, Panthenol, Ethyl Hexanediol ",
+      "priceRange": "mid-range",
       "url": "https://www.cosrx.com/products/aha-bha-clarifying-treatment-toner",
-      "allIngredients": "Water, Salix Alba Bark Water, Glycolic Acid, Betaine Salicylate, Panthenol"
+      "imageURL": "https://www.cosrx.com/cdn/shop/files/ahabha-clarifying-treatment-toner-cosrx-official-1.jpg?v=1724835581"
+
     },
     {
       "id": "la_roche_posay_serozinc_toner",
@@ -132,35 +180,49 @@
         "redness",
         "sensitivity"
       ],
-      "priceRange": "mid-range",
-      "description": "A refreshing mist toner that helps reduce oiliness and soothe skin.",
-      "keyIngredients": [
-        "Zinc Sulfate",
-        "Thermal Spring Water"
+      "description": "A refreshing mist toner that helps reduce oiliness and soothe skin. Must be applied once a day, in the morning, after cleanser.",
+      "dayTime": [
+        "AM"
       ],
-      "url": "https://www.laroche-posay.com/en-int/serozinc/serozinc",
-      "allIngredients": ""
+      "keyIngredients": [
+        "Zinc Sulfate"
+      ],
+      "allIngredients": "WATER, SODIUM CHLORIDE, ZINC SULFATE",
+      "priceRange": "mid-range",
+      "url": "https://www.laroche-posay.us/our-products/face/acne-products/serozinc-face-mist-3433422406728.html",
+      "imageURL": "https://www.laroche-posay.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-laroche-posay-master-catalog/default/dw9ce7b42c/img/3433422406728/la-roche-posay-serozinc-face-mist-for-oily-skin-3433422406728-1.jpg?sw=678&sh=678&sm=cut&sfrm=jpg&q=70"
+
     },
     {
-      "id": "laneige_cream_skin_refiner",
-      "name": "Cream Skin Refiner",
+      "id": "laneige_cream_skin_cerapeptide_toner_and_moisturizer",
+      "name": "Cream Skin Cerapeptide™ Toner & Moisturizer",
       "brand": "Laneige",
       "category": "toner",
       "suitableFor": [
         "dry",
-        "normal"
+        "normal",
+        "combination",
+        "oily",
+        "sensitive"
       ],
       "targetConcerns": [
         "dryness"
       ],
-      "priceRange": "premium",
-      "description": "A nourishing toner that combines the hydration of a cream with the freshness of a toner.",
-      "keyIngredients": [
-        "White Leaf Tea Extract",
-        "Glycerin"
+      "description": "A nourishing toner that combines the hydration of a cream with the freshness of a toner. Must be applied after cleanser, twice a day.",
+      "dayTime": [
+        "AM",
+        "PM"
       ],
-      "url": "https://www.laneige.com/int/en/skincare/cream-skin-refiner.html",
-      "allIngredients": "Water, Glycerin, Camellia Sinensis Leaf Extract, Meadowfoam Seed Oil, Phenoxyethanol"
+      "keyIngredients": [
+        "Ceramide",
+        "Camella Japonica Flower Extract",
+        "Acetyl Tetrapeptide-11"
+      ],
+      "allIngredients": "WATER / AQUA / EAU, BUTYLENE GLYCOL, GLYCERIN, LIMNANTHES ALBA (MEADOWFOAM) SEED OIL, ISOPENTYLDIOL, 1,2-HEXANEDIOL, SQUALANE, POLYGLYCERYL-10 STEARATE, GLYCERYL STEARATE CITRATE, SODIUM STEAROYL GLUTAMATE, INULIN LAURYL CARBAMATE, GLYCERYL CAPRYLATE, ETHYLHEXYLGLYCERIN, PROPANEDIOL, DISODIUM EDTA, CARBOMER, MANNITOL, ACRYLATES/STEARYL METHACRYLATE COPOLYMER, TREMELLA FUCIFORMIS SPOROCARP EXTRACT, HYALURONIC ACID, CAMELLIA SINENSIS LEAF EXTRACT, XANTHAN GUM, CERAMIDE NP, CAMELLIA JAPONICA FLOWER EXTRACT, TOCOPHEROL, ACETYL TETRAPEPTIDE-11",
+      "priceRange": "premium",
+      "url": "https://int.laneige.com/products/cream-skin-cerapeptide-refiner",
+      "imageURL": "https://int.laneige.com/cdn/shop/files/pdp_mig_2024-05-07-240416_final_INT_CREAM-SKIN_thumbnail_01_4.jpg?v=1754037599"
+
     },
     {
       "id": "simple_soothing_facial_toner",
@@ -169,20 +231,31 @@
       "category": "toner",
       "suitableFor": [
         "sensitive",
+        "combination",
+        "normal",
+        "oily",
         "dry"
       ],
       "targetConcerns": [
         "dryness",
         "sensitivity"
       ],
-      "priceRange": "budget",
-      "description": "A gentle toner formulated to soothe and hydrate sensitive skin.",
+      "description": "A gentle toner formulated to soothe and hydrate sensitive skin. Must be applied after cleanser, twice a day.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "Chamomile Extract",
+        "Witch Hazel",
+        "Pro-Vitamin B5",
         "Allantoin"
       ],
-      "url": "https://www.simpleskincare.com/uk/products/toners/soothing-facial-toner.html",
-      "allIngredients": "Water, Chamomilla Recutita Flower Extract, Allantoin, Glycerin, Phenoxyethanol"
+      "allIngredients": "Aqhttps://assets.unileversolutions.com/v1/76574235.png?im=Resize,width=768,height=768ua, Hydrogenated Starch Hydrolysate, Sodium PCA, Allantoin,Phenoxyethanol,Disodium EDTA, Propylene Glycol, Cetylpyridinium Chloride,Niacinamide, Hamamelis Virginiana Leaf Water, Panthenol, Decyl Glucoside.Aqua, Hydrogenated Starch Hydrolysate, Sodium PCA, Allantoin,Phenoxyethanol,Disodium EDTA, Propylene Glycol, Cetylpyridinium Chloride,Niacinamide, Hamamelis Virginiana Leaf Water, Panthenol, Decyl Glucoside",
+      "priceRange": "budget",
+      "url": "https://www.simpleskincare.com/au/p/kind-to-skin-soothing-facial-toner.html/05011451103856",
+      "imageURL": "https://assets.unileversolutions.com/v1/76574235.png?im=Resize,width=768,height=768"
+
     },
     {
       "id": "benton_aloe_bha_skin_toner",
@@ -199,14 +272,21 @@
         "sensitivity",
         "uneven_texture"
       ],
-      "priceRange": "mid-range",
       "description": "A gentle exfoliating toner that helps clarify skin while soothing irritation.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "Aloe Vera",
+        "Portulaca Oleracea Extract",
         "BHA"
       ],
-      "url": "https://bentoncosmetics.com/product/aloe-bha-skin-toner/47/",
-      "allIngredients": "Aloe Barbadensis Leaf Water, Salicylic Acid, Snail Secretion Filtrate, Betaine, Panthenol"
+      "allIngredients": "Aloe Barbadensis Leaf Water, Water, Butylene Glycol, Glycerin, Dipropylene Glycol, Pentylene Glycol, 1,2-Hexanediol, Aloe Barbadensis Leaf Juice, Sodium Hyaluronate, Portulaca Oleracea Extract, Psidium Guajava Fruit Extract, Aspalathus Linearis Extract, Cynanchum Atratum Extract, Salicylic Acid, Perilla Ocymoides Leaf Extract, Schisandra Chinensis Fruit Extract, Acorus Calamus Root Extract, Aloe Barbadensis Leaf Extract, Althaea Rosea Root Extract, Polyglutamic Acid, Beta-Glucan, Arginine, Allantoin, Citrus Paradisi (Grapefruit) Fruit Extract, Caprylyl Glycol, C12-14 Pareth-12, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Xanthan Gum ",
+      "priceRange": "mid-range",
+      "url": "https://bentoncosmetics.com/product/aloe-bha-skin-toner-200ml/749",
+      "imageURL": "https://cafe24img.poxo.com/bentoncos/web/product/big/202405/3cc57c9962caeaad86e1440ed337740f.jpg"
+
     }
   ]
 }

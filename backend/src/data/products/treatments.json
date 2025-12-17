@@ -1,8 +1,10 @@
 {
   "metadata": {
     "author": "[Antonios KARAFENTZOS]",
+    "lastModifiedBy": "Selin BIRINCI",
     "date": "[16.12.2025]",
-    "version": "3.0"
+    "lastModifiedDate": "[16.12.2025]",
+    "version": "4.0"
   },
   "products": [
     {
@@ -12,22 +14,30 @@
       "category": "treatment",
       "suitableFor": [
         "oily",
+        "dry",
+        "normal",
         "combination"
       ],
       "targetConcerns": [
-        "acne",
         "large_pores",
-        "oiliness",
+        "dullness",
         "redness",
         "uneven_texture"
       ],
-      "priceRange": "budget",
-      "description": "A leave-on exfoliating treatment that helps unclog pores and reduce breakouts.",
-      "keyIngredients": [
-        "Salicylic Acid"
+      "description": "A leave-on exfoliating treatment that helps unclog pores and reduce breakouts. Must be used both morning and evening, use SPF.",
+      "dayTime": [
+        "AM",
+        "PM"
       ],
+      "keyIngredients": [
+        "Salicylic Acid",
+        "Squalane",
+        "4-t-Butylcyclohexanol"
+      ],
+      "allIngredients": " Squalane, Caprylic/Capric Triglyceride, Pentylene Glycol, Salicylic Acid, Oleic/Linoleic/Linolenic Polyglycerides, 4-t-Butylcyclohexanol, Hydroxymethoxyphenyl Decanone, Phenoxyethanol, Chlorphenesin",
+      "priceRange": "budget",
       "url": "https://theordinary.com/en-us/salicylic-acid-2-solution-100442.html",
-      "allIngredients": ""
+      "imageURL": "https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwdd7cf5fb/Images/products/The%20Ordinary/rdn-salicylic-anhydrous-solution-30ml.png?sw=860&sh=860&sm=fit"
     },
     {
       "id": "the_ordinary_azelaic_acid_suspension_10",
@@ -36,22 +46,29 @@
       "category": "treatment",
       "suitableFor": [
         "normal",
+        "dry",
         "combination",
         "sensitive"
       ],
       "targetConcerns": [
         "dark_spots",
+        "acne",
         "dullness",
         "redness",
         "uneven_texture"
       ],
-      "priceRange": "budget",
-      "description": "A brightening treatment that helps improve uneven tone and texture.",
+      "description": "A brightening treatment that helps improve uneven tone and texture. Must be used both morning and evening, use SPF.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "Azelaic Acid"
       ],
+      "allIngredients": " Aqua (Water), Isodecyl Neopentanoate, Dimethicone, Azelaic Acid, Dimethicone/Bis-Isobutyl Ppg-20 Crosspolymer, Dimethyl Isosorbide, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Polysilicone-11, Isohexadecane, Tocopherol, Trisodium Ethylenediamine Disuccinate, Isoceteth-20, Polysorbate 60, Triethanolamine, Ethoxydiglycol, Phenoxyethanol, Chlorphenesin",
+      "priceRange": "budget",
       "url": "https://theordinary.com/en-us/azelaic-acid-suspension-10-100407.html",
-      "allIngredients": ""
+      "imageURL": "https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw711cec9a/Images/products/The%20Ordinary/rdn-azelaic-acid-suspension-10pct-30ml.png?sw=860&sh=860&sm=fit"
     },
     {
       "id": "paulas_choice_skin_perfecting_2_bha_liquid_exfoliant",
@@ -60,21 +77,31 @@
       "category": "treatment",
       "suitableFor": [
         "oily",
-        "combination"
+        "combination",
+        "dry",
+        "normal"
       ],
       "targetConcerns": [
         "acne",
         "large_pores",
+        "dark_spots",
         "oiliness",
         "uneven_texture"
       ],
-      "priceRange": "premium",
-      "description": "A leave-on exfoliant that helps clear pores and smooth skin texture.",
-      "keyIngredients": [
-        "Salicylic Acid"
+      "description": "A leave-on exfoliant that helps clear pores and smooth skin texture. Apply to clean skin. At first, use every other day and note skin’s response, then up to twice a day. For daytime, always follow with sunscreen",
+      "dayTime": [
+        "AM",
+        "PM"
       ],
+      "keyIngredients": [
+        "Methylpropanediol",
+        "Green Tea",
+        "BHA"
+      ],
+      "allIngredients": "Water, Methylpropanediol, Butylene Glycol, Salicylic Acid, Polysorbate 20, Camellia Oleifera, Sodium Hydroxide, Tetrasodium EDTA",
+      "priceRange": "premium",
       "url": "https://www.paulaschoice.com/skin-perfecting-2pct-bha-liquid-exfoliant/201.html",
-      "allIngredients": ""
+      "imageURL": "https://www.paulaschoice.com/dw/image/v2/BBNX_PRD/on/demandware.static/-/Sites-pc-catalog/default/dwcf36de14/images/products/2-percent-bha-liquid-exfoliant-2010-portrait.png?sw=1000&sfrm=png"
     },
     {
       "id": "paulas_choice_skin_perfecting_8_aha_gel_exfoliant",
@@ -83,43 +110,31 @@
       "category": "treatment",
       "suitableFor": [
         "normal",
-        "combination"
+        "combination",
+        "dry",
+        "oily"
       ],
       "targetConcerns": [
         "dullness",
-        "uneven_texture"
+        "uneven_texture",
+        "fine_lines"
       ],
+      "description": "An AHA exfoliating gel that helps improve dullness and uneven texture. Apply once or twice daily after cleansing and toning",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
+      "keyIngredients": [
+        "Glycolic Acid",
+        "AHA",
+        "Sodium Hyaluronate",
+        "Green Tea",
+        "Panthenol"
+      ],
+      "allIngredients": "Water, Glycolic Acid, Sodium Hydroxide, Chamomilla Recutita Flower Extract, Aloe Barbadensis Leaf Juice Extract,Camellia Oleifera Leaf Extract, Sodium Hyaluronate, Panthenol, Sodium PCA, Propylene Glycol, Butylene Glycol, Hydroxyethylcellulose, Polyquaternium-10, Phenoxyethanol, Sodium Benzoate",
       "priceRange": "premium",
-      "description": "An AHA exfoliating gel that helps improve dullness and uneven texture.",
-      "keyIngredients": [
-        "Glycolic Acid"
-      ],
       "url": "https://www.paulaschoice.com/skin-perfecting-8pct-aha-gel-exfoliant/190.html",
-      "allIngredients": ""
-    },
-    {
-      "id": "la_roche_posay_effaclar_duo",
-      "name": "Effaclar Duo (+)",
-      "brand": "La Roche-Posay",
-      "category": "treatment",
-      "suitableFor": [
-        "oily",
-        "combination"
-      ],
-      "targetConcerns": [
-        "acne",
-        "large_pores",
-        "oiliness",
-        "redness"
-      ],
-      "priceRange": "mid-range",
-      "description": "A blemish treatment that helps reduce breakouts and improve the look of marks.",
-      "keyIngredients": [
-        "Niacinamide",
-        "Salicylic Acid"
-      ],
-      "url": "https://www.laroche-posay.com/en-int/effaclar/effaclar-duo-plus",
-      "allIngredients": ""
+      "imageURL": "https://www.paulaschoice.com/dw/image/v2/BBNX_PRD/on/demandware.static/-/Sites-pc-catalog/default/dw955c513f/images/products/8-percent-aha-gel-exfoliant-1900-portrait.png?sw=1000&sfrm=png"
     },
     {
       "id": "la_roche_posay_cicaplast_baume_b5",
@@ -129,6 +144,8 @@
       "suitableFor": [
         "dry",
         "sensitive",
+        "combination",
+        "oily",
         "normal"
       ],
       "targetConcerns": [
@@ -136,14 +153,21 @@
         "redness",
         "sensitivity"
       ],
-      "priceRange": "mid-range",
-      "description": "A barrier-repair balm that helps soothe dryness and irritation.",
+      "description": "A barrier-repair balm that helps soothe dryness and irritation. Apply as needed.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "Panthenol (B5)",
-        "Madecassoside"
+        "Madecassoside",
+        "Dimethicone",
+        "Tribioma"
       ],
-      "url": "https://www.laroche-posay.com/en-int/cicaplast/cicaplast-baume-b5-plus",
-      "allIngredients": ""
+      "allIngredients": "WATER, HYDROGENATED POLYISOBUTENE, DIMETHICONE, GLYCERIN, BUTYROSPERMUM PARKII (SHEA) BUTTER, PANTHENOL, ZEA MAYS (CORN) STARCH, PROPANEDIOL, BUTYLENE GLYCOL, CETYL PEG/PPG-10/1 DIMETHICONE, TRIHYDROXYSTEARIN, CENTELLA ASIATICA LEAF EXTRACT, POLYM NIA SONCHIFOLIA ROOT JUICE, ZINC GLUCONATE, MADECASSOSIDE, MANGANESE GLUCONATE, ALPHA-GLUCAN OLIGOSACCHARIDE, SILICA, ALUMINUM HYDROXIDE, MAGNESIUM SULFATE, MANNOSE, CAPRYLOYL GLYCINE, VITREOSCILLA FERMENT, CITRIC ACID, TRISODIUM ETHYLENEDIAMINE DISUCCINATE, LACTOBACILLUS, ACETYLATED GLYCOL STEARATE, MALTODEXTRIN, PENTYLENE GLYCOL, POLYGLYCERYL-4 ISOSTEARATE, TOCOPHEROL, PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE, PHENOXYETHANOL, TITANIUM DIOXIDE",
+      "priceRange": "mid-range",
+      "url": "https://www.laroche-posay.us/our-products/body/body-lotion/cicaplast-balm-b5-for-dry-skin-irritations-cicaplastbalmb5.html",
+      "imageURL": "https://www.laroche-posay.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-laroche-posay-master-catalog/default/dw3310cc71/img/cicaplastbalmb5/40ml/LaRochePosay-Product-Skincare-Cicaplast-Baume-B5+-40ml-3337875816809-ATF-AV1-(1)-1500x1500.jpg?sw=1440&sh=1440&sm=cut&sfrm=jpg&q=70"
     },
     {
       "id": "cosrx_acne_pimple_master_patch",
@@ -156,16 +180,20 @@
       ],
       "targetConcerns": [
         "acne",
-        "dark_spots",
-        "dryness"
+        "dark_spots"
       ],
-      "priceRange": "mid-range",
-      "description": "Hydrocolloid patches that help protect spots and support faster-looking recovery.",
+      "description": "Hydrocolloid patches that help protect spots and support faster-looking recovery. Cleanse the area around the problem spot. Select a bigger size patch than the problem spot and attach the patch to the spot.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "Hydrocolloid"
       ],
+      "allIngredients": "Petroleum Resin, Cellulose Gum, Styrene Isoprene Styrene Block Copolymer, Polyurethane Film, Polyisobutylene, Liquid Paraffin, Tetrakismethane ",
+      "priceRange": "mid-range",
       "url": "https://www.cosrx.com/products/acne-pimple-master-patch",
-      "allIngredients": ""
+      "imageURL": "https://www.cosrx.com/cdn/shop/files/acne-pimple-master-patch-cosrx-official-1_460x.jpg?v=1724835736"
     },
     {
       "id": "cosrx_bha_blackhead_power_liquid",
@@ -183,14 +211,20 @@
         "redness",
         "uneven_texture"
       ],
-      "priceRange": "mid-range",
-      "description": "A BHA exfoliating treatment that helps reduce blackheads and refine pores.",
+      "description": "A BHA exfoliating treatment that helps reduce blackheads and refine pores.After cleansing, use in the skin, toner, or essence step.  Recommend to use 2-3 times in a week, and gradually build up the usage according to the skin condition. ",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "Betaine Salicylate",
+        "Salix Alba (Willow) Bark Water",
         "Niacinamide"
       ],
+      "allIngredients": "Salix Alba (Willow) Bark Water, Butylene Glycol, Betaine Salicylate, Niacinamide, 1,2-Hexanediol, Arginine, Panthenol, Sodium Hyaluronate, Xanthan Gum, Ethyl Hexanediol ",
+      "priceRange": "mid-range",
       "url": "https://www.cosrx.com/products/bha-blackhead-power-liquid",
-      "allIngredients": ""
+      "imageURL": "https://www.cosrx.com/cdn/shop/files/bha-blackhead-power-liquid-cosrx-official-1_460x.jpg?v=1689840681"
     },
     {
       "id": "kiehls_clearly_corrective_dark_spot_solution",
@@ -199,20 +233,28 @@
       "category": "treatment",
       "suitableFor": [
         "normal",
+        "dry",
+        "sensitive",
+        "oily",
         "combination"
       ],
       "targetConcerns": [
         "dark_spots",
         "dullness"
       ],
-      "priceRange": "premium",
-      "description": "A targeted treatment that helps improve the look of dark spots and uneven tone.",
+      "description": "A targeted treatment that helps improve the look of dark spots and uneven tone. Apply dark spot corrector morning and night, before your moisturizer",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "Activated Vitamin C",
-        "White Birch Extract"
+        "Buffered Salicylic Acid"
       ],
-      "url": "https://www.kiehls.com/skincare/serums/clearly-corrective-dark-spot-solution",
-      "allIngredients": ""
+      "allIngredients": "",
+      "priceRange": "premium",
+      "url": "https://www.kiehls.com/skincare/face-serums/clearly-corrective-dark-spot-serum/842.html?dwvar_842_size=3.4 fl. oz. Bottle",
+      "imageURL": "https://www.kiehls.com/dw/image/v2/AAFM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/default/dw22207a7c/nextgen/skin-care/face-serums-and-oils/dermatologist-solutions/clearly-corrective-dark-spot-solution/2025%20images/kiehls-clearly-corrective-dark-spot-solution-100ml-3605970363307-packshot-2400x2400.jpg?sw=1536&sh=1536&sm=cut&sfrm=png&q=70"
     },
     {
       "id": "the_inkey_list_succinic_acid_acne_treatment",
@@ -221,23 +263,32 @@
       "category": "treatment",
       "suitableFor": [
         "oily",
-        "combination"
+        "combination",
+        "dry",
+        "normal",
+        "sensitive"
       ],
       "targetConcerns": [
         "acne",
         "dark_spots",
         "large_pores",
-        "oiliness",
         "redness"
       ],
-      "priceRange": "budget",
-      "description": "A targeted spot treatment designed to reduce blemishes and redness.",
-      "keyIngredients": [
-        "Succinic Acid",
-        "Salicylic Acid"
+      "description": "A targeted spot treatment designed to reduce blemishes and redness.On cleansed skin, apply a thin layer to blemishes up to 3x daily",
+      "dayTime": [
+        "AM",
+        "PM"
       ],
-      "url": "https://www.theinkeylist.com/products/succinic-acid-acne-treatment",
-      "allIngredients": ""
+      "keyIngredients": [
+        "2% Succinic Acid",
+        "2% Sulfur Powder",
+        "1% Salicylic Acid",
+        "0.4% Hyaluronic Acid"
+      ],
+      "allIngredients": "Water (Aqua/Eau), Caprylic/Capric Triglyceride, Glyceryl Stearate SE, Stearic, Acid, Cetearyl Alcohol, Colloidal Sulfur, Glycerin, Succinic Acid, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Salicylic Acid, Phenoxyethanol, Squalane, Benzyl Alcohol, Sodium Hyaluronate, Polysorbate 60, Ethylhexylglycerin, Sodium Hydroxide, Dehydroacetic Acid, Malachite Extract, Sorbitan Isostearate, Trisodium Ethylenediamine Disuccinate, CI 75810 (Chlorophyllin-Copper Complex)",
+      "priceRange": "budget",
+      "url": "https://www.theinkeylist.com/products/succinic-acid",
+      "imageURL": "https://www.theinkeylist.com/cdn/shop/files/SUCCINIC_AwardHero_1075x_crop_center.jpg?v=1730495760"
     },
     {
       "id": "the_inkey_list_retinol_eye_cream",
@@ -246,23 +297,28 @@
       "category": "treatment",
       "suitableFor": [
         "normal",
-        "dry"
+        "dry",
+        "oily",
+        "combination"
       ],
       "targetConcerns": [
         "fine_lines",
         "uneven_texture"
       ],
-      "priceRange": "budget",
-      "description": "An eye-area treatment formulated to help improve the appearance of fine lines.",
-      "keyIngredients": [
-        "Retinol",
-        "Peptides"
+      "description": "An eye-area treatment formulated to help improve the appearance of fine lines. Use in your evening routine only. After cleansing and hydrating, gently pat a small amount of Retinol Eye Cream around the eye contour using your ring finger. Start with 1–2 times per week, then increase depending on your skin’s tolerance",
+      "dayTime": [
+        "PM"
       ],
+      "keyIngredients": [
+        "3% Retinol"
+      ],
+      "allIngredients": "Water (Aqua / Eau), Caprylic/Capric Triglyceride, Glycerin, Butylene Glycol, Pentaerythrityl Distearate, Shea Butter Ethyl Esters, Cetearyl Olivate, Phenoxyethanol, Benzyl Alcohol, Sorbitan Olivate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Sodium Hydroxide, Sodium Hyaluronate, Sodium Stearoyl Glutamate, Copernicia Cerifera Cera, Propanediol, Glycogen, Sodium Gluconate, Retinol, Polysorbate 20, Ethylhexylglycerin, Dehydroacetic Acid, Citric Acid, Helianthus Annuus Seed Oil, 1,2-Hexanediol, Caprylyl Glycol, Disodium Cocoamphodiacetate, Tocopherol, Xanthan Gum, Ethyl Ferulate, Humulus Lupulus Extract.",
+      "priceRange": "budget",
       "url": "https://www.theinkeylist.com/products/retinol-eye-cream",
-      "allIngredients": ""
+      "imageURL": "https://www.theinkeylist.com/cdn/shop/files/Hero_7596686f-962f-4ac8-9307-5a217a52b762_1075x_crop_center.jpg?v=1730494715"
     },
     {
-      "id": "av_ne_cicalfate_restorative_protective_cream",
+      "id": "avene_cicalfate_restorative_protective_cream",
       "name": "Cicalfate+ Restorative Protective Cream",
       "brand": "Avène",
       "category": "treatment",
@@ -276,18 +332,23 @@
         "redness",
         "sensitivity"
       ],
-      "priceRange": "mid-range",
-      "description": "A soothing protective cream designed to support skin recovery and comfort.",
+      "description": "A soothing protective cream designed to support skin recovery and comfort. Apply twice a day to clean, dry skin.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "Sucralfate",
         "Zinc Oxide"
       ],
-      "url": "https://www.eau-thermale-avene.com/p/cicalfate-restorative-protective-cream",
-      "allIngredients": ""
+      "allIngredients": "AVENE THERMAL SPRING WATER, CAPRYLIC/CAPRIC TRIGLYCERIDE, MINERAL OIL / HUILE MINERALE, GLYCERIN, HYDROGENATED VEGETABLE OIL, ZINC OXIDE, PROPYLENE GLYCOL, POLYCLUGERYL-2-SESQUIISOSTERATE, PEG-22/DODECYL GLYCOL COPOLYMER, ALUMINUM STEARATE, AQUAPHILUS DOLOMIAE FERMENT FILTRATE, ARGININE, BEESWAX / CIRE D'ABEILLE, COPPER SULFATE, MAGNESIUM STEARATE, MICROCRYSTALLINE WAX / XIRE MICROCRISTALLINE, TROMETHAMINE, ZINC SULFATE",
+      "priceRange": "mid-range",
+      "url": "https://www.aveneusa.com/cicalfateplus-restorative-protective-cream#185=776",
+      "imageURL": "https://www.aveneusa.com/media/catalog/product/c/i/cicalfate__restorative_cream__100ml_newpackaging.jpg?quality=100&fit=bounds&height=1000&width=1000&canvas=1000:1000"
     },
     {
-      "id": "bioderma_s_bium_global",
-      "name": "Sébium Global",
+      "id": "bioderma_sebium_pore_refiner",
+      "name": "Sébium Pore Refiner",
       "brand": "Bioderma",
       "category": "treatment",
       "suitableFor": [
@@ -299,63 +360,20 @@
         "oiliness",
         "uneven_texture"
       ],
-      "priceRange": "mid-range",
-      "description": "A treatment designed to help improve the look of blemishes and excess oil.",
+      "description": "A treatment designed to help improve the look of blemishes and excess oil. Apply on its own or before applying your skincare cream, either all over the face for oily skin, or locally on the T-zone for combination skin: Forehead, nose, chin.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngredients": [
         "AHA",
-        "Zinc"
+        "Zinc",
+        "Salicylic Acid"
       ],
-      "url": "https://www.bioderma.com/en/our-products/sebium/global",
-      "allIngredients": ""
-    },
-    {
-      "id": "eucerin_dermopure_oil_control_treatment",
-      "name": "DermoPure Oil Control Treatment",
-      "brand": "Eucerin",
-      "category": "treatment",
-      "suitableFor": [
-        "oily",
-        "combination"
-      ],
-      "targetConcerns": [
-        "acne",
-        "large_pores",
-        "oiliness",
-        "redness"
-      ],
+      "allIngredients": "AQUA/WATER/EAU, METHYL METHACRYLATE CROSSPOLYMER, DIPROPYLENE GLYCOL, CYCLOPENTASILOXANE, CYCLOHEXASILOXANE, DIMETHICONE, GLYCERIN, BUTYLENE GLYCOL, FOMES OFFICINALIS (MUSHROOM) EXTRACT, SODIUM POLYACRYLATE, SALICYLIC ACID, DODECYL GALLATE, GINKGO BILOBA LEAF EXTRACT, MANNITOL, XYLITOL, RHAMNOSE, FRUCTOOLIGOSACCHARIDES, LAMINARIA OCHROLEUCA EXTRACT, SILICA, TRIDECETH-6, C30-45 ALKYL CETEARYL DIMETHICONE CROSSPOLYMER, LAURYL PEG/PPG-18/18 METHICONE, CAPRYLIC/CAPRIC TRIGLYCERIDE, MINERAL OIL (PARAFFINUM LIQUIDUM), PENTYLENE GLYCOL, 1,2-HEXANEDIOL, PEG/PPG-18/18 DIMETHICONE, CAPRYLYL GLYCOL, PROPYLENE GLYCOL, SODIUM HYDROXIDE, CITRIC ACID, DISODIUM EDTA, FRAGRANCE (PARFUM)",
       "priceRange": "mid-range",
-      "description": "A treatment that helps reduce blemishes and support clearer-looking skin.",
-      "keyIngredients": [
-        "Salicylic Acid",
-        "Licochalcone A"
-      ],
-      "url": "https://www.eucerin.com/products/dermopure/oil-control-treatment",
-      "allIngredients": ""
-    },
-    {
-      "id": "vichy_normaderm_phytosolution_double_correction_daily_care",
-      "name": "Normaderm Phytosolution Double-Correction Daily Care",
-      "brand": "Vichy",
-      "category": "treatment",
-      "suitableFor": [
-        "oily",
-        "combination"
-      ],
-      "targetConcerns": [
-        "acne",
-        "dryness",
-        "large_pores",
-        "oiliness",
-        "redness"
-      ],
-      "priceRange": "mid-range",
-      "description": "A daily treatment that helps reduce blemishes and improve the look of pores.",
-      "keyIngredients": [
-        "Salicylic Acid",
-        "Hyaluronic Acid"
-      ],
-      "url": "https://www.vichy.com/en-int/skin-care/normaderm-phytosolution-double-correction-daily-care",
-      "allIngredients": ""
+      "url": "https://www.bioderma.us/en/p/sebium-pore-refiner.html#28614E",
+      "imageURL": "https://back-ac-prod.bioderma.com/media/catalog/product/cache/b443460c314aa18d2c50e93a48ddeb50/d/5/d5624cbb882214f1b7bbdb026726a896-_7b159670_7d__7b_7d__7b28614e_7d.jpg"
     }
   ]
 }

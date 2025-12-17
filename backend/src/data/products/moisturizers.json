@@ -1,8 +1,10 @@
 {
   "metadata": {
     "author": "[Antonios KARAFENTZOS]",
+    "lastModifiedBy": "Selin BIRINCI",
     "date": "[16.12.2025]",
-    "version": "3.0"
+    "lastModifiedDate": "[16.12.2025]",
+    "version": "4.0"
   },
   "products": [
     {
@@ -18,15 +20,21 @@
       "targetConcerns": [
         "dryness"
       ],
-      "priceRange": "budget",
-      "description": "A rich moisturizer that helps restore the skin barrier and provide long-lasting hydration.",
+      "description": "A rich moisturizer that helps restore the skin barrier and provide long-lasting hydration. Apply as needed.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngriedients": [
         "Ceramides",
         "Hyaluronic Acid",
-        "Glycerin"
+        "Dimenthicone",
+        "Petrolatum"
       ],
+      "allIngredients": "AQUA / WATER / EAU, GLYCERIN, CETEARYL ALCOHOL, CAPRYLIC/CAPRIC TRIGLYCERIDE, CETYL ALCOHOL, CETEARETH-20, PETROLATUM, POTASSIUM PHOSPHATE, CERAMIDE NP, CERAMIDE AP, CERAMIDE EOP, CARBOMER, DIMETHICONE, BEHENTRIMONIUM METHOSULFATE, SODIUM LAUROYL LACTYLATE, SODIUM HYALURONATE, CHOLESTEROL, PHENOXYETHANOL, DISODIUM EDTA, DIPOTASSIUM PHOSPHATE, TOCOPHEROL, PHYTOSPHINGOSINE, XANTHAN GUM, ETHYLHEXYLGLYCERIN",
+      "priceRange": "budget",
       "url": "https://www.cerave.com/skincare/moisturizers/moisturizing-cream",
-      "allIngredients": "Aqua / Water, Glycerin, Cetearyl Alcohol, Caprylic/Capric Triglyceride, Ceramide NP, Ceramide AP, Ceramide EOP, Cholesterol, Sodium Hyaluronate, Phytosphingosine, Carbomer, Phenoxyethanol"
+      "imageURL": "https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/products-v4/moisturizing-cream/cerave_moisturizing_cream_16oz_jar_front-700x875-v4.jpg?rev=db6e3c22250e4928bc749dd2c207de5b&w=1024&hash=6F328ADF4FC786BEF8A0AD063EBD5312"
     },
     {
       "id": "cerave_pm_facial_moisturizing_lotion",
@@ -36,42 +44,54 @@
       "suitableFor": [
         "normal",
         "dry",
+        "oily",
         "combination"
       ],
       "targetConcerns": [
         "dryness"
       ],
-      "priceRange": "budget",
-      "description": "A lightweight nighttime moisturizer that hydrates and supports skin barrier repair.",
+      "description": "A lightweight nighttime moisturizer that hydrates and supports skin barrier repair. Must be used only at night.",
+      "dayTime": [
+        "PM"
+      ],
       "keyIngriedients": [
         "Niacinamide",
         "Ceramides",
         "Hyaluronic Acid"
       ],
+      "allIngredients": "AQUA / WATER / EAU, GLYCERIN, CAPRYLIC/CAPRIC TRIGLYCERIDE, NIACINAMIDE, CETEARYL ALCOHOL, POTASSIUM PHOSPHATE, CERAMIDE NP, CERAMIDE AP, CERAMIDE EOP, CARBOMER, DIMETHICONE, CETEARETH-20, BEHENTRIMONIUM METHOSULFATE, SODIUM LAUROYL LACTYLATE, SODIUM HYALURONATE, CHOLESTEROL, PHENOXYETHANOL, DISODIUM EDTA, DIPOTASSIUM PHOSPHATE, CAPRYLYL GLYCOL, PHYTOSPHINGOSINE, XANTHAN GUM, POLYGLYCERYL-3 DIISOSTEARATE, ETHYLHEXYLGLYCERIN",
+      "priceRange": "budget",
       "url": "https://www.cerave.com/skincare/moisturizers/pm-facial-moisturizing-lotion",
-      "allIngredients": "Aqua / Water, Glycerin, Niacinamide, Caprylic/Capric Triglyceride, Ceramide NP, Ceramide AP, Ceramide EOP, Sodium Hyaluronate, Cholesterol, Phenoxyethanol"
+      "imageURL": "https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/skincare/2025/pm-facial-lotion/700x785/pm-facial-lotion-front-li-badge-700x785-v2.jpg?rev=cbb7009183c440bf88700493a280e336&w=1024&hash=41EF6E9FB03CB3EAD2ACD0907E562280"
     },
     {
-      "id": "neutrogena_hydro_boost_water_gel",
-      "name": "Hydro Boost Water Gel",
-      "brand": "Neutrogena",
+      "id": "cerave_am_facial_moisturizing_lotion_spf_50",
+      "name": "AM Facial Moisturizing Lotion SPF 50",
+      "brand": "CeraVe",
       "category": "moisturizer",
       "suitableFor": [
         "oily",
         "combination",
+        "dry",
         "normal"
       ],
       "targetConcerns": [
         "dryness"
       ],
-      "priceRange": "budget",
-      "description": "A lightweight gel moisturizer that delivers intense hydration without heaviness.",
+      "description": "A moisturizer and sunscreen, all in one. Must be only used in the morning.",
+      "dayTime": [
+        "AM"
+      ],
       "keyIngriedients": [
         "Hyaluronic Acid",
-        "Glycerin"
+        "Ceramides",
+        "Niacinamide",
+        "Broad-Spectrum SPF 50 Sunscreen"
       ],
-      "url": "https://www.neutrogena.com/products/skincare/hydro-boost-water-gel",
-      "allIngredients": "Water, Dimethicone, Glycerin, Sodium Hyaluronate, Carbomer, Phenoxyethanol, Chlorphenesin"
+      "allIngredients": "WATER, GLYCERIN, DIMETHICONE, PROPANEDIOL, BUTYLOCTYL SALICYLATE, STEARETH-20, CELLULOSE, NIACINAMIDE, ETHYLHEXYL METHOXYCRYLENE, STEARETH-2, CERAMIDE NP, CERAMIDE AP, CERAMIDE EOP, SORBITAN ISOSTEARATE, CARBOMER, GLYCINE SOJA (SOYBEAN) OIL, TRIETHOXYCAPRYLYLSILANE, CETEARYL ALCOHOL, BEHENTRIMONIUM METHOSULFATE, TRIETHYL CITRATE, SODIUM HYALURONATE, SODIUM LAUROYL LACTYLATE, CHOLESTEROL, AMMONIUM POLYACRYLOYLDIMETHYL TAURATE, TOCOPHEROL, CHLORPHENESIN, HYDROXYACETOPHENONE, CAPRYLYL GLYCOL, HYDROXYETHYL ACRYLATE/SODIUM ACRYLOYLDIMETHYL TAURATE COPOLYMER, TRISODIUM ETHYLENEDIAMINE DISUCCINATE, PHYTOSPHINGOSINE, XANTHAN GUM, POLYHYDROXYSTEARIC ACID, POLYSORBATE 60, ORYZA SATIVA (RICE) BRAN WAX, BENZOIC ACID, C12-22 ALKYL ACRYLATE/HYDROXYETHYLACRYLATE COPOLYMER",
+      "priceRange": "budget",
+      "url": "https://www.cerave.com/skincare/moisturizers/facial-moisturizers/am-facial-moisturizing-lotion-spf-50#key-ingredients",
+      "imageURL": "https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/skincare/moisturizers/am-50-fps/am-50-prod-images-desktop/01_am_spf_50_na_packshot_pack_front_700x785.jpg?rev=baab4917fe724ce28a71bff0e949d39b&w=1024&hash=6F0F528E0287D185BF4C501054E920D6"
     },
     {
       "id": "la_roche_posay_toleriane_sensitive_fluide",
@@ -81,25 +101,31 @@
       "suitableFor": [
         "sensitive",
         "normal",
+        "oily",
         "combination"
       ],
       "targetConcerns": [
         "dryness",
         "sensitivity"
       ],
-      "priceRange": "mid-range",
-      "description": "A lightweight moisturizer formulated to soothe and hydrate sensitive skin.",
+      "description": "A lightweight moisturizer formulated to soothe and hydrate sensitive skin. Can be used both morning and night.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngriedients": [
-        "Niacinamide",
         "Glycerin",
         "Thermal Spring Water"
       ],
-      "url": "https://www.laroche-posay.com/en-int/toleriane/toleriane-sensitive-fluid",
-      "allIngredients": "Aqua / Water, Glycerin, Niacinamide, Caprylic/Capric Triglyceride, Sodium Hydroxide"
+      "allIngredients": "AQUA / WATER / EAU, CAPRYLIC/CAPRIC TRIGLYCERIDE, GLYCERIN, PROPANEDIOL, PENTYLENE GLYCOL, NIACINAMIDE, AMMONIUM POLYACRYLOYLDIMETHYL TAURATE, CAPRYLYL GLYCOL, CITRIC ACID, XANTHAN GUM",
+      "priceRange": "mid-range",
+      "url": "https://www.laroche-posay.us/our-products/face/face-moisturizer/toleriane-fluide-oil-free-moisturizer-3337875588676.html",
+      "imageURL": "https://www.laroche-posay.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-laroche-posay-master-catalog/default/dwfa584c33/img/3337875588676/la-roche-posay-toleriane-fluide-oil-free-face-moisturizer-3337875588676-1.jpg?sw=1440&sh=1440&sm=cut&sfrm=jpg&q=70"
+
     },
     {
-      "id": "la_roche_posay_lipikar_balm_ap_m",
-      "name": "Lipikar Balm AP+M",
+      "id": "la_roche_posay_lipikar_balm_ap+m_triple_repair_body_moisturizer",
+      "name": "Lipikar AP+M Triple Repair Body Moisturizer",
       "brand": "La Roche-Posay",
       "category": "moisturizer",
       "suitableFor": [
@@ -109,14 +135,22 @@
       "targetConcerns": [
         "dryness"
       ],
-      "priceRange": "mid-range",
-      "description": "A nourishing balm that relieves dryness and helps rebalance the skin barrier.",
+      "description": "A nourishing balm that relieves dryness and helps rebalance the skin barrier. Can be used both morning and night.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngriedients": [
         "Shea Butter",
-        "Niacinamide"
+        "Niacinamide",
+        "Ceramide-3",
+        "Glycerin",
+        "Postbiotic Aqua Posae Filiformis"
       ],
-      "url": "https://www.laroche-posay.com/en-int/lipikar/lipikar-baume-apm",
-      "allIngredients": "Aqua / Water, Glycerin, Butyrospermum Parkii Butter, Niacinamide, Mineral Oil, Dimethicone"
+      "allIngredients": "AQUA / WATER/EAU, BUTYROSPERMUM PARKII BUTTER / SHEA BUTTER, GLYCERIN, DIMETHICONE, NIACINAMIDE, CETEARYL ALCOHOL, BRASSICA CAMPESTRIS SEED OIL/RAPESEED SEED OIL, GLYCERYL STEARATE, AMMONIUM POLYACRYLOYLDIMETHYL TAURATE, PEG-100 STEARATE, PROPANEDIOL, OPHIOPOGON JAPONICUS ROOT EXTRACT, CERAMIDE NP, SORBITAN TRISTEARATE, DIMETHICONOL, PEG-20 METHYL GLUCOSE SESQUISTEARATE, SODIUM CHLORIDE, MANNOSE, COCO-BETAINE, DISODIUM EDTA, CAPRYLOYL GLYCINE, CAPRYLYL GLYCOL, VITREOSCILLA FERMENT, CITRIC ACID, MALTODEXTRIN, XANTHAN GUM, TOCOPHEROL, PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE ",
+      "priceRange": "mid-range",
+      "url": "https://www.laroche-posay.us/our-products/body/body-lotion/lipikar-ap-m-triple-repair-body-moisturizer-for-dry-skin-3337872418570.html",
+      "imageURL": "https://www.laroche-posay.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-laroche-posay-master-catalog/default/dwc3baf099/product/March%202023%20packshot%20updates/LIpikar-AP_Tripple-Repair-Moisturizer_400ml-Pump.jpg?sw=1440&sh=1440&sm=cut&sfrm=jpg&q=70"
     },
     {
       "id": "clinique_dramatically_different_hydrating_jelly",
@@ -132,14 +166,18 @@
         "large_pores",
         "oiliness"
       ],
-      "priceRange": "premium",
-      "description": "An oil-free gel moisturizer that delivers hydration without clogging pores.",
-      "keyIngriedients": [
-        "Hyaluronic Acid",
-        "Cucumber Extract"
+      "description": "An oil-free gel moisturizer that delivers hydration without clogging pores. Can be used both morning and night.",
+      "dayTime": [
+        "AM",
+        "PM"
       ],
-      "url": "https://www.clinique.com/product/1687/58208/skincare/moisturizers/dramatically-different-hydrating-jelly",
-      "allIngredients": "Water, Glycerin, Dimethicone, Sodium Hyaluronate, Cucumis Sativus Fruit Extract, Phenoxyethanol"
+      "keyIngriedients": [
+        "Hyaluronic Acid"
+      ],
+      "allIngredients": "Water Aqua Eau, Bis-peg-18 Methyl Ether Dimethyl Silane, Butylene Glycol, Glycerin, Sodium Hyaluronate, Caffeine, Propylene Glycol Dicaprat, Trehalose, Sorbitol, Sodium Polyaspartate, Ethyheuxxylxywhole, Glycol Glycol, Helianthus Annuus (sunflower) Seed Extract, Gelidiella A",
+      "priceRange": "premium",
+      "url": "https://www.clinique.ro/product/dramatically-different-hydrating-jelly?gad_source=1&gad_campaignid=22934395605&gclid=Cj0KCQiAo4TKBhDRARIsAGW29bevUiW2u5M5Bs_hlERP-vjncwFEzUtGRCHzDKLr5SG7FrVrarObEv0aAkRkEALw_wcB", 
+      "imageURL": "https://sdcdn.io/cl/cl_sku_KFP501_2400x2400_0.jpg?height=1400px&width=1400px"
     },
     {
       "id": "kiehls_ultra_facial_cream",
@@ -153,14 +191,19 @@
       "targetConcerns": [
         "dryness"
       ],
-      "priceRange": "premium",
-      "description": "A lightweight cream that provides long-lasting hydration for daily use.",
+      "description": "A lightweight cream that provides long-lasting hydration for daily use. Can be used both morning and night.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngriedients": [
         "Squalane",
         "Glacial Glycoprotein"
       ],
-      "url": "https://www.kiehls.com/skincare/moisturizers/ultra-facial-cream",
-      "allIngredients": "Aqua / Water, Glycerin, Squalane, Cetearyl Alcohol, Glyceryl Stearate, Phenoxyethanol"
+      "allIngredients": "AQUA / WATER • GLYCERIN • DIMETHICONE • SQUALANE • BIS-PEG-18 METHYL ETHER DIMETHYL SILANE • SUCROSE STEARATE • STEARYL ALCOHOL • PEG-8 STEARATE • MYRISTYL MYRISTATE • PRUNUS ARMENIACA KERNEL OIL / APRICOT KERNEL OIL • PHENOXYETHANOL • PERSEA GRATISSIMA OIL / AVOCADO OIL • GLYCERYL STEARATE • CETYL ALCOHOL • ORYZA SATIVA BRAN OIL / RICE BRAN OIL • OLEA EUROPAEA FRUIT OIL / OLIVE FRUIT OIL • CHLORPHENESIN • STEARIC ACID • PALMITIC ACID • CARBOMER • ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER • TRISODIUM ETHYLENEDIAMINE DISUCCINATE • PRUNUS AMYGDALUS DULCIS OIL / SWEET ALMOND OIL • XANTHAN GUM • ETHYLHEXYLGLYCERIN • SODIUM HYDROXIDE • TOCOPHEROL • GLYCINE SOJA OIL / SOYBEAN OIL • PSEUDOALTEROMONAS FERMENT EXTRACT • MYRISTIC ACID • HYDROXYPALMITOYL SPHINGANINE • SALICYLIC ACID • HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL • ROSMARINUS OFFICINALIS LEAF EXTRACT / ROSEMARY LEAF EXTRACT • CITRIC ACID",
+      "priceRange": "premium",
+      "url": "https://www.kiehls.ro/ultra-facial-cream---crema-hidratanta-pentru-toate-tipurile-de-ten/622.html",
+      "imageURL": "https://www.kiehls.ro/dw/image/v2/AAQP_PRD/on/demandware.static/-/Sites-kie-master-catalog/default/dw572a12c9/convergence-packshots/skincare/creams/622/kiehls-face-ultra-facial-cream-50ml-3605970360757-whip.jpg?sw=1152&sh=1152&sm=cut&sfrm=png&q=70"
     },
     {
       "id": "first_aid_beauty_ultra_repair_cream",
@@ -175,14 +218,20 @@
         "dryness",
         "sensitivity"
       ],
-      "priceRange": "premium",
-      "description": "A rich cream designed to soothe and hydrate very dry or irritated skin.",
+      "description": "A rich cream designed to soothe and hydrate very dry or irritated skin. Can be used both morning and night. Also suitable for eczema.",
+      "dayTime": [
+        "AM",
+        "PM"
+      ],
       "keyIngriedients": [
         "Colloidal Oatmeal",
+        "Ceramides",
         "Shea Butter"
       ],
-      "url": "https://www.firstaidbeauty.com/skin-care/ultra-repair-cream",
-      "allIngredients": "Water, Glycerin, Butyrospermum Parkii Butter, Colloidal Oatmeal, Allantoin, Phenoxyethanol"
+      "allIngredients": "Water, stearic acid, glycerin, C12-15 alkyl benzoate, caprylic/capric triglyceride,glyceryl stearate, glyceryl stearate SE,cetearylalcohol, dimethicone, squalane,hydrogenated shea butter,phenoxyethanol, caprylyl glycol,xanthamgum, allantoin, sodium hydroxide, tetrasodium EDTA, chrysanthemum parthenium (feverfew) extract, camellia sinensis leaf extract, glycyrrhiza glabra (licorice) root extract, ceramide NP, eucalyptus globulus leaf oil",
+      "priceRange": "premium",
+      "url": "https://www.firstaidbeauty.com/products/ultra-repair-cream-intense-hydration-new?srsltid=AfmBOor6iDEUU488OlJjgenxyMhHIu5lk_b0zcHR9HlB13oTI763o9ZU",
+      "imageURL": "https://www.firstaidbeauty.com/cdn/shop/files/Ultra-Repair-Cream_2026-Refresh_FAB_Lead_6oz_Fab_3.jpg?v=1764771395&width=493"
     }
   ]
 }

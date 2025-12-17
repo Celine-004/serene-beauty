@@ -1,29 +1,39 @@
 {
   "metadata": {
     "author": "[Antonios KARAFENTZOS]",
+    "lastModifiedBy": "Selin BIRINCI",
     "date": "[16.12.2025]",
-    "version": "3.0"
+    "lastModifiedDate": "[16.12.2025]",
+    "version": "4.0"
   },
   "products": [
     {
-      "id": "la_roche_posay_anthelios_invisible_fluid_spf_50",
-      "name": "Anthelios Invisible Fluid SPF 50+",
+      "id": "la_roche_posay_anthelios_invisible_fluid_spf_50_without_fragrance",
+      "name": "Anthelios Invisible Fluid SPF 50+ Without Fragrance",
       "brand": "La Roche-Posay",
       "category": "sunscreen",
       "suitableFor": [
         "oily",
         "combination",
+        "dry",
+        "normal",
         "sensitive"
       ],
-      "targetConcerns": [],
-      "priceRange": "mid-range",
-      "description": "A lightweight, fast-absorbing sunscreen that provides very high UV protection without leaving residue.",
+      "targetConcerns": [
+        "sensitivity"
+      ],
+      "description": "A lightweight, fast-absorbing sunscreen that provides very high UV protection without leaving residue. Reapply every 2-3 hours.",
+      "dayTime": [
+        "AM"
+      ],
       "keyIngriedients": [
-        "Mexoryl Filters",
+        "Mexoryl 400",
         "Glycerin"
       ],
-      "url": "https://www.laroche-posay.com/en-int/anthelios/anthelios-invisible-fluid-spf50-plus",
-      "allIngredients": "Aqua / Water, Alcohol Denat., Diisopropyl Sebacate, Ethylhexyl Triazone, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Glycerin, Silica, Tocopherol"
+      "allIngredients": "AQUA / WATER / EAU, ALLCOHOL DENATED., THYHYTHEL CIRTATE, DIISOPROPYL SEBACATE, SILICA, THYEXY THERELY SALICYLATE, GHEQUID, THYEXHENONELONEL METHOXEXHIENNYLINESUL TRIAZINE, THYCHEKINED (COACHING), THYCARDYZORDER, THYENSOT, THYENXTHE, THYCHEKED, THYCHAKINGSULE/COVERYTHEXYNERDUME/CYTHYSTHYSCED ORSACKING, THYAXTHEXITED",
+      "priceRange": "mid-range",
+      "url": "https://www.laroche-posay.ro/anthelios/anthelios-uvmune/anthelios-uvmune-400-invisible-fluid-spf50-plus-non-perfumed?gclsrc=aw.ds&gad_source=1&gad_campaignid=22102012521&gclid=Cj0KCQiAo4TKBhDRARIsAGW29beebXDsN4rz3OBcoSrbhSqYgvk1xrhXVNedo_i3N14v9s1RBkMg7VsaAiwBEALw_wcB",
+      "imageURL": "https://www.laroche-posay.ro/-/media/project/loreal/brand-sites/lrp/emea/ro/products/anthelios/anthelios-uvmune-400-invisible-fluid-spf50--plus-non-perfumed/lrpproductpagesunantheliosuvmune400fluidspspf503337875797597frontpng.jpeg"
     },
     {
       "id": "la_roche_posay_anthelios_melt_in_milk_spf_100",
@@ -32,19 +42,29 @@
       "category": "sunscreen",
       "suitableFor": [
         "dry",
-        "normal"
+        "normal",
+        "combination",
+        "oily",
+        "sensitive"
       ],
       "targetConcerns": [
-        "dryness"
+        "sensitivity"
       ],
-      "priceRange": "mid-range",
-      "description": "A moisturizing sunscreen lotion offering ultra-high broad-spectrum protection.",
+      "description": "A moisturizing sunscreen lotion offering ultra-high broad-spectrum protection. Reapply every 2-3 hours.",
+      "dayTime": [
+        "AM"
+      ],
       "keyIngriedients": [
-        "Mexoryl Filters",
+        "Dimethicone",
+        "Glycerin",
+        "Vitamin B5",
+        "Silica",
         "Vitamin E"
       ],
-      "url": "https://www.laroche-posay.us/sunscreen/anthelios-melt-in-milk-spf-100-3606000403708.html",
-      "allIngredients": "Water, Homosalate, Octisalate, Octocrylene, Avobenzone, Glycerin, Tocopherol"
+      "allIngredients": "WATER, POLYMETHYLSILSESQUIOXANE, GLYCERIN, DIMETHICONE, POLY C10-30 ALKYL ACRYLATE, STYRENE/ACRYLATES COPOLYMER, SILICA, CAPRYLYL METHICONE, ACRYLATES/DIMETHICONE COPOLYMER, DIETHYLHEXYL SYRINGYLIDENEMALONATE, PEG-100 STEARATE, GLYCERYL STEARATE, PHENOXYETHANOL, POTASSIUM CETYL PHOSPHATE, TOCOPHEROL, CAPRYLYL GLYCOL, PANTHENOL, ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, TRIETHANOLAMINE, PEG-8 LAURATE, INULIN LAURYL CARBAMATE, CHLORPHENESIN, P-ANISIC ACID, CAPRYLIC/CAPRIC TRIGLYCERIDE, XANTHAN GUM, DISODIUM EDTA, CASSIA ALATA LEAF EXTRACT, MALTODEXTRIN, SODIUM DODECYLBENZENESULFONATE",
+      "priceRange": "mid-range",
+      "url": "https://www.laroche-posay.us/our-products/sun/body-sunscreen/anthelios-melt-in-milk-sunscreen-for-face-body-spf-100-antheliosmeltinmilkspf100.html",
+      "imageURL": "https://www.laroche-posay.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-laroche-posay-master-catalog/default/dwa36b8c02/product/March%202023%20packshot%20updates/Anthelios100_MeltInMilk.jpg?sw=1440&sh=1440&sm=cut&sfrm=jpg&q=70"
     },
     {
       "id": "cerave_hydrating_mineral_sunscreen_spf_30",
@@ -53,19 +73,29 @@
       "category": "sunscreen",
       "suitableFor": [
         "dry",
+        "combination",
+        "normal",
+        "oily",
         "sensitive"
       ],
       "targetConcerns": [
         "dryness"
       ],
-      "priceRange": "budget",
-      "description": "A mineral sunscreen that hydrates while protecting the skin barrier.",
+      "description": "A mineral sunscreen that hydrates while protecting the skin barrier. Reapply every 2-3 hours.",
+      "dayTime": [
+        "AM"
+      ],
       "keyIngriedients": [
         "Zinc Oxide",
+        "Niacinamide",
+        "Hyaluronic Acid",
+        "Titanium Dioxide",
         "Ceramides"
       ],
-      "url": "https://www.cerave.com/skincare/sunscreen/hydrating-mineral-sunscreen-spf-30-face-lotion",
-      "allIngredients": "Water, Zinc Oxide, Glycerin, Ceramide NP, Ceramide AP, Ceramide EOP, Dimethicone, Sodium Hyaluronate"
+      "allIngredients": "Water, Glycerin, C12-15 Alkyl Benzoate, Dimethicone, Glyceryl Stearate, Isododecane, Butyloctyl Salicylate, Styrene/acrylates Copolymer, Propanediol, Stearic Acid, Peg-100 Stearate, Sorbitan Stearate, Niacinamide, Peg-8 Laurate, Ceramide NP, Ceramide AP, Ceramide EOP, Sorbitan Isostearate, Carbomer, Cetearyl Alcohol, Ceteareth-20, Triethoxycaprylylsilane, Dimethiconol, Sodium Citrate, Sodium Lauroyl Lactylate, Sodium Dodecylbenzenesulfonate, Myristic Acid, Sodium Hyaluronate, Cholesterol,Aluminum Hydroxide, Palmitic Acid, Phenoxyethanol, Chlorphenesin, Hydroxyethyl Acrylate/sodium Acryloyldimethyl Taurate Copolymer, Caprylyl Glycol, Citric Acid, Panthenol, Xanthan Gum, Phytosphingosine, Polyhydroxystearic Acid, Polysorbate 60, Ethylhexylglycerin",
+      "priceRange": "budget",
+      "url": "https://www.cerave.com/sunscreen/face/hydrating-mineral-sunscreen-face-lotion-spf-30",
+      "imageURL": "https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/sunscreen/face/30-spf-face/30-spf-face_front.jpg?rev=3a662171cf3d47eea33f18a9d080b1a8&w=1024&hash=8E76CD36C21A87282DEA2E3670585622"
     },
     {
       "id": "cerave_am_facial_moisturizing_lotion_spf_30",
@@ -74,115 +104,80 @@
       "category": "sunscreen",
       "suitableFor": [
         "normal",
-        "combination"
+        "dry"
       ],
       "targetConcerns": [
         "dryness"
       ],
-      "priceRange": "budget",
-      "description": "A daily facial moisturizer with SPF that hydrates and protects skin from UV damage.",
+      "description": "A daily facial moisturizer with SPF that hydrates and protects skin from UV damage. Reapply every 2-3 hours.",
+      "dayTime": [
+        "AM"
+      ],
       "keyIngriedients": [
         "Ceramides",
+        "Hyaluronic Acid",
         "Niacinamide"
       ],
-      "url": "https://www.cerave.com/skincare/moisturizers/am-facial-moisturizing-lotion-spf-30",
-      "allIngredients": "Water, Homosalate, Octinoxate, Niacinamide, Ceramides, Glycerin, Dimethicone"
-    },
-    {
-      "id": "neutrogena_hydro_boost_water_gel_lotion_spf_30",
-      "name": "Hydro Boost Water Gel Lotion SPF 30",
-      "brand": "Neutrogena",
-      "category": "sunscreen",
-      "suitableFor": [
-        "oily",
-        "combination"
-      ],
-      "targetConcerns": [
-        "dryness",
-        "uneven_texture"
-      ],
+      "allIngredients": " WATER, NIACINAMIDE, CETEARYL ALCOHOL, GLYCERIN, PROPANEDIOL, DIMETHICONE, BEHENTRIMONIUM METHOSULFATE, BHT, CERAMIDE NP, CERAMIDE AP, CERAMIDE EOP, CARBOMER, TRIETHOXYCAPRYLYLSILANE, TRIETHYL CITRATE, SODIUM LAUROYL LACTYLATE, SODIUM HYALURONATE, CHOLESTEROL, ALUMINUM STARCH OCTENYLSUCCINATE, PHENOXYETHANOL, HYDROXYETHYLCELLULOSE, HYDROXYACETOPHENONE, CAPRYLYL GLYCOL, TRISODIUM ETHYLENEDIAMINE DISUCCINATE, PHYTOSPHINGOSINE, XANTHAN GUM, BENZOIC ACID",
       "priceRange": "budget",
-      "description": "A lightweight sunscreen with a water-gel texture that hydrates while protecting skin.",
-      "keyIngriedients": [
-        "Hyaluronic Acid",
-        "Glycerin"
-      ],
-      "url": "https://www.neutrogena.com/products/sun/hydro-boost-water-gel-lotion-spf-30",
-      "allIngredients": "Water, Avobenzone, Homosalate, Octisalate, Glycerin, Sodium Hyaluronate"
+      "url": "https://www.cerave.com/skincare/moisturizers/am-facial-moisturizing-lotion-with-sunscreen#key-ingredients",
+      "imageURL": "https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/skincare/moisturizers/am-facial-moisturizing-lotion-with-sunscreen/am-30-facial-moisturizer_front.jpg?rev=675a526e833f404e8ab1a167f77c7b58&w=1024&hash=0CB60934B4BB60C1ECBDC3264E98B840"
     },
     {
-      "id": "neutrogena_ultra_sheer_dry_touch_spf_100",
-      "name": "Ultra Sheer Dry-Touch SPF 100",
-      "brand": "Neutrogena",
+      "id": "isdin_fusion_water_magic_repair_spf_50",
+      "name": "Fusion Water MAGIC repair SPF 50",
+      "brand": "ISDIN",
       "category": "sunscreen",
       "suitableFor": [
+        "combination",
         "oily",
         "normal"
       ],
       "targetConcerns": [
-        "dryness",
-        "oiliness"
+        "oiliness",
+        "fine_lines"
       ],
-      "priceRange": "budget",
-      "description": "A fast-absorbing sunscreen that delivers powerful protection with a matte finish.",
-      "keyIngriedients": [
-        "Helioplex Technology"
+      "description": "An ultra-light sunscreen suitable for daily use and all skin types. Reapply every 2-3 hours. Reapply every 2-3 hours.",
+      "dayTime": [
+        "AM"
       ],
-      "url": "https://www.neutrogena.com/products/sun/ultra-sheer-dry-touch-sunscreen-spf-100",
-      "allIngredients": "Water, Avobenzone, Homosalate, Octocrylene, Silica, Tocopherol"
-    },
-    {
-      "id": "eucerin_oil_control_spf_50",
-      "name": "Oil Control SPF 50+",
-      "brand": "Eucerin",
-      "category": "sunscreen",
-      "suitableFor": [
-        "oily"
-      ],
-      "targetConcerns": [
-        "acne",
-        "oiliness"
-      ],
-      "priceRange": "mid-range",
-      "description": "A mattifying sunscreen designed to control oil and shine.",
-      "keyIngriedients": [
-        "L-Carnitine",
-        "Silica"
-      ],
-      "url": "https://www.eucerin.com/products/sun-protection/oil-control-spf-50plus",
-      "allIngredients": "Water, Alcohol Denat., Avobenzone, Octocrylene, Silica, Glycerin"
-    },
-    {
-      "id": "isdin_fusion_water_spf_50",
-      "name": "Fusion Water SPF 50",
-      "brand": "ISDIN",
-      "category": "sunscreen",
-      "suitableFor": [],
-      "targetConcerns": [],
-      "priceRange": "mid-range",
-      "description": "An ultra-light sunscreen suitable for daily use and all skin types.",
       "keyIngriedients": [
         "Hyaluronic Acid",
         "Vitamin E"
       ],
-      "url": "https://www.isdin.com/en/product/fotoprotector-isdin/fusion-water-spf-50",
-      "allIngredients": "Water, Alcohol Denat., Ethylhexyl Triazone, Glycerin, Tocopherol"
+      "allIngredients": "Aqua (Water), Octocrylene, Propanediol, Butyl Methoxydibenzoylmethane, Ethylhexyl Salicylate, Polymethyl Methacrylate, Dimethicone, Phenylbenzimidazole Sulfonic Acid, Polysilicone-15, Propylene Glycol Dicaprylate/Dicaprate, Tromethamine, Glycerin, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Silica, Dimethicone/Vinyl Dimethicone Crosspolymer, Butylene Glycol, 1,2-Hexanediol, Hydroxyacetophenone, Polysorbate 60, PEG-10 Dimethicone, Sodium Hyaluronate, Tocopheryl Acetate, Xanthan Gum, Caprylyl Glycol, Parfum (Fragrance), Disodium EDTA, PEG-8, Carbomer, Polysorbate 20, Sodium Lactate, Tocopherol, Phenoxyethanol, Tropolone, Lecithin, Plankton Extract, Ascorbyl Palmitate, Sodium Benzoate, Ascorbic Acid, Citric Acid, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Pentapeptide-34 Trifluoroacetate.",
+      "priceRange": "mid-range",
+      "url": "https://www.isdin.com/en-GB/product/fotoprotector-isdin/magic-repair-spf-50",
+      "imageURL": "https://www.isdin.com/sites/default/files/productos/imagenes/es_2937_th_fuagerepairspf5050ml_main_image_0_1.jpg?v=1713435917"
     },
     {
-      "id": "supergoop_unseen_sunscreen_spf_40",
-      "name": "Unseen Sunscreen SPF 40",
+      "id": "supergoop_unseen_sunscreen_stick_spf_40",
+      "name": "Unseen Sunscreen Stick SPF 40",
       "brand": "Supergoop!",
       "category": "sunscreen",
-      "suitableFor": [],
-      "targetConcerns": [],
-      "priceRange": "premium",
-      "description": "A weightless, invisible sunscreen that doubles as a makeup primer.",
-      "keyIngriedients": [
-        "Silicone Elastomers",
-        "Antioxidants"
+      "suitableFor": [
+        "combination",
+        "normal",
+        "oily",
+        "sensitive",
+        "dry"
       ],
-      "url": "https://supergoop.com/products/unseen-sunscreen",
-      "allIngredients": "Isododecane, Dimethicone, Homosalate, Octisalate, Avobenzone, Tocopherol"
+      "targetConcerns": [
+        "sensitivity"
+      ],
+      "description": "Invisible sunscreen stick for on-the-go, clear sun protection that helps reduce the appearance of oil & shine & glides seamlessly over makeup",
+      "dayTime": [
+        "AM"
+      ],
+      "keyIngriedients": [
+        "Silicone Powders",
+        "Marine Bamboo Extract",
+        "Meadowfoam Estolide"
+      ],
+      "allIngredients": "Isododecane, Octyldodecanol, Polymethylsilsesquioxane, Dicaprylyl Carbonate,Caprylic/Capric Triglyceride, Diisopropyl Adipate, Silica,Butyloctyl Salicylate, C12-15 Alkyl Benzoate, Isohexadecane,Dimethicone Crosspolymer, Dibutyl Lauroyl Glutamide,Silica Silylate, Dibutyl Ethylhexanoyl Glutamide,Ethylcellulose, Caprylyl Glycol, DiethylhexylSyringylidenemalonate, Himanthalia Elongata Extract,Meadowfoam Estolide, Tocophero",
+      "priceRange": "premium",
+      "url": "https://supergoop.com/products/unseen-clear-sunscreen-stick?variant=40758203154530",
+      "imageURL": "https://supergoop.com/cdn/shop/files/UnseenSunscreenStick_PDP_WhyYoullLoveIt.jpg?v=1708982372&width=1024"
     }
   ]
 }
