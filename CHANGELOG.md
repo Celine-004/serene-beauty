@@ -5,6 +5,39 @@ All notable changes to Serene Beauty will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- Login and Register pages with form validation
+- JWT token storage in localStorage
+- Quiz data persistence (sessionStorage → localStorage on auth)
+
+## [0.2.0] - 2025-12-18
+
+### Added
+
+#### Frontend
+- Concern Selection component with skin-type-aware grouping
+- Dashboard with personalized routine display
+- Sidebar with skin type info, concerns, price filter, step toggles
+- AM/PM/Daily routine toggle for skin types with multiple routines
+- Collapsible routine steps with application instructions
+- Product recommendations per step with scrollable list
+- Concern-based treatment recommendations section
+- Price range filter (all/budget/mid-range/premium)
+- Show/hide individual routine steps
+
+#### Backend
+- Added `/api/products/recommend/:skinType/:category/:dayTime` endpoint
+
+### Fixed
+- Routine step cards crash when `keyIngredients` undefined
+- Empty step cards due to missing dayTime route
+
+### User Flow
+- Quiz → Results → Concern Selection → Dashboard (seamless state management)
+- Standalone `/concerns` route for updating concerns anytime
+
 ## [0.1.0] - 2025-12-18
 
 ### Added
