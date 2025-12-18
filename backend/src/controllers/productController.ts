@@ -105,3 +105,40 @@ export const getProductsForRoutineStep = async (req: Request, res: Response) => 
     res.status(500).json({ message: 'Server error fetching products' })
   }
 }
+export const getProductsForRoutineStepByTime = async (req: Request, res: Response) => {
+  try {
+    const { skinType, category, dayTime } = req.params
+
+    const validSkinTypes = ['oily', 'dry', 'combination', 'sensitive', 'normal']
+    const validCategories = ['cleanser', 'toner', 'serum', 'moisturizer', 'sunscreen', 'treatment']
+    const validDayTimes = ['AM', 'PM']
+
+    if (!validSkinTypes.includes(skinType)) {
+      return res.status(400).json({ message: 'Invalid skin type' })
+    }
+    if (!validCategories.includes(category)) {
+      return res.status(400).json({ message: 'Invalid category' })
+    }
+    if (!validDayTimes.includes(dayTime)) {
+      return res.status(400).json({ message: 'Invalid dayTime. Use AM or PM' })
+    }
+
+    const products = allProducts.filter(
+      (product: any) => 
+        product.category === category && 
+        product.suitableFor.includes(skinType) &&
+        product.dayTime.includes(dayTime)
+    )
+
+    res.json({
+      skinType,
+      category,
+      dayTime,
+      products,
+      totalProducts: products.length
+    })
+  } catch (error) {
+    console.error('Error fetching products:', error)
+    res.status(500).json({ message: 'Server error fetching products' })
+  }
+}

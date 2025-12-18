@@ -1,2 +1,55 @@
 @import "tailwindcss";
 
+@theme {
+  /* Colors */
+  --color-porcelain: #f9f9f1;
+  --color-lavender-veil: #e0d5f6;
+  --color-deep-twilight: #25166b;
+  --color-midnight: #100047;
+  --color-alabaster: #e8e5e0;
+  --color-wisteria: #c1aaee;
+  --color-periwinkle: #8080e5;
+
+  /* Fonts */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Cormorant Garamond", serif;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 18px;
+  background-color: var(--color-porcelain);
+  color: var(--color-midnight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Dark background - light text */
+.bg-deep-twilight {
+  background-color: var(--color-deep-twilight);
+  color: var(--color-alabaster);
+}
+
+/* Light backgrounds - dark text */
+.bg-porcelain {
+  background-color: var(--color-porcelain);
+  color: var(--color-midnight);
+}
+
+.bg-alabaster {
+  background-color: var(--color-alabaster);
+  color: var(--color-midnight);
+}
+
+.bg-wisteria {
+  background-color: var(--color-wisteria);
+  color: var(--color-midnight);
+}
+
+.bg-lavender-veil {
+  background-color: var(--color-lavender-veil);
+  color: var(--color-midnight);
+}
