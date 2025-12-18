@@ -5,12 +5,20 @@ All notable changes to Serene Beauty will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.3.0] - 2025-12-18
 
 ### Added
-- Login and Register pages with form validation
-- JWT token storage in localStorage
-- Quiz data persistence (sessionStorage → localStorage on auth)
+
+#### Frontend
+- Login page with email/password form and validation
+- Register page with name, username, email, password fields
+- Password validation (8+ chars, uppercase, lowercase, number)
+- JWT token storage in localStorage on successful auth
+- Quiz data persistence (transfers from sessionStorage to localStorage on auth)
+- Conditional "Create Account" prompt (hidden when logged in)
+
+### Changed
+- Dashboard checks login state to show/hide signup prompt
 
 ## [0.2.0] - 2025-12-18
 
