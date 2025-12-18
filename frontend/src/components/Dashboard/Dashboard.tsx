@@ -67,6 +67,8 @@ export default function Dashboard() {
   const [concernTreatments, setConcernTreatments] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
   const [expandedStep, setExpandedStep] = useState<string | null>(null)
+  const [priceFilter, setPriceFilter] = useState<string>('all')
+  const [hiddenSteps, setHiddenSteps] = useState<string[]>([])
 
   useEffect(() => {
     const storedSkinType = sessionStorage.getItem('skinType') || 'normal'
@@ -95,7 +97,6 @@ export default function Dashboard() {
     fetchRoutines()
   }, [])
 
-  // Fetch products for routine steps
   useEffect(() => {
     const currentRoutine = routines.find(r => r.dayTime === activeRoutine)
     if (!currentRoutine || !skinType) return
@@ -120,7 +121,6 @@ export default function Dashboard() {
     fetchProducts()
   }, [activeRoutine, routines, skinType])
 
-  // Fetch concern-based treatments
   useEffect(() => {
     if (!skinType || concerns.length === 0) return
 
@@ -129,7 +129,6 @@ export default function Dashboard() {
         const data = await api.getProductsForStep(skinType, 'treatment')
         const treatments = data.products || []
         
-        // Filter treatments that target user's selected concerns
         const relevantTreatments = treatments.filter((product: Product) =>
           product.targetConcerns?.some(concern => concerns.includes(concern))
         )
@@ -145,7 +144,7 @@ export default function Dashboard() {
 
   const currentRoutine = routines.find(r => r.dayTime === activeRoutine)
   const hasMultipleRoutines = routines.length > 1
-  const routineDuration = currentRoutine ? currentRoutine.steps.length * 2 : 0
+  const visibleSteps = currentRoutine?.steps.filter(step => !hiddenSteps.includes(step.category)) || []
 
   const formatCategory = (category: string) => {
     return category.charAt(0).toUpperCase() + category.slice(1)
@@ -163,6 +162,19 @@ export default function Dashboard() {
     return icons[category] || "•"
   }
 
+  const toggleStep = (category: string) => {
+    if (hiddenSteps.includes(category)) {
+      setHiddenSteps(hiddenSteps.filter(s => s !== category))
+    } else {
+      setHiddenSteps([...hiddenSteps, category])
+    }
+  }
+
+  const filterProductsByPrice = (products: Product[]) => {
+    if (priceFilter === 'all') return products
+    return products.filter(p => p.priceRange === priceFilter)
+  }
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-porcelain">
@@ -176,74 +188,8 @@ export default function Dashboard() {
       <div className="max-w-7xl mx-auto p-4 md:p-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           
-          {/* Sidebar */}
-          <div className="lg:col-span-1 lg:order-2">
-            <div className="bg-white rounded-lg shadow-lg border border-alabaster p-6 sticky top-8">
-              
-              {/* Skin Type Badge */}
-              <div className="text-center mb-6">
-                <div className="w-20 h-20 rounded-full bg-lavender-veil mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-3xl">
-                    {skinType === 'oily' ? '💧' : skinType === 'dry' ? '🏜️' : skinType === 'sensitive' ? '🌸' : skinType === 'combination' ? '⚖️' : '✨'}
-                  </span>
-                </div>
-                <h2 className="text-xl font-heading text-deep-twilight capitalize">
-                  {skinType} Skin
-                </h2>
-                <p className="text-sm mt-2 opacity-80">
-                  {skinTypeDescriptions[skinType]}
-                </p>
-              </div>
-
-              {/* Concerns */}
-         {concerns.length > 0 && (
-  <div className="mb-6">
-    <h3 className="font-heading text-deep-twilight mb-3">Your Concerns</h3>
-    <div className="flex flex-wrap gap-2">
-      {concerns.map(concern => (
-        <span
-          key={concern}
-          className="text-sm bg-deep-twilight px-3 py-2 rounded-lg"
-        >
-          {concernLabels[concern] || concern}
-        </span>
-      ))}
-    </div>
-  </div>
-)}
-
-              {/* Routine Info */}
-              <div className="mb-6 p-4 bg-alabaster rounded-lg">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm opacity-70">Steps</span>
-                  <span className="font-medium">{currentRoutine?.steps.length || 0}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm opacity-70">Est. Time</span>
-                  <span className="font-medium">~{routineDuration} min</span>
-                </div>
-              </div>
-
-              {/* Quick Actions */}
-              <div className="space-y-3">
-                <a
-                  href="/concerns"
-                  className="block text-center px-4 py-2 rounded-lg bg-alabaster hover:bg-wisteria/30 transition font-medium text-sm"
-                >
-                  Update Concerns
-                </a>
-                <a
-                  href="/quiz"
-                  className="block text-center px-4 py-2 rounded-lg bg-alabaster hover:bg-wisteria/30 transition font-medium text-sm"
-                >
-                  Retake Quiz
-                </a>
-              </div>
-            </div>
-          </div>
-
           {/* Main Content */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 lg:order-1">
             
             {/* Header */}
             <div className="mb-8">
@@ -287,7 +233,7 @@ export default function Dashboard() {
             {/* Steps */}
             {currentRoutine && (
               <div className="space-y-4 mb-12">
-                {currentRoutine.steps.map(step => (
+                {visibleSteps.map((step, index) => (
                   <div 
                     key={step.order} 
                     className="bg-white rounded-lg shadow-lg border border-alabaster overflow-hidden"
@@ -303,7 +249,7 @@ export default function Dashboard() {
                         </span>
                         <div className="text-left">
                           <h3 className="text-xl font-heading text-deep-twilight">
-                            Step {step.order}: {formatCategory(step.category)}
+                            Step {index + 1}: {formatCategory(step.category)}
                           </h3>
                           <p className="text-sm opacity-70">
                             {stepInstructions[step.category]}
@@ -317,11 +263,11 @@ export default function Dashboard() {
 
                     {/* Expanded Product Recommendations */}
                     {expandedStep === step.category && (
-                      <div className="px-6 pb-6 border-t border-alabaster pt-4">
+                        <div className="px-6 pb-6 border-t border-alabaster pt-4">
                         <h4 className="font-medium mb-4">Recommended Products</h4>
-                        {stepProducts[step.category]?.length > 0 ? (
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {stepProducts[step.category].slice(0, 4).map(product => (
+                        {filterProductsByPrice(stepProducts[step.category] || []).length > 0 ? (
+                          <div className="max-h-96 overflow-y-auto">
+                            {filterProductsByPrice(stepProducts[step.category] || []).map(product => (
                               <div 
                                 key={product.id} 
                                 className="border border-alabaster rounded-lg p-4 hover:border-wisteria transition"
@@ -330,7 +276,7 @@ export default function Dashboard() {
                                 <h5 className="font-medium mb-2">{product.name}</h5>
                                 <p className="text-sm opacity-80 mb-3 line-clamp-2">{product.description}</p>
                                 <div className="flex flex-wrap gap-2 mb-3">
-                                  {product.keyIngredients.slice(0, 3).map((ingredient, i) => (
+                                  {(product.keyIngredients || []).slice(0, 3).map((ingredient, i) => (
                                     <span key={i} className="text-xs bg-lavender-veil px-2 py-1 rounded">
                                       {ingredient}
                                     </span>
@@ -344,7 +290,11 @@ export default function Dashboard() {
                             ))}
                           </div>
                         ) : (
-                          <p className="text-center opacity-70 py-4">No products found for this step.</p>
+                          <p className="text-center opacity-70 py-4">
+                            {priceFilter !== 'all' 
+                              ? `No ${priceFilter} products found for this step.` 
+                              : 'No products found for this step.'}
+                          </p>
                         )}
                       </div>
                     )}
@@ -363,9 +313,9 @@ export default function Dashboard() {
                   These treatments specifically target your selected concerns. Consider adding them to your evening routine.
                 </p>
                 
-                {concernTreatments.length > 0 ? (
+                {filterProductsByPrice(concernTreatments).length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {concernTreatments.map(product => (
+                    {filterProductsByPrice(concernTreatments).map(product => (
                       <div 
                         key={product.id} 
                         className="bg-white border border-alabaster rounded-lg p-4 hover:border-wisteria transition"
@@ -374,7 +324,6 @@ export default function Dashboard() {
                         <h5 className="font-medium mb-2">{product.name}</h5>
                         <p className="text-sm opacity-80 mb-3 line-clamp-2">{product.description}</p>
                         
-                        {/* Show which concerns this targets */}
                         <div className="flex flex-wrap gap-2 mb-3">
                           {product.targetConcerns
                             .filter(c => concerns.includes(c))
@@ -394,7 +343,11 @@ export default function Dashboard() {
                   </div>
                 ) : (
                   <div className="bg-white border border-alabaster rounded-lg p-8 text-center">
-                    <p className="opacity-70">No specific treatments found for your concerns yet.</p>
+                    <p className="opacity-70">
+                      {priceFilter !== 'all' 
+                        ? `No ${priceFilter} treatments found for your concerns.` 
+                        : 'No specific treatments found for your concerns yet.'}
+                    </p>
                   </div>
                 )}
               </div>
@@ -412,6 +365,115 @@ export default function Dashboard() {
               >
                 Create Free Account
               </a>
+            </div>
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-1 lg:order-2">
+            <div className="bg-white rounded-lg shadow-lg border border-alabaster p-6 sticky top-8">
+              
+              {/* Skin Type Badge */}
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 rounded-full bg-lavender-veil mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-3xl">
+                    {skinType === 'oily' ? '💧' : skinType === 'dry' ? '🏜️' : skinType === 'sensitive' ? '🌸' : skinType === 'combination' ? '⚖️' : '✨'}
+                  </span>
+                </div>
+                <h2 className="text-xl font-heading text-deep-twilight capitalize">
+                  {skinType} Skin
+                </h2>
+                <p className="text-sm mt-2 opacity-80">
+                  {skinTypeDescriptions[skinType]}
+                </p>
+              </div>
+
+              {/* Concerns */}
+              {concerns.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="font-heading text-deep-twilight mb-3">Your Concerns</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {concerns.map(concern => (
+                      <span
+                        key={concern}
+                        className="text-sm bg-deep-twilight px-3 py-2 rounded-lg"
+                      >
+                        {concernLabels[concern] || concern}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Price Filter */}
+              <div className="mb-6">
+                <h3 className="font-heading text-deep-twilight mb-3">Price Range</h3>
+                <div className="space-y-2">
+                  {['all', 'budget', 'mid-range', 'premium'].map(price => (
+                    <button
+                      key={price}
+                      onClick={() => setPriceFilter(price)}
+                      className={`w-full text-left px-3 py-2 rounded-lg transition text-sm ${
+                        priceFilter === price
+                          ? 'bg-deep-twilight'
+                          : 'bg-alabaster hover:bg-wisteria/30'
+                      }`}
+                    >
+                      {price === 'all' ? '🏷️ All Prices' : 
+                       price === 'budget' ? '💰 Budget-friendly' : 
+                       price === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Toggle Steps */}
+              <div className="mb-6">
+                <h3 className="font-heading text-deep-twilight mb-3">Show/Hide Steps</h3>
+                <div className="space-y-2">
+                  {currentRoutine?.steps.map(step => (
+                    <button
+                      key={step.category}
+                      onClick={() => toggleStep(step.category)}
+                      className={`w-full text-left px-3 py-2 rounded-lg transition text-sm flex items-center justify-between ${
+                        hiddenSteps.includes(step.category)
+                          ? 'bg-alabaster opacity-50'
+                          : 'bg-alabaster hover:bg-wisteria/30'
+                      }`}
+                    >
+                      <span>{getCategoryIcon(step.category)} {formatCategory(step.category)}</span>
+                      <span>{hiddenSteps.includes(step.category) ? '○' : '●'}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Routine Info */}
+              <div className="mb-6 p-4 bg-alabaster rounded-lg">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm opacity-70">Active Steps</span>
+                  <span className="font-medium">{visibleSteps.length}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm opacity-70">Est. Time</span>
+                  <span className="font-medium">~{visibleSteps.length * 2} min</span>
+                </div>
+              </div>
+
+              {/* Quick Actions */}
+              <div className="space-y-3">
+                <a
+                  href="/concerns"
+                  className="block text-center px-4 py-2 rounded-lg bg-alabaster hover:bg-wisteria/30 transition font-medium text-sm"
+                >
+                  Update Concerns
+                </a>
+                <a
+                  href="/quiz"
+                  className="block text-center px-4 py-2 rounded-lg bg-alabaster hover:bg-wisteria/30 transition font-medium text-sm"
+                >
+                  Retake Quiz
+                </a>
+              </div>
             </div>
           </div>
         </div>
