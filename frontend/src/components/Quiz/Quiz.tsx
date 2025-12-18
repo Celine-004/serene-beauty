@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { api } from '../../api'
+import ConcernSelection from '../ConcernSelection/ConcernSelection'
 
 interface Option {
   text: string
@@ -20,12 +21,16 @@ interface QuizResult {
   }
 }
 
+type FlowStep = 'quiz' | 'results' | 'concerns'
+
 export default function Quiz() {
   const [questions, setQuestions] = useState<Question[]>([])
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<{ questionId: number; skinType: string }[]>([])
   const [result, setResult] = useState<QuizResult | null>(null)
   const [loading, setLoading] = useState(true)
+  const [flowStep, setFlowStep] = useState<FlowStep>('quiz')
+  const [selectedConcerns, setSelectedConcerns] = useState<string[]>([])
 
   useEffect(() => {
     const fetchQuiz = async () => {
@@ -66,6 +71,7 @@ export default function Quiz() {
       setLoading(true)
       const data = await api.submitQuiz(answers)
       setResult(data)
+      setFlowStep('results')
       setLoading(false)
     } catch (error) {
       console.error('Error submitting quiz:', error)
@@ -77,34 +83,57 @@ export default function Quiz() {
     setCurrentQuestion(0)
     setAnswers([])
     setResult(null)
+    setFlowStep('quiz')
+    setSelectedConcerns([])
   }
+
+  const handleConcernsComplete = (concerns: string[]) => {
+    setSelectedConcerns(concerns)
+    // Store in sessionStorage for dashboard to access
+    sessionStorage.setItem('skinType', result?.skinType || '')
+    sessionStorage.setItem('concerns', JSON.stringify(concerns))
+    window.location.href = '/dashboard'
+  }
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-porcelain">
-        <p className="text-lg text-midnight">Loading...</p>
+        <p className="text-lg">Loading...</p>
       </div>
     )
   }
 
-  if (result) {
+  // Show concern selection after results
+  if (flowStep === 'concerns' && result) {
+    return (
+      <ConcernSelection
+        skinType={result.skinType}
+        onComplete={handleConcernsComplete}
+        onBack={() => setFlowStep('results')}
+      />
+    )
+  }
+
+  // Show results
+  if (flowStep === 'results' && result) {
     return (
       <div className="min-h-screen bg-porcelain flex items-center justify-center p-4">
         <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full text-center border border-alabaster">
           <h2 className="text-3xl font-heading text-deep-twilight mb-4">Your Skin Type</h2>
           <div className="bg-lavender-veil rounded-lg p-6 mb-6">
             <h3 className="text-2xl font-heading text-deep-twilight">{result.result.title}</h3>
-            <p className="text-midnight mt-3 leading-relaxed">{result.result.message}</p>
+            <p className="mt-3 leading-relaxed">{result.result.message}</p>
           </div>
           <div className="space-y-3">
             <button
-              onClick={() => window.location.href = '/dashboard'}
-              className="w-full bg-deep-twilight text-alabaster py-3 rounded-lg hover:opacity-90 transition font-medium"
+              onClick={() => setFlowStep('concerns')}
+              className="w-full bg-deep-twilight py-3 rounded-lg hover:opacity-90 transition font-medium"
             >
-              View My Routine
+              Continue
             </button>
             <button
               onClick={restartQuiz}
-              className="w-full bg-alabaster text-midnight py-3 rounded-lg hover:bg-wisteria/30 transition font-medium"
+              className="w-full bg-alabaster py-3 rounded-lg hover:bg-wisteria/30 transition font-medium"
             >
               Retake Quiz
             </button>
@@ -114,6 +143,7 @@ export default function Quiz() {
     )
   }
 
+  // Show quiz questions
   const question = questions[currentQuestion]
   const progress = ((currentQuestion + 1) / questions.length) * 100
   const currentAnswer = answers[currentQuestion]?.skinType
@@ -121,9 +151,8 @@ export default function Quiz() {
   return (
     <div className="min-h-screen bg-porcelain flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-lg w-full border border-alabaster">
-        {/* Progress Bar */}
         <div className="mb-8">
-          <div className="flex justify-between text-sm text-midnight/70 mb-2">
+          <div className="flex justify-between text-sm opacity-70 mb-2">
             <span>Question {currentQuestion + 1} of {questions.length}</span>
             <span>{Math.round(progress)}%</span>
           </div>
@@ -135,12 +164,10 @@ export default function Quiz() {
           </div>
         </div>
 
-        {/* Question */}
         <h2 className="text-2xl font-heading text-deep-twilight mb-6 leading-relaxed">
           {question.question}
         </h2>
 
-        {/* Options */}
         <div className="space-y-3 mb-8">
           {question.options.map((option, index) => (
             <button
@@ -152,20 +179,19 @@ export default function Quiz() {
                   : 'border-alabaster hover:border-wisteria hover:bg-lavender-veil/30'
               }`}
             >
-              <span className="text-midnight">{option.text}</span>
+              <span>{option.text}</span>
             </button>
           ))}
         </div>
 
-        {/* Navigation Buttons */}
         <div className="flex justify-between">
           <button
             onClick={goBack}
             disabled={currentQuestion === 0}
             className={`px-6 py-2 rounded-lg transition font-medium ${
               currentQuestion === 0
-                ? 'bg-alabaster/50 text-midnight/30 cursor-not-allowed'
-                : 'bg-alabaster text-midnight hover:bg-wisteria/30'
+                ? 'bg-alabaster/50 opacity-30 cursor-not-allowed'
+                : 'bg-alabaster hover:bg-wisteria/30'
             }`}
           >
             Back
@@ -175,7 +201,7 @@ export default function Quiz() {
             disabled={!currentAnswer}
             className={`px-6 py-2 rounded-lg transition font-medium ${
               !currentAnswer
-                ? 'bg-deep-twilight/50 text-alabaster/50 cursor-not-allowed'
+                ? 'bg-deep-twilight/50 opacity-50 cursor-not-allowed'
                 : 'bg-deep-twilight hover:opacity-90'
             }`}
           >
