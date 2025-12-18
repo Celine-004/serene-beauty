@@ -69,6 +69,12 @@ export default function Dashboard() {
   const [expandedStep, setExpandedStep] = useState<string | null>(null)
   const [priceFilter, setPriceFilter] = useState<string>('all')
   const [hiddenSteps, setHiddenSteps] = useState<string[]>([])
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    setIsLoggedIn(!!token)
+  }, [])
 
   useEffect(() => {
     const storedSkinType = sessionStorage.getItem('skinType') || 'normal'
@@ -354,20 +360,21 @@ export default function Dashboard() {
             )}
 
             {/* Save Prompt */}
-            <div className="bg-deep-twilight rounded-lg p-8 text-center">
-              <h3 className="text-2xl font-heading mb-2">Save Your Routine</h3>
-              <p className="mb-6 opacity-90">
-                Create a free account to save your routine, track your progress, and get personalized tips.
-              </p>
-              <a
-                href="/register"
-                className="inline-block bg-white text-deep-twilight px-8 py-3 rounded-lg hover:opacity-90 transition font-medium"
-              >
-                Create Free Account
-              </a>
-            </div>
+            {!isLoggedIn && (
+              <div className="bg-deep-twilight rounded-lg p-8 text-center">
+                <h3 className="text-2xl font-heading mb-2">Save Your Routine</h3>
+                <p className="mb-6 opacity-90">
+                  Create a free account to save your routine, track your progress, and get personalized tips.
+                </p>
+                <a
+                  href="/register"
+                  className="inline-block bg-white text-deep-twilight px-8 py-3 rounded-lg hover:opacity-90 transition font-medium"
+                >
+                  Create Free Account
+                </a>
+              </div>
+            )}
           </div>
-
           {/* Sidebar */}
           <div className="lg:col-span-1 lg:order-2">
             <div className="bg-white rounded-lg shadow-lg border border-alabaster p-6 sticky top-8">

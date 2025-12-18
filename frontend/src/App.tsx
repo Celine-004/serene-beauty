@@ -3,6 +3,8 @@ import Quiz from './components/Quiz/Quiz'
 import ConcernSelection from './components/ConcernSelection/ConcernSelection'
 import { useState } from 'react'
 import Dashboard from './components/Dashboard/Dashboard'
+import Login from './components/Auth/Login'
+import Register from './components/Auth/Register'
 
 function Home() {
   return (
@@ -51,6 +53,8 @@ function App() {
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/concerns" element={<StandaloneConcerns />} />
 	<Route path="/dashboard" element={<Dashboard />} />
+	<Route path="/login" element={<Login />} />
+	<Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   )
