@@ -1,12 +1,11 @@
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
 
-const getAuthHeader = () => {
+const getAuthHeader = (): Record<string, string> => {
   const token = localStorage.getItem('token')
   return token ? { Authorization: `Bearer ${token}` } : {}
 }
 
 export const api = {
-  // Quiz
   getQuiz: async () => {
     const response = await fetch(`${API_URL}/quiz`)
     return response.json()
@@ -21,13 +20,11 @@ export const api = {
     return response.json()
   },
 
-  // Routines
   getRoutinesBySkinType: async (skinType: string) => {
     const response = await fetch(`${API_URL}/routines/${skinType}`)
     return response.json()
   },
 
-  // Products
   getProductsForStep: async (skinType: string, category: string) => {
     const response = await fetch(`${API_URL}/products/recommend/${skinType}/${category}`)
     return response.json()
@@ -38,7 +35,6 @@ export const api = {
     return response.json()
   },
 
-  // Auth
   register: async (data: { name: string; username: string; email: string; password: string }) => {
     const response = await fetch(`${API_URL}/auth/register`, {
       method: 'POST',
@@ -65,7 +61,6 @@ export const api = {
     return response.json()
   },
 
-  // Profile
   getProfile: async () => {
     const response = await fetch(`${API_URL}/profile`, {
       headers: { ...getAuthHeader() }
