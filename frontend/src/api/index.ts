@@ -1,5 +1,10 @@
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
 
+const getAuthHeader = () => {
+  const token = localStorage.getItem('token')
+  return token ? { Authorization: `Bearer ${token}` } : {}
+}
+
 export const api = {
   // Quiz
   getQuiz: async () => {
@@ -40,6 +45,10 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     })
+    if (!response.ok) {
+      const error = await response.json()
+      throw new Error(error.message)
+    }
     return response.json()
   },
 
@@ -48,6 +57,52 @@ export const api = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
+    })
+    if (!response.ok) {
+      const error = await response.json()
+      throw new Error(error.message)
+    }
+    return response.json()
+  },
+
+  // Profile
+  getProfile: async () => {
+    const response = await fetch(`${API_URL}/profile`, {
+      headers: { ...getAuthHeader() }
+    })
+    return response.json()
+  },
+
+  saveProfile: async (data: { skinType: string; concerns: string[]; quizAnswers?: any[] }) => {
+    const response = await fetch(`${API_URL}/profile`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
+      body: JSON.stringify(data)
+    })
+    return response.json()
+  },
+
+  selectProduct: async (data: { category: string; productId: string; dayTime?: string }) => {
+    const response = await fetch(`${API_URL}/profile/select-product`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
+      body: JSON.stringify(data)
+    })
+    return response.json()
+  },
+
+  removeProduct: async (data: { category: string; dayTime?: string }) => {
+    const response = await fetch(`${API_URL}/profile/remove-product`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...getAuthHeader() },
+      body: JSON.stringify(data)
+    })
+    return response.json()
+  },
+
+  getSelectedProducts: async () => {
+    const response = await fetch(`${API_URL}/profile/selected-products`, {
+      headers: { ...getAuthHeader() }
     })
     return response.json()
   }

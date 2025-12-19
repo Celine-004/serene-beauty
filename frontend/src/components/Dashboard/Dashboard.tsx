@@ -29,6 +29,12 @@ interface Product {
   imageURL?: string
 }
 
+interface SelectedProduct {
+  category: string
+  productId: string
+  dayTime: string
+}
+
 const stepInstructions: Record<string, string> = {
   cleanser: "Apply to damp skin and gently massage in circular motions. Rinse with lukewarm water.",
   toner: "Apply to clean skin using hands or a cotton pad. Gently press into the skin.",
@@ -71,6 +77,10 @@ export default function Dashboard() {
   const [priceFilter, setPriceFilter] = useState<string>('all')
   const [hiddenSteps, setHiddenSteps] = useState<string[]>([])
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [selectedProducts, setSelectedProducts] = useState<Record<string, string>>({})
+  const [hasRoutineSaved, setHasRoutineSaved] = useState(false)
+  const [isEditMode, setIsEditMode] = useState(false)
+  const [saving, setSaving] = useState(false)
 
   useEffect(() => {
     const token = localStorage.getItem('token')
@@ -78,8 +88,8 @@ export default function Dashboard() {
   }, [])
 
   useEffect(() => {
-    const storedSkinType = sessionStorage.getItem('skinType') || 'normal'
-    const storedConcerns = JSON.parse(sessionStorage.getItem('concerns') || '[]')
+    const storedSkinType = sessionStorage.getItem('skinType') || localStorage.getItem('skinType') || 'normal'
+    const storedConcerns = JSON.parse(sessionStorage.getItem('concerns') || localStorage.getItem('concerns') || '[]')
     
     setSkinType(storedSkinType)
     setConcerns(storedConcerns)
@@ -104,6 +114,36 @@ export default function Dashboard() {
     fetchRoutines()
   }, [])
 
+  // Fetch selected products for logged-in users
+  useEffect(() => {
+    if (!isLoggedIn) return
+
+    const fetchSelectedProducts = async () => {
+      try {
+        const data = await api.getSelectedProducts()
+        if (data.selectedProducts && data.selectedProducts.length > 0) {
+          const selections: Record<string, string> = {}
+          data.selectedProducts.forEach((p: SelectedProduct) => {
+            const key = `${p.category}_${p.dayTime}`
+            selections[key] = p.productId
+          })
+          setSelectedProducts(selections)
+          setHasRoutineSaved(true)
+        } else {
+          setHasRoutineSaved(false)
+          setIsEditMode(true) // First time user, show selection mode
+        }
+      } catch (error) {
+        console.error('Error fetching selected products:', error)
+        setHasRoutineSaved(false)
+        setIsEditMode(true)
+      }
+    }
+
+    fetchSelectedProducts()
+  }, [isLoggedIn])
+
+  // Fetch products for routine steps
   useEffect(() => {
     const currentRoutine = routines.find(r => r.dayTime === activeRoutine)
     if (!currentRoutine || !skinType) return
@@ -128,6 +168,7 @@ export default function Dashboard() {
     fetchProducts()
   }, [activeRoutine, routines, skinType])
 
+  // Fetch concern-based treatments
   useEffect(() => {
     if (!skinType || concerns.length === 0) return
 
@@ -182,18 +223,66 @@ export default function Dashboard() {
     return products.filter(p => p.priceRange === priceFilter)
   }
 
+  const handleSelectProduct = (category: string, productId: string) => {
+    if (!isLoggedIn || !isEditMode) return
+
+    const dayTime = activeRoutine === 'Daily' ? 'Both' : activeRoutine
+    const key = `${category}_${dayTime}`
+    
+    setSelectedProducts(prev => ({ ...prev, [key]: productId }))
+  }
+
+  const handleSaveRoutine = async () => {
+    if (!isLoggedIn) return
+
+    setSaving(true)
+    try {
+      // Save each selected product
+      for (const [key, productId] of Object.entries(selectedProducts)) {
+        const [category, dayTime] = key.split('_')
+        await api.selectProduct({ category, productId, dayTime })
+      }
+
+      // Save profile with skin type and concerns
+      await api.saveProfile({
+        skinType,
+        concerns
+      })
+
+      setHasRoutineSaved(true)
+      setIsEditMode(false)
+    } catch (error) {
+      console.error('Error saving routine:', error)
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  const getSelectedProductForStep = (category: string): Product | null => {
+    const dayTime = activeRoutine === 'Daily' ? 'Both' : activeRoutine
+    const key = `${category}_${dayTime}`
+    const productId = selectedProducts[key]
+    
+    if (!productId) return null
+    
+    const products = stepProducts[category] || []
+    return products.find(p => p.id === productId) || null
+  }
+
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-porcelain">
-        <p className="text-lg">Loading your routine...</p>
+      <div className="min-h-screen bg-porcelain">
+        <Navbar />
+        <div className="flex items-center justify-center min-h-[calc(100vh-64px)]">
+          <p className="text-lg">Loading your routine...</p>
+        </div>
       </div>
     )
   }
 
   return (
-  <div className="min-h-screen bg-porcelain">
-    <Navbar />
     <div className="min-h-screen bg-porcelain">
+      <Navbar />
       <div className="max-w-7xl mx-auto p-4 md:p-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           
@@ -206,7 +295,7 @@ export default function Dashboard() {
                 Your Skincare Routine
               </h1>
               <p className="text-lg opacity-80">
-                A personalized routine designed just for you
+                {isEditMode ? 'Select your preferred products for each step' : 'A personalized routine designed just for you'}
               </p>
             </div>
 
@@ -242,73 +331,142 @@ export default function Dashboard() {
             {/* Steps */}
             {currentRoutine && (
               <div className="space-y-4 mb-12">
-                {visibleSteps.map((step, index) => (
-                  <div 
-                    key={step.order} 
-                    className="bg-white rounded-lg shadow-lg border border-alabaster overflow-hidden"
-                  >
-                    {/* Step Header */}
-                    <button
-                      onClick={() => setExpandedStep(expandedStep === step.category ? null : step.category)}
-                      className="w-full px-6 py-4 flex items-center justify-between hover:bg-alabaster/50 transition"
-                    >
-                      <div className="flex items-center gap-4">
-                        <span className="w-10 h-10 rounded-full bg-deep-twilight flex items-center justify-center text-lg">
-                          {getCategoryIcon(step.category)}
-                        </span>
-                        <div className="text-left">
-                          <h3 className="text-xl font-heading text-deep-twilight">
-                            Step {index + 1}: {formatCategory(step.category)}
-                          </h3>
-                          <p className="text-sm opacity-70">
-                            {stepInstructions[step.category]}
-                          </p>
-                        </div>
-                      </div>
-                      <span className="text-2xl opacity-50">
-                        {expandedStep === step.category ? '−' : '+'}
-                      </span>
-                    </button>
+                {visibleSteps.map((step, index) => {
+                  const selectedProduct = getSelectedProductForStep(step.category)
+                  const showOnlySelected = hasRoutineSaved && !isEditMode && selectedProduct
 
-                    {/* Expanded Product Recommendations */}
-                    {expandedStep === step.category && (
+                  return (
+                    <div 
+                      key={step.order} 
+                      className="bg-white rounded-lg shadow-lg border border-alabaster overflow-hidden"
+                    >
+                      {/* Step Header */}
+                      <button
+                        onClick={() => setExpandedStep(expandedStep === step.category ? null : step.category)}
+                        className="w-full px-6 py-4 flex items-center justify-between hover:bg-alabaster/50 transition"
+                      >
+                        <div className="flex items-center gap-4">
+                          <span className="w-10 h-10 rounded-full bg-deep-twilight flex items-center justify-center text-lg">
+                            {getCategoryIcon(step.category)}
+                          </span>
+                          <div className="text-left">
+                            <h3 className="text-xl font-heading text-deep-twilight">
+                              Step {index + 1}: {formatCategory(step.category)}
+                            </h3>
+                            <p className="text-sm opacity-70">
+                              {stepInstructions[step.category]}
+                            </p>
+                          </div>
+                        </div>
+                        <span className="text-2xl opacity-50">
+                          {expandedStep === step.category ? '−' : '+'}
+                        </span>
+                      </button>
+
+                      {/* Expanded Product Recommendations */}
+                      {expandedStep === step.category && (
                         <div className="px-6 pb-6 border-t border-alabaster pt-4">
-                        <h4 className="font-medium mb-4">Recommended Products</h4>
-                        {filterProductsByPrice(stepProducts[step.category] || []).length > 0 ? (
+                          <h4 className="font-medium mb-4">
+                            {showOnlySelected ? 'Your Selected Product' : 'Recommended Products'}
+                          </h4>
                           <div className="max-h-96 overflow-y-auto">
-                            {filterProductsByPrice(stepProducts[step.category] || []).map(product => (
-                              <div 
-                                key={product.id} 
-                                className="border border-alabaster rounded-lg p-4 hover:border-wisteria transition"
-                              >
-                                <p className="text-sm text-wisteria mb-1">{product.brand}</p>
-                                <h5 className="font-medium mb-2">{product.name}</h5>
-                                <p className="text-sm opacity-80 mb-3 line-clamp-2">{product.description}</p>
+                            {showOnlySelected ? (
+                              // Show only selected product
+                              <div className="border border-deep-twilight bg-lavender-veil rounded-lg p-4">
+                                <p className="text-sm text-wisteria mb-1">{selectedProduct.brand}</p>
+                                <h5 className="font-medium mb-2">{selectedProduct.name}</h5>
+                                <p className="text-sm opacity-80 mb-3">{selectedProduct.description}</p>
                                 <div className="flex flex-wrap gap-2 mb-3">
-                                  {(product.keyIngredients || []).slice(0, 3).map((ingredient, i) => (
-                                    <span key={i} className="text-xs bg-lavender-veil px-2 py-1 rounded">
+                                  {(selectedProduct.keyIngredients || []).slice(0, 3).map((ingredient, i) => (
+                                    <span key={i} className="text-xs bg-white px-2 py-1 rounded">
                                       {ingredient}
                                     </span>
                                   ))}
                                 </div>
                                 <p className="text-sm opacity-70">
-                                  {product.priceRange === 'budget' ? '💰 Budget-friendly' : 
-                                   product.priceRange === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
+                                  {selectedProduct.priceRange === 'budget' ? '💰 Budget-friendly' : 
+                                   selectedProduct.priceRange === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
                                 </p>
                               </div>
-                            ))}
+                            ) : (
+                              // Show all products with selection
+                              filterProductsByPrice(stepProducts[step.category] || []).length > 0 ? (
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                  {filterProductsByPrice(stepProducts[step.category] || []).map(product => {
+                                    const dayTime = activeRoutine === 'Daily' ? 'Both' : activeRoutine
+                                    const selectionKey = `${step.category}_${dayTime}`
+                                    const isSelected = selectedProducts[selectionKey] === product.id
+
+                                    return (
+                                      <div 
+                                        key={product.id} 
+                                        className={`border rounded-lg p-4 transition cursor-pointer ${
+                                          isSelected 
+                                            ? 'border-deep-twilight bg-lavender-veil' 
+                                            : 'border-alabaster hover:border-wisteria'
+                                        }`}
+                                        onClick={() => isEditMode && handleSelectProduct(step.category, product.id)}
+                                      >
+                                        <p className="text-sm text-wisteria mb-1">{product.brand}</p>
+                                        <h5 className="font-medium mb-2">{product.name}</h5>
+                                        <p className="text-sm opacity-80 mb-3 line-clamp-2">{product.description}</p>
+                                        <div className="flex flex-wrap gap-2 mb-3">
+                                          {(product.keyIngredients || []).slice(0, 3).map((ingredient, i) => (
+                                            <span key={i} className="text-xs bg-lavender-veil px-2 py-1 rounded">
+                                              {ingredient}
+                                            </span>
+                                          ))}
+                                        </div>
+                                        <div className="flex justify-between items-center">
+                                          <p className="text-sm opacity-70">
+                                            {product.priceRange === 'budget' ? '💰 Budget-friendly' : 
+                                             product.priceRange === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
+                                          </p>
+                                          {isLoggedIn && isEditMode && (
+                                            <span className={`text-sm px-3 py-1 rounded-lg ${
+                                              isSelected
+                                                ? 'bg-deep-twilight'
+                                                : 'bg-alabaster'
+                                            }`}>
+                                              {isSelected ? '✓ Selected' : 'Select'}
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+                                    )
+                                  })}
+                                </div>
+                              ) : (
+                                <p className="text-center opacity-70 py-4">
+                                  {priceFilter !== 'all' 
+                                    ? `No ${priceFilter} products found for this step.` 
+                                    : 'No products found for this step.'}
+                                </p>
+                              )
+                            )}
                           </div>
-                        ) : (
-                          <p className="text-center opacity-70 py-4">
-                            {priceFilter !== 'all' 
-                              ? `No ${priceFilter} products found for this step.` 
-                              : 'No products found for this step.'}
-                          </p>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                ))}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+
+            {/* Save Routine Button - Show when in edit mode */}
+            {isLoggedIn && isEditMode && (
+              <div className="mb-12">
+                <button
+                  onClick={handleSaveRoutine}
+                  disabled={saving}
+                  className={`w-full py-4 rounded-lg font-medium text-lg transition ${
+                    saving
+                      ? 'bg-deep-twilight/50 cursor-not-allowed'
+                      : 'bg-deep-twilight hover:opacity-90'
+                  }`}
+                >
+                  {saving ? 'Saving...' : 'Save My Routine'}
+                </button>
               </div>
             )}
 
@@ -362,7 +520,7 @@ export default function Dashboard() {
               </div>
             )}
 
-            {/* Save Prompt */}
+            {/* Save Prompt - only show if not logged in */}
             {!isLoggedIn && (
               <div className="bg-deep-twilight rounded-lg p-8 text-center">
                 <h3 className="text-2xl font-heading mb-2">Save Your Routine</h3>
@@ -378,6 +536,7 @@ export default function Dashboard() {
               </div>
             )}
           </div>
+
           {/* Sidebar */}
           <div className="lg:col-span-1 lg:order-2">
             <div className="bg-white rounded-lg shadow-lg border border-alabaster p-6 sticky top-8">
@@ -411,6 +570,30 @@ export default function Dashboard() {
                       </span>
                     ))}
                   </div>
+                </div>
+              )}
+
+              {/* Edit Routine Button - Show when routine is saved and not in edit mode */}
+              {isLoggedIn && hasRoutineSaved && !isEditMode && (
+                <div className="mb-6">
+                  <button
+                    onClick={() => setIsEditMode(true)}
+                    className="w-full py-3 rounded-lg bg-deep-twilight hover:opacity-90 transition font-medium"
+                  >
+                    Edit Routine
+                  </button>
+                </div>
+              )}
+
+              {/* Cancel Edit Button - Show when in edit mode and has saved routine */}
+              {isLoggedIn && hasRoutineSaved && isEditMode && (
+                <div className="mb-6">
+                  <button
+                    onClick={() => setIsEditMode(false)}
+                    className="w-full py-3 rounded-lg bg-alabaster hover:bg-wisteria/30 transition font-medium"
+                  >
+                    Cancel Editing
+                  </button>
                 </div>
               )}
 
@@ -489,6 +672,5 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
-</div>
   )
 }

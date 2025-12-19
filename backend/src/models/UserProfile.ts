@@ -8,6 +8,11 @@ export interface IUserProfile extends Document {
     questionId: number
     selectedOption: string
   }[]
+  selectedProducts: {
+    category: string
+    productId: string
+    dayTime: 'AM' | 'PM' | 'Both'
+  }[]
   createdAt: Date
   updatedAt: Date
 }
@@ -33,6 +38,11 @@ const userProfileSchema = new Schema<IUserProfile>(
     quizAnswers: [{
       questionId: { type: Number, required: true },
       selectedOption: { type: String, required: true }
+    }],
+    selectedProducts: [{
+      category: { type: String, required: true },
+      productId: { type: String, required: true },
+      dayTime: { type: String, enum: ['AM', 'PM', 'Both'], default: 'Both' }
     }]
   },
   {

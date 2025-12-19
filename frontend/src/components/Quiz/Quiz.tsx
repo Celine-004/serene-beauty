@@ -110,14 +110,11 @@ export default function Quiz() {
   // Show concern selection after results
   if (flowStep === 'concerns' && result) {
     return (
-      <div className="min-h-screen bg-porcelain">
-      <Navbar />
-        <ConcernSelection
-          skinType={result.skinType}
-          onComplete={handleConcernsComplete}
-          onBack={() => setFlowStep('results')}
-        />
-      </div>
+      <ConcernSelection
+        skinType={result.skinType}
+        onComplete={handleConcernsComplete}
+        onBack={() => setFlowStep('results')}
+      />
     )
   }
 
