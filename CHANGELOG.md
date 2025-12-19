@@ -5,6 +5,17 @@ All notable changes to Serene Beauty will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+#### Frontend
+- Landing page with hero section, tagline, and CTA
+- How It Works section (3-step explanation)
+- Benefits section (4 feature cards)
+- Coming Soon section (future features preview)
+- Final CTA section with dark background
+- Navbar component with login state awareness
+- Home link added to navbar
+- Footer with navigation, copyright, and utility links
+- Navbar added to Quiz, ConcernSelection, and Dashboard pages
+
 ## [0.3.0] - 2025-12-18
 
 ### Added
