@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { api } from '../../api'
+import Navbar from '../Layout/Navbar'
 
 interface Step {
   order: number
@@ -190,6 +191,8 @@ export default function Dashboard() {
   }
 
   return (
+  <div className="min-h-screen bg-porcelain">
+    <Navbar />
     <div className="min-h-screen bg-porcelain">
       <div className="max-w-7xl mx-auto p-4 md:p-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -486,5 +489,6 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
+</div>
   )
 }

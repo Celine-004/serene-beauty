@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Navbar from '../Layout/Navbar'
 
 interface Concern {
   id: string
@@ -41,6 +42,8 @@ export default function ConcernSelection({ skinType, onComplete, onBack }: Conce
   const otherConcerns = concerns.filter(c => !c.commonFor.includes(skinType))
 
   return (
+  <div className="min-h-screen bg-porcelain">
+    <Navbar />
     <div className="min-h-screen bg-porcelain flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl w-full border border-alabaster">
         <h2 className="text-3xl font-heading text-deep-twilight mb-2 text-center">
@@ -117,6 +120,7 @@ export default function ConcernSelection({ skinType, onComplete, onBack }: Conce
           </button>
         </div>
       </div>
-    </div>
+    </div>   
+ </div>
   )
 }

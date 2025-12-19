@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { api } from '../../api'
 import ConcernSelection from '../ConcernSelection/ConcernSelection'
+import Navbar from '../Layout/Navbar'
 
 interface Option {
   text: string
@@ -97,8 +98,11 @@ export default function Quiz() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-porcelain">
-        <p className="text-lg">Loading...</p>
+      <div className="min-h-screen bg-porcelain">
+      <Navbar />
+        <div className="flex items-center justify-center min-h-screen bg-porcelain">
+          <p className="text-lg">Loading...</p>
+        </div>
       </div>
     )
   }
@@ -106,17 +110,22 @@ export default function Quiz() {
   // Show concern selection after results
   if (flowStep === 'concerns' && result) {
     return (
-      <ConcernSelection
-        skinType={result.skinType}
-        onComplete={handleConcernsComplete}
-        onBack={() => setFlowStep('results')}
-      />
+      <div className="min-h-screen bg-porcelain">
+      <Navbar />
+        <ConcernSelection
+          skinType={result.skinType}
+          onComplete={handleConcernsComplete}
+          onBack={() => setFlowStep('results')}
+        />
+      </div>
     )
   }
 
   // Show results
   if (flowStep === 'results' && result) {
     return (
+      <div className="min-h-screen bg-porcelain">
+      <Navbar />
       <div className="min-h-screen bg-porcelain flex items-center justify-center p-4">
         <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full text-center border border-alabaster">
           <h2 className="text-3xl font-heading text-deep-twilight mb-4">Your Skin Type</h2>
@@ -140,6 +149,7 @@ export default function Quiz() {
           </div>
         </div>
       </div>
+      </div>
     )
   }
 
@@ -149,6 +159,8 @@ export default function Quiz() {
   const currentAnswer = answers[currentQuestion]?.skinType
 
   return (
+    <div className="min-h-screen bg-porcelain">
+      <Navbar />
     <div className="min-h-screen bg-porcelain flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-lg p-8 max-w-lg w-full border border-alabaster">
         <div className="mb-8">
@@ -209,6 +221,7 @@ export default function Quiz() {
           </button>
         </div>
       </div>
+    </div>
     </div>
   )
 }

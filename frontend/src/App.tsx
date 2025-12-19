@@ -1,46 +1,25 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/Home/Home'
 import Quiz from './components/Quiz/Quiz'
 import ConcernSelection from './components/ConcernSelection/ConcernSelection'
-import { useState } from 'react'
 import Dashboard from './components/Dashboard/Dashboard'
 import Login from './components/Auth/Login'
 import Register from './components/Auth/Register'
-
-function Home() {
-  return (
-    <div className="min-h-screen bg-porcelain flex items-center justify-center p-4">
-      <div className="text-center max-w-md">
-        <h1 className="text-5xl font-heading text-deep-twilight mb-4">Serene Beauty</h1>
-        <p className="text-lg mb-8 leading-relaxed">
-          Discover your personalized skincare routine based on your unique skin type.
-        </p>
-        <a
-          href="/quiz"
-          className="inline-block bg-deep-twilight px-8 py-3 rounded-lg hover:opacity-90 transition font-medium"
-        >
-          Take the Quiz
-        </a>
-      </div>
-    </div>
-  )
-}
+import { useState } from 'react'
 
 function StandaloneConcerns() {
-  const [savedConcerns, setSavedConcerns] = useState<string[]>([])
-  
-  // For standalone access, we need skin type from somewhere
-  // For now, default to 'normal' or get from localStorage later
   const handleComplete = (concerns: string[]) => {
-    setSavedConcerns(concerns)
-    // TODO: Save to user profile when auth is ready
+    sessionStorage.setItem('concerns', JSON.stringify(concerns))
     window.location.href = '/dashboard'
   }
 
+  const skinType = sessionStorage.getItem('skinType') || localStorage.getItem('skinType') || 'normal'
+
   return (
     <ConcernSelection
-      skinType="normal"
+      skinType={skinType}
       onComplete={handleComplete}
-      onBack={() => window.location.href = '/'}
+      onBack={() => window.location.href = '/dashboard'}
     />
   )
 }
@@ -52,9 +31,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/concerns" element={<StandaloneConcerns />} />
-	<Route path="/dashboard" element={<Dashboard />} />
-	<Route path="/login" element={<Login />} />
-	<Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   )
