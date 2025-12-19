@@ -5,6 +5,31 @@ All notable changes to Serene Beauty will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2025-12-19
+
+### Added
+
+#### Backend
+- UserProfile model updated with selectedProducts array
+- Profile controller with CRUD operations for product selection
+- JWT authentication middleware for protected routes
+- Profile routes: GET/POST /api/profile, select-product, remove-product, selected-products
+
+#### Frontend
+- Product selection for authenticated users
+- "Save My Routine" button for first-time users
+- "Edit Routine" button in sidebar for returning users
+- Selected products persist to backend
+- View mode shows only selected products per step
+- Edit mode shows all products with selection UI
+
+### Fixed
+- Double navbar bug when Quiz flows to ConcernSelection
+
+## [0.4.0] - 2025-12-19
+
+### Added
+
 #### Frontend
 - Landing page with hero section, tagline, and CTA
 - How It Works section (3-step explanation)
