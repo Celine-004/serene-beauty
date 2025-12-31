@@ -1,6 +1,19 @@
+import { useEffect } from 'react'
 import Navbar from '../Layout/Navbar'
 
 export default function Home() {
+  // Wake up the backend when user lands on home page
+  useEffect(() => {
+    const wakeUpBackend = async () => {
+      try {
+        await fetch('https://serene-beauty-api.onrender.com/health')
+      } catch (error) {
+        // Silent fail - just warming up the server
+      }
+    }
+    wakeUpBackend()
+  }, [])
+
   return (
     <div className="min-h-screen bg-porcelain">
       <Navbar />
@@ -12,7 +25,7 @@ export default function Home() {
             Discover Your Perfect Skincare Routine
           </h1>
           <p className="text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            Take our personalized quiz to find products tailored to your unique skin type and concerns. 
+            Take our personalized quiz to find products tailored to your unique skin type and concerns.
             No guesswork, just results.
           </p>
           <a
@@ -80,7 +93,7 @@ export default function Home() {
                 Personalized for You
               </h3>
               <p className="leading-relaxed">
-                No two skin types are the same. Our algorithm considers your unique skin type and concerns 
+                No two skin types are the same. Our algorithm considers your unique skin type and concerns
                 to create a routine that actually works for you.
               </p>
             </div>
@@ -89,7 +102,7 @@ export default function Home() {
                 Science-Backed Recommendations
               </h3>
               <p className="leading-relaxed">
-                Every product recommendation is based on ingredients that are proven to work for your 
+                Every product recommendation is based on ingredients that are proven to work for your
                 specific skin concerns.
               </p>
             </div>
@@ -98,7 +111,7 @@ export default function Home() {
                 Budget-Friendly Options
               </h3>
               <p className="leading-relaxed">
-                Filter products by price range. Great skincare doesn't have to break the bank. 
+                Filter products by price range. Great skincare doesn't have to break the bank.
                 Find options that fit your budget.
               </p>
             </div>
@@ -107,7 +120,7 @@ export default function Home() {
                 Simple and Clear
               </h3>
               <p className="leading-relaxed">
-                No confusing routines with 12 steps. We keep it simple with clear instructions 
+                No confusing routines with 12 steps. We keep it simple with clear instructions
                 on what to use and when.
               </p>
             </div>
