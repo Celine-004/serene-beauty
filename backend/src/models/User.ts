@@ -4,7 +4,9 @@ export interface IUser extends Document {
   name: string
   username: string
   email: string
-  password: string
+  password?: string
+  googleId?: string
+  emailVerified: boolean
   createdAt: Date
   updatedAt: Date
 }
@@ -35,8 +37,16 @@ const userSchema = new Schema<IUser>(
     },
     password: {
       type: String,
-      required: [true, 'Password is required'],
       minlength: [8, 'Password must be at least 8 characters']
+      // Not required - Google OAuth users won't have a password
+    },
+    googleId: {
+      type: String,
+      sparse: true
+    },
+    emailVerified: {
+      type: Boolean,
+      default: false
     }
   },
   {

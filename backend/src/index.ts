@@ -8,6 +8,7 @@ import quizRoutes from './routes/quizRoutes'
 import routineRoutes from './routes/routineRoutes'
 import productRoutes from './routes/productRoutes'
 import profileRoutes from './routes/profileRoutes'
+import passport from './config/passport'
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -55,6 +56,7 @@ app.use(generalLimiter)
 
 // Body parser with size limit (prevents large payload attacks)
 app.use(express.json({ limit: '10kb' }))
+app.use(passport.initialize())
 
 // Database connection
 mongoose.connect(MONGODB_URI)
