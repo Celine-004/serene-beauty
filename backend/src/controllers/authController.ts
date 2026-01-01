@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 import User from '../models/User'
 import { registerSchema, loginSchema } from '../utils/validation'
 
-const JWT_SECRET = process.env.JWT_SECRET as string
+const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret'
 
 export const register = async (req: Request, res: Response) => {
   try {
@@ -72,6 +72,11 @@ export const login = async (req: Request, res: Response) => {
     const user = await User.findOne({ email })
     if (!user) {
       return res.status(401).json({ message: 'Invalid email or password' })
+    }
+
+    // Check if user has a password (might be Google OAuth user)
+    if (!user.password) {
+      return res.status(401).json({ message: 'Please sign in with Google' })
     }
 
     // Check password
