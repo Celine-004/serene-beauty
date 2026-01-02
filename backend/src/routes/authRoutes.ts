@@ -1,14 +1,25 @@
 import { Router } from 'express'
 import passport from '../config/passport'
 import jwt from 'jsonwebtoken'
-import { register, login, logout } from '../controllers/authController'
+import { register, login, logout, getMe, updateMe, deleteMe, unlinkGoogle, setPassword, changePassword } from '../controllers/authController'
+import { authenticate } from '../middleware/auth'
 
 const router = Router()
 
-// Existing routes
+// Public routes
 router.post('/register', register)
 router.post('/login', login)
 router.post('/logout', logout)
+
+// Protected routes (require authentication)
+router.get('/me', authenticate, getMe)
+router.put('/me', authenticate, updateMe)
+router.delete('/me', authenticate, deleteMe)
+router.post('/unlink-google', authenticate, unlinkGoogle)
+router.post('/set-password', authenticate, setPassword)
+router.post('/change-password', authenticate, changePassword)
+
+
 
 // Google OAuth routes
 router.get(
@@ -28,15 +39,13 @@ router.get(
   (req, res) => {
     try {
       const user = req.user as any
-      
-      // Create JWT token (same as regular login)
+
       const token = jwt.sign(
         { userId: user._id },
         process.env.JWT_SECRET || 'fallback-secret',
         { expiresIn: '24h' }
       )
 
-      // Redirect to frontend with token
       const frontendURL = process.env.FRONTEND_URL || 'http://localhost:5173'
       res.redirect(`${frontendURL}/oauth-callback?token=${token}&userId=${user._id}&name=${encodeURIComponent(user.name)}`)
     } catch (error) {

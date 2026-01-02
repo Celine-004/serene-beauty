@@ -5,6 +5,42 @@ All notable changes to Serene Beauty will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [0.7.0] - 2026-01-02
+
+### Added - User Profile
+- **Profile Page** (`/profile`) with editable name and username
+- **Account Information** displaying email and member since date (read-only)
+- **Google Account Management** - link/unlink Google account from profile
+- **Set Password** for Google-only users to enable email login
+- **Change Password** for users with existing passwords (requires current password)
+- **Delete Account** with confirmation dialog (removes user and all profile data)
+- **My Account** link in navbar for logged-in users
+- Backend endpoints: `GET /api/auth/me`, `PUT /api/auth/me`, `DELETE /api/auth/me`
+- Backend endpoints: `POST /api/auth/set-password`, `POST /api/auth/change-password`, `POST /api/auth/unlink-google`
+
+## [0.6.0] - 2026-01-01
+
+### Added - Security & OAuth
+- **Helmet.js** security headers (XSS protection, clickjacking prevention, MIME sniffing prevention, HTTPS enforcement)
+- **Rate Limiting** - general routes (100 requests/15 min), auth routes (10 requests/15 min)
+- **CORS Configuration** - restricted to localhost:5173 and serene-beauty-app.netlify.app
+- **Body Size Limit** - 10kb max payload to prevent overflow attacks
+- **Error Handling Middleware** - prevents stack trace leaks to clients
+- **Google OAuth Authentication** using Passport.js
+  - Sign in with Google button on Login and Register pages
+  - Automatic account creation for new Google users
+  - Account linking for existing users with matching email
+  - OAuth callback handler (`/oauth-callback`)
+- **Backend Ping** on Home page load to wake up Render server (reduces cold start delay)
+- User model updated with `googleId`, `emailVerified`, and optional `password` fields
+- Environment variables: `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `FRONTEND_URL`, `BACKEND_URL`
+
+### Security Notes
+- OAuth credentials stored in environment variables (never committed to git)
+- JWT tokens issued after OAuth with 24-hour expiry
+- Google users can set a password to enable email login
+
 ## [0.5.0] - 2025-12-19
 
 ### Added

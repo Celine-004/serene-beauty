@@ -100,5 +100,89 @@ export const api = {
       headers: { ...getAuthHeader() }
     })
     return response.json()
+  },
+
+  // User account
+getMe: async () => {
+  const res = await fetch(`${API_URL}/auth/me`, {
+    headers: getAuthHeader()
+  })
+  if (!res.ok) {
+    const error = await res.json()
+    throw new Error(error.message || 'Failed to fetch user')
   }
+  return res.json()
+},
+
+updateMe: async (data: { name?: string; username?: string }) => {
+  const res = await fetch(`${API_URL}/auth/me`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      ...getAuthHeader()
+    },
+    body: JSON.stringify(data)
+  })
+  if (!res.ok) {
+    const error = await res.json()
+    throw new Error(error.message || 'Failed to update profile')
+  }
+  return res.json()
+},
+
+deleteMe: async () => {
+  const res = await fetch(`${API_URL}/auth/me`, {
+    method: 'DELETE',
+    headers: getAuthHeader()
+  })
+  if (!res.ok) {
+    const error = await res.json()
+    throw new Error(error.message || 'Failed to delete account')
+  }
+  return res.json()
+},
+
+unlinkGoogle: async () => {
+  const res = await fetch(`${API_URL}/auth/unlink-google`, {
+    method: 'POST',
+    headers: getAuthHeader()
+  })
+  if (!res.ok) {
+    const error = await res.json()
+    throw new Error(error.message || 'Failed to unlink Google')
+  }
+  return res.json()
+},
+setPassword: async (password: string) => {
+  const res = await fetch(`${API_URL}/auth/set-password`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...getAuthHeader()
+    },
+    body: JSON.stringify({ password })
+  })
+  if (!res.ok) {
+    const error = await res.json()
+    throw new Error(error.message || 'Failed to set password')
+  }
+  return res.json()
+},
+
+changePassword: async (currentPassword: string, newPassword: string) => {
+  const res = await fetch(`${API_URL}/auth/change-password`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...getAuthHeader()
+    },
+    body: JSON.stringify({ currentPassword, newPassword })
+  })
+  if (!res.ok) {
+    const error = await res.json()
+    throw new Error(error.message || 'Failed to change password')
+  }
+  return res.json()
+},
+
 }

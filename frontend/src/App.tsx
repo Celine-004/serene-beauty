@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard/Dashboard'
 import Login from './components/Auth/Login'
 import Register from './components/Auth/Register'
 import OAuthCallback from './components/Auth/OAuthCallback'
+import Profile from './components/Profile/Profile'
 
 function StandaloneConcerns() {
   const handleComplete = (concerns: string[]) => {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 	<Route path="/oauth-callback" element={<OAuthCallback />} />
+	<Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   )

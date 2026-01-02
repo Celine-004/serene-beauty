@@ -35,6 +35,12 @@ export default function Navbar() {
             </a>
             {isLoggedIn ? (
               <>
+		<a
+		 href="/profile" 
+		 className="hover:text-deep-twilight transition"
+		 >
+		 My Account
+		</a>
                 <a 
                   href="/dashboard" 
                   className="hover:text-deep-twilight transition"
