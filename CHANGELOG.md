@@ -5,6 +5,28 @@ All notable changes to Serene Beauty will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] - 2026-03-06
+
+### Added - Contact & Privacy Pages
+- **Contact Page** (`/contact`) with form saving to MongoDB
+  - Fields: name, email, subject, message
+  - Success confirmation after submission
+  - Form validation (required fields, email format)
+- **Privacy Policy Page** (`/privacy`) with full policy content
+  - Information collection disclosure
+  - Data usage explanation
+  - Google Analytics disclosure with opt-out link
+  - Data security measures
+  - User rights (access, update, delete)
+  - Cookie policy
+- Contact model and controller in backend
+- Backend endpoint: `POST /api/contact`
+
+### Fixed
+- Footer Contact link now routes to `/contact` page (was broken mail to link)
+
+### Changed
+- Copyright year updated to 2026
 
 ## [0.7.0] - 2026-01-02
 

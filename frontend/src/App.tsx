@@ -7,6 +7,8 @@ import Login from './components/Auth/Login'
 import Register from './components/Auth/Register'
 import OAuthCallback from './components/Auth/OAuthCallback'
 import Profile from './components/Profile/Profile'
+import Contact from './components/Contact/Contact'
+import Privacy from './components/Privacy/Privacy'
 
 function StandaloneConcerns() {
   const handleComplete = (concerns: string[]) => {
@@ -37,6 +39,8 @@ function App() {
         <Route path="/register" element={<Register />} />
 	<Route path="/oauth-callback" element={<OAuthCallback />} />
 	<Route path="/profile" element={<Profile />} />
+	<Route path="/contact" element={<Contact />} />
+	<Route path="/privacy" element={<Privacy />} />
       </Routes>
     </BrowserRouter>
   )

@@ -9,6 +9,7 @@ import routineRoutes from './routes/routineRoutes'
 import productRoutes from './routes/productRoutes'
 import profileRoutes from './routes/profileRoutes'
 import passport from './config/passport'
+import contactRoutes from './routes/contactRoutes'
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -69,6 +70,7 @@ app.use('/api/quiz', quizRoutes)
 app.use('/api/routines', routineRoutes)
 app.use('/api/products', productRoutes)
 app.use('/api/profile', profileRoutes)
+app.use('/api/contact', contactRoutes)
 
 // Test route
 app.get('/', (req: Request, res: Response) => {
