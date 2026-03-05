@@ -180,9 +180,9 @@ export default function Home() {
             <a href="/quiz" className="hover:text-deep-twilight transition">Quiz</a>
             <a href="/dashboard" className="hover:text-deep-twilight transition">Dashboard</a>
           </div>
-          <p className="text-sm opacity-70">© 2025 Serene Beauty. All rights reserved.</p>
+          <p className="text-sm opacity-70">© 2026 Serene Beauty. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="mailto:support@serenebeauty.com" className="hover:text-deep-twilight transition">Contact</a>
+            <a href="/contact" className="hover:text-deep-twilight transition">Contact</a>
             <a href="/privacy" className="hover:text-deep-twilight transition">Privacy</a>
           </div>
         </div>

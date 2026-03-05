@@ -19,6 +19,20 @@ export const api = {
     })
     return response.json()
   },
+submitContact: async (data: { name: string; email: string; subject: string; message: string }) => {
+  const res = await fetch(`${API_URL}/contact`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  if (!res.ok) {
+    const error = await res.json()
+    throw new Error(error.message || 'Failed to send message')
+  }
+  return res.json()
+}, 
 
   getRoutinesBySkinType: async (skinType: string) => {
     const response = await fetch(`${API_URL}/routines/${skinType}`)
