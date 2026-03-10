@@ -75,16 +75,16 @@ submitContact: async (data: { name: string; email: string; subject: string; mess
     return response.json()
   },
 
-  getProfile: async () => {
-    const response = await fetch(`${API_URL}/profile`, {
-      headers: { ...getAuthHeader() }
-    })
-     if (!res.ok) {
-    const error = await res.json()
+getProfile: async () => {
+  const response = await fetch(`${API_URL}/profile`, {
+    headers: { ...getAuthHeader() }
+  })
+  if (!response.ok) {
+    const error = await response.json()
     throw new Error(error.message || 'Failed to fetch profile')
-    }
-    return response.json()
-  },
+  }
+  return response.json()
+},  
 
   saveProfile: async (data: { skinType: string; concerns: string[]; quizAnswers?: any[] }) => {
     const response = await fetch(`${API_URL}/profile`, {
