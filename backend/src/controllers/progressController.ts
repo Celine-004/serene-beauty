@@ -2,6 +2,14 @@ import { Request, Response } from 'express'
 import ProductUsageLog from '../models/ProductUsageLog'
 import UserProfile from '../models/UserProfile'
 
+declare global {
+  namespace Express {
+    interface Request {
+      userId?: string
+    }
+  }
+}
+
 const STEP_ORDER: Record<string, number> = {
   'cleanser': 1,
   'toner': 2,
