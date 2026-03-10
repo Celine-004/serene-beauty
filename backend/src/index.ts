@@ -10,6 +10,7 @@ import productRoutes from './routes/productRoutes'
 import profileRoutes from './routes/profileRoutes'
 import passport from './config/passport'
 import contactRoutes from './routes/contactRoutes'
+import ingredientRoutes from './routes/ingredientRoutes'
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -71,6 +72,7 @@ app.use('/api/routines', routineRoutes)
 app.use('/api/products', productRoutes)
 app.use('/api/profile', profileRoutes)
 app.use('/api/contact', contactRoutes)
+app.use('/api/ingredients', ingredientRoutes)
 
 // Test route
 app.get('/', (req: Request, res: Response) => {

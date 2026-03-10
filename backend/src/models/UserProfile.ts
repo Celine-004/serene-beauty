@@ -13,6 +13,10 @@ export interface IUserProfile extends Document {
     productId: string
     dayTime: 'AM' | 'PM' | 'Both'
   }[]
+   ingredientSettings: {
+    allergies: string[]
+    preferences: string[]
+  }
   createdAt: Date
   updatedAt: Date
 }
@@ -43,7 +47,11 @@ const userProfileSchema = new Schema<IUserProfile>(
       category: { type: String, required: true },
       productId: { type: String, required: true },
       dayTime: { type: String, enum: ['AM', 'PM', 'Both'], default: 'Both' }
-    }]
+    }],
+    ingredientSettings: {
+      allergies: { type: [String], default: [] },
+      preferences: { type: [String], default: [] }
+    }
   },
   {
     timestamps: true

@@ -79,6 +79,10 @@ submitContact: async (data: { name: string; email: string; subject: string; mess
     const response = await fetch(`${API_URL}/profile`, {
       headers: { ...getAuthHeader() }
     })
+     if (!res.ok) {
+    const error = await res.json()
+    throw new Error(error.message || 'Failed to fetch profile')
+    }
     return response.json()
   },
 
@@ -199,4 +203,30 @@ changePassword: async (currentPassword: string, newPassword: string) => {
   return res.json()
 },
 
+updateIngredientSettings: async (data: { allergies: string[]; preferences: string[] }) => {
+  const res = await fetch(`${API_URL}/profile/ingredient-settings`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...getAuthHeader()
+    },
+    body: JSON.stringify(data)
+  })
+  if (!res.ok) {
+    const error = await res.json()
+    throw new Error(error.message || 'Failed to update ingredient settings')
+  }
+  return res.json()
+},
+
+getIngredientSettings: async () => {
+  const res = await fetch(`${API_URL}/profile/ingredient-settings`, {
+    headers: getAuthHeader()
+  })
+  if (!res.ok) {
+    const error = await res.json()
+    throw new Error(error.message || 'Failed to fetch ingredient settings')
+  }
+  return res.json()
+},
 }
