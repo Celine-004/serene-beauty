@@ -34,32 +34,13 @@ export default function Navbar() {
               Home
             </a>
             {isLoggedIn ? (
-              <>
-		<a
-		 href="/profile" 
-		 className="hover:text-deep-twilight transition"
-		 >
-		 My Account
-		</a>
-                <a 
-                  href="/dashboard" 
-                  className="hover:text-deep-twilight transition"
-                >
-                  Dashboard
-                </a>
-                <a 
-                  href="/concerns" 
-                  className="hover:text-deep-twilight transition"
-                >
-                  My Concerns
-                </a>
-                <button
-                  onClick={handleLogout}
-                  className="px-4 py-2 rounded-lg bg-alabaster hover:bg-wisteria/30 transition font-medium"
-                >
-                  Log Out
-                </button>
-              </>
+                <>
+    <a href="/concerns" className="hover:text-deep-twilight transition">My Concerns</a>
+    <a href="/progress" className="hover:text-deep-twilight transition">Progress</a>
+    <a href="/dashboard" className="hover:text-deep-twilight transition">Dashboard</a>
+    <a href="/profile" className="hover:text-deep-twilight transition">My Account</a>
+    <button onClick={handleLogout} className="px-4 py-2 rounded-lg bg-alabaster hover:bg-wisteria/30 transition font-medium">Log Out</button>
+  </>
             ) : (
               <>
                 <a 

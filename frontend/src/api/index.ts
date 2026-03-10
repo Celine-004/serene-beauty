@@ -229,4 +229,128 @@ getIngredientSettings: async () => {
   }
   return res.json()
 },
+
+// Progress tracking
+  getDailyLog: async (date?: string) => {
+    const url = date 
+      ? `${API_URL}/progress/daily?date=${date}` 
+      : `${API_URL}/progress/daily`
+    const res = await fetch(url, {
+      headers: getAuthHeader()
+    })
+    if (!res.ok) {
+      const error = await res.json()
+      throw new Error(error.message || 'Failed to fetch daily log')
+    }
+    return res.json()
+  },
+
+  getRoutineProducts: async () => {
+    const res = await fetch(`${API_URL}/progress/routine-products`, {
+      headers: getAuthHeader()
+    })
+    if (!res.ok) {
+      const error = await res.json()
+      throw new Error(error.message || 'Failed to fetch routine products')
+    }
+    return res.json()
+  },
+
+  logRoutineComplete: async (data: { dayTime: 'AM' | 'PM'; products: any[] }) => {
+    const res = await fetch(`${API_URL}/progress/routine-complete`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...getAuthHeader()
+      },
+      body: JSON.stringify(data)
+    })
+    if (!res.ok) {
+      const error = await res.json()
+      throw new Error(error.message || 'Failed to log routine')
+    }
+    return res.json()
+  },
+
+  logProductUsage: async (data: { dayTime: 'AM' | 'PM'; product: any; isCustom?: boolean }) => {
+    const res = await fetch(`${API_URL}/progress/log-product`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...getAuthHeader()
+      },
+      body: JSON.stringify(data)
+    })
+    if (!res.ok) {
+      const error = await res.json()
+      throw new Error(error.message || 'Failed to log product')
+    }
+    return res.json()
+  },
+
+  removeProductFromLog: async (data: { dayTime: 'AM' | 'PM'; productId: string; isCustom?: boolean }) => {
+    const res = await fetch(`${API_URL}/progress/remove-product`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...getAuthHeader()
+      },
+      body: JSON.stringify(data)
+    })
+    if (!res.ok) {
+      const error = await res.json()
+      throw new Error(error.message || 'Failed to remove product')
+    }
+    return res.json()
+  },
+
+  updateDailyLog: async (data: { skinRating?: number; skinFeeling?: string[]; notes?: string }) => {
+    const res = await fetch(`${API_URL}/progress/daily`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        ...getAuthHeader()
+      },
+      body: JSON.stringify(data)
+    })
+    if (!res.ok) {
+      const error = await res.json()
+      throw new Error(error.message || 'Failed to update log')
+    }
+    return res.json()
+  },
+
+  getUsageHistory: async (days: number = 7) => {
+    const res = await fetch(`${API_URL}/progress/history?days=${days}`, {
+      headers: getAuthHeader()
+    })
+    if (!res.ok) {
+      const error = await res.json()
+      throw new Error(error.message || 'Failed to fetch history')
+    }
+    return res.json()
+  },
+
+  getUsageWarnings: async () => {
+    const res = await fetch(`${API_URL}/progress/warnings`, {
+      headers: getAuthHeader()
+    })
+    if (!res.ok) {
+      const error = await res.json()
+      throw new Error(error.message || 'Failed to fetch warnings')
+    }
+    return res.json()
+  },
+
+  getRecentProducts: async () => {
+    const res = await fetch(`${API_URL}/progress/recent-products`, {
+      headers: getAuthHeader()
+    })
+    if (!res.ok) {
+      const error = await res.json()
+      throw new Error(error.message || 'Failed to fetch recent products')
+    }
+    return res.json()
+  },
+
 }
