@@ -107,6 +107,67 @@ export const removeProduct = async (req: Request, res: Response) => {
   }
 }
 
+export const updateIngredientSettings = async (req: Request, res: Response) => {
+  try {
+    const userId = (req as any).userId
+    const { allergies, preferences } = req.body
+
+    if (allergies && !Array.isArray(allergies)) {
+      return res.status(400).json({ message: 'allergies must be an array' })
+    }
+    if (preferences && !Array.isArray(preferences)) {
+      return res.status(400).json({ message: 'preferences must be an array' })
+    }
+
+    let profile = await UserProfile.findOne({ userId })
+
+    if (!profile) {
+      return res.status(404).json({ message: 'Profile not found' })
+    }
+
+    if (!profile.ingredientSettings) {
+      profile.ingredientSettings = { allergies: [], preferences: [] }
+    }
+
+    if (allergies) {
+      profile.ingredientSettings.allergies = allergies.map((i: string) => i.toUpperCase().trim())
+    }
+    if (preferences) {
+      profile.ingredientSettings.preferences = preferences.map((i: string) => i.toUpperCase().trim())
+    }
+
+    await profile.save()
+
+    res.json({
+      message: 'Ingredient settings updated',
+      ingredientSettings: profile.ingredientSettings
+    })
+  } catch (error) {
+    console.error('Error updating ingredient settings:', error)
+    res.status(500).json({ message: 'Server error updating ingredient settings' })
+  }
+}
+
+export const getIngredientSettings = async (req: Request, res: Response) => {
+  try {
+    const userId = (req as any).userId
+
+    const profile = await UserProfile.findOne({ userId })
+
+    if (!profile) {
+      return res.status(404).json({ message: 'Profile not found' })
+    }
+
+    res.json({
+      ingredientSettings: profile.ingredientSettings || { allergies: [], preferences: [] }
+    })
+  } catch (error) {
+    console.error('Error fetching ingredient settings:', error)
+    res.status(500).json({ message: 'Server error fetching ingredient settings' })
+  }
+}
+
+
 export const getSelectedProducts = async (req: Request, res: Response) => {
   try {
     const userId = (req as any).userId

@@ -25,6 +25,7 @@ interface Product {
   suitableFor: string[]
   targetConcerns: string[]
   keyIngredients: string[]
+  allIngredients?: string
   priceRange: string
   imageURL?: string
 }
@@ -33,6 +34,11 @@ interface SelectedProduct {
   category: string
   productId: string
   dayTime: string
+}
+
+interface IngredientSettings {
+  allergies: string[]
+  preferences: string[]
 }
 
 const stepInstructions: Record<string, string> = {
@@ -81,6 +87,7 @@ export default function Dashboard() {
   const [hasRoutineSaved, setHasRoutineSaved] = useState(false)
   const [isEditMode, setIsEditMode] = useState(false)
   const [saving, setSaving] = useState(false)
+  const [ingredientSettings, setIngredientSettings] = useState<IngredientSettings>({ allergies: [], preferences: [] })
 
   useEffect(() => {
     const token = localStorage.getItem('token')
@@ -91,6 +98,12 @@ export default function Dashboard() {
     const storedSkinType = sessionStorage.getItem('skinType') || localStorage.getItem('skinType') || 'normal'
     const storedConcerns = JSON.parse(sessionStorage.getItem('concerns') || localStorage.getItem('concerns') || '[]')
     
+    // Load ingredient settings from storage
+    const storedIngredients = sessionStorage.getItem('ingredientSettings') || localStorage.getItem('ingredientSettings')
+    if (storedIngredients) {
+      setIngredientSettings(JSON.parse(storedIngredients))
+    }
+
     setSkinType(storedSkinType)
     setConcerns(storedConcerns)
 
@@ -98,12 +111,12 @@ export default function Dashboard() {
       try {
         const data = await api.getRoutinesBySkinType(storedSkinType)
         setRoutines(data.routines)
-        
+
         if (data.routines.length > 0) {
           const firstRoutine = data.routines[0]
           setActiveRoutine(firstRoutine.dayTime as 'AM' | 'PM' | 'Daily')
         }
-        
+
         setLoading(false)
       } catch (error) {
         console.error('Error fetching routines:', error)
@@ -113,6 +126,26 @@ export default function Dashboard() {
 
     fetchRoutines()
   }, [])
+
+  // Fetch ingredient settings for logged-in users
+  useEffect(() => {
+    if (!isLoggedIn) return
+
+    const fetchIngredientSettings = async () => {
+      try {
+        const data = await api.getIngredientSettings()
+        if (data.ingredientSettings) {
+          setIngredientSettings(data.ingredientSettings)
+          // Also save to localStorage for persistence
+          localStorage.setItem('ingredientSettings', JSON.stringify(data.ingredientSettings))
+        }
+      } catch (error) {
+        console.error('Error fetching ingredient settings:', error)
+      }
+    }
+
+    fetchIngredientSettings()
+  }, [isLoggedIn])
 
   // Fetch selected products for logged-in users
   useEffect(() => {
@@ -131,7 +164,7 @@ export default function Dashboard() {
           setHasRoutineSaved(true)
         } else {
           setHasRoutineSaved(false)
-          setIsEditMode(true) // First time user, show selection mode
+          setIsEditMode(true)
         }
       } catch (error) {
         console.error('Error fetching selected products:', error)
@@ -150,7 +183,7 @@ export default function Dashboard() {
 
     const fetchProducts = async () => {
       const products: Record<string, Product[]> = {}
-      
+
       for (const step of currentRoutine.steps) {
         try {
           const dayTimeParam = activeRoutine === 'Daily' ? 'AM' : activeRoutine
@@ -161,7 +194,7 @@ export default function Dashboard() {
           products[step.category] = []
         }
       }
-      
+
       setStepProducts(products)
     }
 
@@ -176,11 +209,11 @@ export default function Dashboard() {
       try {
         const data = await api.getProductsForStep(skinType, 'treatment')
         const treatments = data.products || []
-        
+
         const relevantTreatments = treatments.filter((product: Product) =>
           product.targetConcerns?.some(concern => concerns.includes(concern))
         )
-        
+
         setConcernTreatments(relevantTreatments)
       } catch (error) {
         console.error('Error fetching treatments:', error)
@@ -189,6 +222,52 @@ export default function Dashboard() {
 
     fetchTreatments()
   }, [skinType, concerns])
+
+  // Check if product contains any excluded ingredients
+  const checkProductIngredients = (product: Product): { hasAllergy: boolean; hasPreference: boolean; matchedAllergies: string[]; matchedPreferences: string[] } => {
+    const result = { hasAllergy: false, hasPreference: false, matchedAllergies: [] as string[], matchedPreferences: [] as string[] }
+    
+    if (!product.allIngredients) return result
+    
+    const productIngredients = product.allIngredients.toUpperCase()
+    
+    for (const allergy of ingredientSettings.allergies) {
+      if (productIngredients.includes(allergy.toUpperCase())) {
+        result.hasAllergy = true
+        result.matchedAllergies.push(allergy)
+      }
+    }
+    
+    for (const pref of ingredientSettings.preferences) {
+      if (productIngredients.includes(pref.toUpperCase())) {
+        result.hasPreference = true
+        result.matchedPreferences.push(pref)
+      }
+    }
+    
+    return result
+  }
+
+  // Filter products: remove allergies, keep preferences (with warning)
+  const filterAndFlagProducts = (products: Product[]): { safe: Product[]; flagged: Product[]; blocked: Product[] } => {
+    const safe: Product[] = []
+    const flagged: Product[] = []
+    const blocked: Product[] = []
+    
+    for (const product of products) {
+      const check = checkProductIngredients(product)
+      
+      if (check.hasAllergy) {
+        blocked.push(product)
+      } else if (check.hasPreference) {
+        flagged.push(product)
+      } else {
+        safe.push(product)
+      }
+    }
+    
+    return { safe, flagged, blocked }
+  }
 
   const currentRoutine = routines.find(r => r.dayTime === activeRoutine)
   const hasMultipleRoutines = routines.length > 1
@@ -228,7 +307,7 @@ export default function Dashboard() {
 
     const dayTime = activeRoutine === 'Daily' ? 'Both' : activeRoutine
     const key = `${category}_${dayTime}`
-    
+
     setSelectedProducts(prev => ({ ...prev, [key]: productId }))
   }
 
@@ -237,13 +316,11 @@ export default function Dashboard() {
 
     setSaving(true)
     try {
-      // Save each selected product
       for (const [key, productId] of Object.entries(selectedProducts)) {
         const [category, dayTime] = key.split('_')
         await api.selectProduct({ category, productId, dayTime })
       }
 
-      // Save profile with skin type and concerns
       await api.saveProfile({
         skinType,
         concerns
@@ -262,9 +339,9 @@ export default function Dashboard() {
     const dayTime = activeRoutine === 'Daily' ? 'Both' : activeRoutine
     const key = `${category}_${dayTime}`
     const productId = selectedProducts[key]
-    
+
     if (!productId) return null
-    
+
     const products = stepProducts[category] || []
     return products.find(p => p.id === productId) || null
   }
@@ -285,10 +362,10 @@ export default function Dashboard() {
       <Navbar />
       <div className="max-w-7xl mx-auto p-4 md:p-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          
+
           {/* Main Content */}
           <div className="lg:col-span-3 lg:order-1">
-            
+
             {/* Header */}
             <div className="mb-8">
               <h1 className="text-4xl font-heading text-deep-twilight mb-2">
@@ -334,10 +411,15 @@ export default function Dashboard() {
                 {visibleSteps.map((step, index) => {
                   const selectedProduct = getSelectedProductForStep(step.category)
                   const showOnlySelected = hasRoutineSaved && !isEditMode && selectedProduct
+                  
+                  // Get filtered products for this step
+                  const allStepProducts = stepProducts[step.category] || []
+                  const priceFiltered = filterProductsByPrice(allStepProducts)
+                  const { safe, flagged, blocked } = filterAndFlagProducts(priceFiltered)
 
                   return (
-                    <div 
-                      key={step.order} 
+                    <div
+                      key={step.order}
                       className="bg-white rounded-lg shadow-lg border border-alabaster overflow-hidden"
                     >
                       {/* Step Header */}
@@ -373,6 +455,14 @@ export default function Dashboard() {
                             {showOnlySelected ? (
                               // Show only selected product
                               <div className="border border-deep-twilight bg-lavender-veil rounded-lg p-4">
+                                {(() => {
+                                  const check = checkProductIngredients(selectedProduct)
+                                  return check.hasPreference ? (
+                                    <div className="bg-amber-50 border border-amber-200 text-amber-800 px-3 py-2 rounded-lg mb-3 text-sm">
+                                      ⚠️ Contains: {check.matchedPreferences.join(', ')}
+                                    </div>
+                                  ) : null
+                                })()}
                                 <p className="text-sm text-wisteria mb-1">{selectedProduct.brand}</p>
                                 <h5 className="font-medium mb-2">{selectedProduct.name}</h5>
                                 <p className="text-sm opacity-80 mb-3">{selectedProduct.description}</p>
@@ -384,65 +474,155 @@ export default function Dashboard() {
                                   ))}
                                 </div>
                                 <p className="text-sm opacity-70">
-                                  {selectedProduct.priceRange === 'budget' ? '💰 Budget-friendly' : 
+                                  {selectedProduct.priceRange === 'budget' ? '💰 Budget-friendly' :
                                    selectedProduct.priceRange === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
                                 </p>
                               </div>
                             ) : (
                               // Show all products with selection
-                              filterProductsByPrice(stepProducts[step.category] || []).length > 0 ? (
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                  {filterProductsByPrice(stepProducts[step.category] || []).map(product => {
-                                    const dayTime = activeRoutine === 'Daily' ? 'Both' : activeRoutine
-                                    const selectionKey = `${step.category}_${dayTime}`
-                                    const isSelected = selectedProducts[selectionKey] === product.id
+                              <>
+                                {/* Safe Products */}
+                                {safe.length > 0 && (
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    {safe.map(product => {
+                                      const dayTime = activeRoutine === 'Daily' ? 'Both' : activeRoutine
+                                      const selectionKey = `${step.category}_${dayTime}`
+                                      const isSelected = selectedProducts[selectionKey] === product.id
 
-                                    return (
-                                      <div 
-                                        key={product.id} 
-                                        className={`border rounded-lg p-4 transition cursor-pointer ${
-                                          isSelected 
-                                            ? 'border-deep-twilight bg-lavender-veil' 
-                                            : 'border-alabaster hover:border-wisteria'
-                                        }`}
-                                        onClick={() => isEditMode && handleSelectProduct(step.category, product.id)}
-                                      >
-                                        <p className="text-sm text-wisteria mb-1">{product.brand}</p>
-                                        <h5 className="font-medium mb-2">{product.name}</h5>
-                                        <p className="text-sm opacity-80 mb-3 line-clamp-2">{product.description}</p>
-                                        <div className="flex flex-wrap gap-2 mb-3">
-                                          {(product.keyIngredients || []).slice(0, 3).map((ingredient, i) => (
-                                            <span key={i} className="text-xs bg-lavender-veil px-2 py-1 rounded">
-                                              {ingredient}
-                                            </span>
-                                          ))}
+                                      return (
+                                        <div
+                                          key={product.id}
+                                          className={`border rounded-lg p-4 transition cursor-pointer ${
+                                            isSelected
+                                              ? 'border-deep-twilight bg-lavender-veil'
+                                              : 'border-alabaster hover:border-wisteria'
+                                          }`}
+                                          onClick={() => isEditMode && handleSelectProduct(step.category, product.id)}
+                                        >
+                                          <p className="text-sm text-wisteria mb-1">{product.brand}</p>
+                                          <h5 className="font-medium mb-2">{product.name}</h5>
+                                          <p className="text-sm opacity-80 mb-3 line-clamp-2">{product.description}</p>
+                                          <div className="flex flex-wrap gap-2 mb-3">
+                                            {(product.keyIngredients || []).slice(0, 3).map((ingredient, i) => (
+                                              <span key={i} className="text-xs bg-lavender-veil px-2 py-1 rounded">
+                                                {ingredient}
+                                              </span>
+                                            ))}
+                                          </div>
+                                          <div className="flex justify-between items-center">
+                                            <p className="text-sm opacity-70">
+                                              {product.priceRange === 'budget' ? '💰 Budget-friendly' :
+                                               product.priceRange === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
+                                            </p>
+                                            {isLoggedIn && isEditMode && (
+                                              <span className={`text-sm px-3 py-1 rounded-lg ${
+                                                isSelected
+                                                  ? 'bg-deep-twilight'
+                                                  : 'bg-alabaster'
+                                              }`}>
+                                                {isSelected ? '✓ Selected' : 'Select'}
+                                              </span>
+                                            )}
+                                          </div>
                                         </div>
-                                        <div className="flex justify-between items-center">
-                                          <p className="text-sm opacity-70">
-                                            {product.priceRange === 'budget' ? '💰 Budget-friendly' : 
-                                             product.priceRange === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
-                                          </p>
-                                          {isLoggedIn && isEditMode && (
-                                            <span className={`text-sm px-3 py-1 rounded-lg ${
+                                      )
+                                    })}
+                                  </div>
+                                )}
+
+                                {/* Flagged Products (Preferences) */}
+                                {flagged.length > 0 && (
+                                  <>
+                                    <h5 className="font-medium text-amber-600 mb-3 flex items-center gap-2">
+                                      ⚠️ Contains ingredients you prefer to avoid
+                                    </h5>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                      {flagged.map(product => {
+                                        const check = checkProductIngredients(product)
+                                        const dayTime = activeRoutine === 'Daily' ? 'Both' : activeRoutine
+                                        const selectionKey = `${step.category}_${dayTime}`
+                                        const isSelected = selectedProducts[selectionKey] === product.id
+
+                                        return (
+                                          <div
+                                            key={product.id}
+                                            className={`border rounded-lg p-4 transition cursor-pointer ${
                                               isSelected
-                                                ? 'bg-deep-twilight'
-                                                : 'bg-alabaster'
-                                            }`}>
-                                              {isSelected ? '✓ Selected' : 'Select'}
-                                            </span>
-                                          )}
-                                        </div>
-                                      </div>
-                                    )
-                                  })}
-                                </div>
-                              ) : (
-                                <p className="text-center opacity-70 py-4">
-                                  {priceFilter !== 'all' 
-                                    ? `No ${priceFilter} products found for this step.` 
-                                    : 'No products found for this step.'}
-                                </p>
-                              )
+                                                ? 'border-deep-twilight bg-lavender-veil'
+                                                : 'border-amber-300 bg-amber-50 hover:border-amber-400'
+                                            }`}
+                                            onClick={() => isEditMode && handleSelectProduct(step.category, product.id)}
+                                          >
+                                            <div className="bg-amber-100 border border-amber-200 text-amber-800 px-2 py-1 rounded text-xs mb-2">
+                                              Contains: {check.matchedPreferences.join(', ')}
+                                            </div>
+                                            <p className="text-sm text-wisteria mb-1">{product.brand}</p>
+                                            <h5 className="font-medium mb-2">{product.name}</h5>
+                                            <p className="text-sm opacity-80 mb-3 line-clamp-2">{product.description}</p>
+                                            <div className="flex flex-wrap gap-2 mb-3">
+                                              {(product.keyIngredients || []).slice(0, 3).map((ingredient, i) => (
+                                                <span key={i} className="text-xs bg-white px-2 py-1 rounded">
+                                                  {ingredient}
+                                                </span>
+                                              ))}
+                                            </div>
+                                            <div className="flex justify-between items-center">
+                                              <p className="text-sm opacity-70">
+                                                {product.priceRange === 'budget' ? '💰 Budget-friendly' :
+                                                 product.priceRange === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
+                                              </p>
+                                              {isLoggedIn && isEditMode && (
+                                                <span className={`text-sm px-3 py-1 rounded-lg ${
+                                                  isSelected
+                                                    ? 'bg-deep-twilight'
+                                                    : 'bg-alabaster'
+                                                }`}>
+                                                  {isSelected ? '✓ Selected' : 'Select'}
+                                                </span>
+                                              )}
+                                            </div>
+                                          </div>
+                                        )
+                                      })}
+                                    </div>
+                                  </>
+                                )}
+
+                                {/* Blocked Products (Allergies) - Collapsed by default */}
+                                {blocked.length > 0 && (
+                                  <details className="mt-4">
+                                    <summary className="cursor-pointer text-red-600 font-medium mb-3">
+                                      🚫 {blocked.length} product{blocked.length > 1 ? 's' : ''} hidden (contains allergens)
+                                    </summary>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 opacity-50">
+                                      {blocked.map(product => {
+                                        const check = checkProductIngredients(product)
+                                        return (
+                                          <div
+                                            key={product.id}
+                                            className="border border-red-200 bg-red-50 rounded-lg p-4"
+                                          >
+                                            <div className="bg-red-100 border border-red-200 text-red-800 px-2 py-1 rounded text-xs mb-2">
+                                              🚫 Allergy: {check.matchedAllergies.join(', ')}
+                                            </div>
+                                            <p className="text-sm text-wisteria mb-1">{product.brand}</p>
+                                            <h5 className="font-medium mb-2">{product.name}</h5>
+                                            <p className="text-sm opacity-80 line-clamp-2">{product.description}</p>
+                                          </div>
+                                        )
+                                      })}
+                                    </div>
+                                  </details>
+                                )}
+
+                                {safe.length === 0 && flagged.length === 0 && blocked.length === 0 && (
+                                  <p className="text-center opacity-70 py-4">
+                                    {priceFilter !== 'all'
+                                      ? `No ${priceFilter} products found for this step.`
+                                      : 'No products found for this step.'}
+                                  </p>
+                                )}
+                              </>
                             )}
                           </div>
                         </div>
@@ -453,7 +633,7 @@ export default function Dashboard() {
               </div>
             )}
 
-            {/* Save Routine Button - Show when in edit mode */}
+            {/* Save Routine Button */}
             {isLoggedIn && isEditMode && (
               <div className="mb-12">
                 <button
@@ -477,50 +657,91 @@ export default function Dashboard() {
                   Treatments for Your Concerns
                 </h2>
                 <p className="mb-6 opacity-80">
-                  These treatments specifically target your selected concerns. Consider adding them to your evening routine.
+                  These treatments specifically target your selected concerns.
                 </p>
-                
-                {filterProductsByPrice(concernTreatments).length > 0 ? (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {filterProductsByPrice(concernTreatments).map(product => (
-                      <div 
-                        key={product.id} 
-                        className="bg-white border border-alabaster rounded-lg p-4 hover:border-wisteria transition"
-                      >
-                        <p className="text-sm text-wisteria mb-1">{product.brand}</p>
-                        <h5 className="font-medium mb-2">{product.name}</h5>
-                        <p className="text-sm opacity-80 mb-3 line-clamp-2">{product.description}</p>
-                        
-                        <div className="flex flex-wrap gap-2 mb-3">
-                          {product.targetConcerns
-                            .filter(c => concerns.includes(c))
-                            .map((concern, i) => (
-                              <span key={i} className="text-xs bg-wisteria/30 px-2 py-1 rounded-full">
-                                {concernLabels[concern] || concern}
-                              </span>
-                            ))}
-                        </div>
-                        
-                        <p className="text-sm opacity-70">
-                          {product.priceRange === 'budget' ? '💰 Budget-friendly' : 
-                           product.priceRange === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
+
+                {(() => {
+                  const priceFiltered = filterProductsByPrice(concernTreatments)
+                  const { safe, flagged, blocked } = filterAndFlagProducts(priceFiltered)
+                  
+                  if (safe.length === 0 && flagged.length === 0) {
+                    return (
+                      <div className="bg-white border border-alabaster rounded-lg p-8 text-center">
+                        <p className="opacity-70">
+                          {priceFilter !== 'all'
+                            ? `No ${priceFilter} treatments found for your concerns.`
+                            : 'No specific treatments found for your concerns yet.'}
                         </p>
                       </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="bg-white border border-alabaster rounded-lg p-8 text-center">
-                    <p className="opacity-70">
-                      {priceFilter !== 'all' 
-                        ? `No ${priceFilter} treatments found for your concerns.` 
-                        : 'No specific treatments found for your concerns yet.'}
-                    </p>
-                  </div>
-                )}
+                    )
+                  }
+
+                  return (
+                    <>
+                      {/* Safe Treatments */}
+                      {safe.length > 0 && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                          {safe.map(product => (
+                            <div
+                              key={product.id}
+                              className="bg-white border border-alabaster rounded-lg p-4 hover:border-wisteria transition"
+                            >
+                              <p className="text-sm text-wisteria mb-1">{product.brand}</p>
+                              <h5 className="font-medium mb-2">{product.name}</h5>
+                              <p className="text-sm opacity-80 mb-3 line-clamp-2">{product.description}</p>
+                              <div className="flex flex-wrap gap-2 mb-3">
+                                {product.targetConcerns
+                                  .filter(c => concerns.includes(c))
+                                  .map((concern, i) => (
+                                    <span key={i} className="text-xs bg-wisteria/30 px-2 py-1 rounded-full">
+                                      {concernLabels[concern] || concern}
+                                    </span>
+                                  ))}
+                              </div>
+                              <p className="text-sm opacity-70">
+                                {product.priceRange === 'budget' ? '💰 Budget-friendly' :
+                                 product.priceRange === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Flagged Treatments */}
+                      {flagged.length > 0 && (
+                        <>
+                          <h5 className="font-medium text-amber-600 mb-3">⚠️ Contains ingredients you prefer to avoid</h5>
+                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {flagged.map(product => {
+                              const check = checkProductIngredients(product)
+                              return (
+                                <div
+                                  key={product.id}
+                                  className="bg-amber-50 border border-amber-300 rounded-lg p-4"
+                                >
+                                  <div className="bg-amber-100 border border-amber-200 text-amber-800 px-2 py-1 rounded text-xs mb-2">
+                                    Contains: {check.matchedPreferences.join(', ')}
+                                  </div>
+                                  <p className="text-sm text-wisteria mb-1">{product.brand}</p>
+                                  <h5 className="font-medium mb-2">{product.name}</h5>
+                                  <p className="text-sm opacity-80 mb-3 line-clamp-2">{product.description}</p>
+                                  <p className="text-sm opacity-70">
+                                    {product.priceRange === 'budget' ? '💰 Budget-friendly' :
+                                     product.priceRange === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
+                                  </p>
+                                </div>
+                              )
+                            })}
+                          </div>
+                        </>
+                      )}
+                    </>
+                  )
+                })()}
               </div>
             )}
 
-            {/* Save Prompt - only show if not logged in */}
+            {/* Save Prompt */}
             {!isLoggedIn && (
               <div className="bg-deep-twilight rounded-lg p-8 text-center">
                 <h3 className="text-2xl font-heading mb-2">Save Your Routine</h3>
@@ -540,7 +761,7 @@ export default function Dashboard() {
           {/* Sidebar */}
           <div className="lg:col-span-1 lg:order-2">
             <div className="bg-white rounded-lg shadow-lg border border-alabaster p-6 sticky top-8">
-              
+
               {/* Skin Type Badge */}
               <div className="text-center mb-6">
                 <div className="w-20 h-20 rounded-full bg-lavender-veil mx-auto mb-4 flex items-center justify-center">
@@ -573,7 +794,46 @@ export default function Dashboard() {
                 </div>
               )}
 
-              {/* Edit Routine Button - Show when routine is saved and not in edit mode */}
+              {/* Ingredient Settings */}
+              {(ingredientSettings.allergies.length > 0 || ingredientSettings.preferences.length > 0) && (
+                <div className="mb-6">
+                  <h3 className="font-heading text-deep-twilight mb-3">Ingredient Settings</h3>
+                  
+                  {ingredientSettings.allergies.length > 0 && (
+                    <div className="mb-3">
+                      <p className="text-sm text-red-600 font-medium mb-2">🚫 Allergies</p>
+                      <div className="flex flex-wrap gap-1">
+                        {ingredientSettings.allergies.map(allergy => (
+                          <span
+                            key={allergy}
+                            className="text-xs bg-red-100 text-red-800 px-2 py-1 rounded"
+                          >
+                            {allergy}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  
+                  {ingredientSettings.preferences.length > 0 && (
+                    <div>
+                      <p className="text-sm text-amber-600 font-medium mb-2">⚠️ Preferences</p>
+                      <div className="flex flex-wrap gap-1">
+                        {ingredientSettings.preferences.map(pref => (
+                          <span
+                            key={pref}
+                            className="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded"
+                          >
+                            {pref}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Edit Routine Button */}
               {isLoggedIn && hasRoutineSaved && !isEditMode && (
                 <div className="mb-6">
                   <button
@@ -585,7 +845,7 @@ export default function Dashboard() {
                 </div>
               )}
 
-              {/* Cancel Edit Button - Show when in edit mode and has saved routine */}
+              {/* Cancel Edit Button */}
               {isLoggedIn && hasRoutineSaved && isEditMode && (
                 <div className="mb-6">
                   <button
@@ -611,8 +871,8 @@ export default function Dashboard() {
                           : 'bg-alabaster hover:bg-wisteria/30'
                       }`}
                     >
-                      {price === 'all' ? '🏷️ All Prices' : 
-                       price === 'budget' ? '💰 Budget-friendly' : 
+                      {price === 'all' ? '🏷️ All Prices' :
+                       price === 'budget' ? '💰 Budget-friendly' :
                        price === 'mid-range' ? '💰💰 Mid-range' : '💰💰💰 Premium'}
                     </button>
                   ))}
